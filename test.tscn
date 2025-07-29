@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://clxkv0n0dfx6x"]
+
+[ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://platforms.tscn" id="2_6uqi0"]
+[ext_resource type="PackedScene" uid="uid://eiqwuussh0vb" path="res://thelma.tscn" id="2_8uh7m"]
+[ext_resource type="PackedScene" uid="uid://cg7xhjxgqp1ce" path="res://platform2.tscn" id="3_6uqi0"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(-9, 174)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_6uqi0")]
+position = Vector2(362, 412)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("2_6uqi0")]
+position = Vector2(626, 407)
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("2_6uqi0")]
+position = Vector2(231, 408)
+
+[node name="CharacterBody2D4" parent="." instance=ExtResource("2_6uqi0")]
+position = Vector2(498, 410)
+
+[node name="Thelma" parent="." instance=ExtResource("2_8uh7m")]
+position = Vector2(342, 223)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("3_6uqi0")]
+position = Vector2(1345, 427)
+
+[node name="CharacterBody2D5" parent="." instance=ExtResource("2_6uqi0")]
+position = Vector2(90, 404)
+
+[node name="CharacterBody2D3" parent="CharacterBody2D5" instance=ExtResource("2_6uqi0")]
+position = Vector2(668, 3)
+
+[node name="CharacterBody2D3" parent="CharacterBody2D5/CharacterBody2D3" instance=ExtResource("2_6uqi0")]
+position = Vector2(124, 1)
+
+[node name="CharacterBody2D3" parent="CharacterBody2D5/CharacterBody2D3/CharacterBody2D3" instance=ExtResource("2_6uqi0")]
+position = Vector2(126, -6)
+
+[node name="CharacterBody2D3" parent="CharacterBody2D5/CharacterBody2D3/CharacterBody2D3/CharacterBody2D3" instance=ExtResource("2_6uqi0")]
+position = Vector2(85, -128)
+
+[node name="CharacterBody2D3" parent="CharacterBody2D5/CharacterBody2D3/CharacterBody2D3/CharacterBody2D3/CharacterBody2D3" instance=ExtResource("2_6uqi0")]
+position = Vector2(-1057, -1)

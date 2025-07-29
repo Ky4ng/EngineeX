@@ -1,0 +1,79 @@
+[gd_scene load_steps=3 format=3 uid="uid://mx6hjhfs5j1x"]
+
+[ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://platforms.tscn" id="1_jq1x4"]
+[ext_resource type="PackedScene" uid="uid://eiqwuussh0vb" path="res://thelma.tscn" id="2_svvfb"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_jq1x4")]
+position = Vector2(75, 208)
+
+[node name="Thelma" parent="." instance=ExtResource("2_svvfb")]
+position = Vector2(83, 38)
+collision_mask = 2
+
+[node name="Camera2D" type="Camera2D" parent="Thelma"]
+position = Vector2(-8, 170)
+zoom = Vector2(0.5, 0.5)
+process_callback = 0
+limit_smoothed = true
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("1_jq1x4")]
+position = Vector2(65, 574)
+
+[node name="CharacterBody2D" parent="CharacterBody2D2" instance=ExtResource("1_jq1x4")]
+position = Vector2(131, 3)
+
+[node name="CharacterBody2D" parent="CharacterBody2D2/CharacterBody2D" instance=ExtResource("1_jq1x4")]
+position = Vector2(126, 9)
+
+[node name="CharacterBody2D" parent="CharacterBody2D2/CharacterBody2D/CharacterBody2D" instance=ExtResource("1_jq1x4")]
+position = Vector2(134, -3)
+
+[node name="CharacterBody2D" parent="CharacterBody2D2/CharacterBody2D/CharacterBody2D/CharacterBody2D" instance=ExtResource("1_jq1x4")]
+position = Vector2(131, -3)
+
+[node name="CharacterBody2D" parent="CharacterBody2D2/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D" instance=ExtResource("1_jq1x4")]
+position = Vector2(129, -1)
+
+[node name="CharacterBody2D" parent="CharacterBody2D2/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D" instance=ExtResource("1_jq1x4")]
+position = Vector2(129, 7)
+
+[node name="CharacterBody2D" parent="CharacterBody2D2/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D" instance=ExtResource("1_jq1x4")]
+position = Vector2(124, 1)
+
+[node name="CharacterBody2D" parent="CharacterBody2D2/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D" instance=ExtResource("1_jq1x4")]
+position = Vector2(128, -2)
+
+[node name="CharacterBody2D" parent="CharacterBody2D2/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D" instance=ExtResource("1_jq1x4")]
+position = Vector2(-1037, -136)
+
+[node name="CharacterBody2D" parent="CharacterBody2D2/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D" instance=ExtResource("1_jq1x4")]
+position = Vector2(0, -128)
+
+[node name="CharacterBody2D" parent="CharacterBody2D2/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D" instance=ExtResource("1_jq1x4")]
+position = Vector2(144, -113)
+
+[node name="CharacterBody2D" parent="CharacterBody2D2/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D" instance=ExtResource("1_jq1x4")]
+position = Vector2(129, 0)
+
+[node name="CharacterBody2D" parent="CharacterBody2D2/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D" instance=ExtResource("1_jq1x4")]
+position = Vector2(129, 0)
+
+[node name="CharacterBody2D" parent="CharacterBody2D2/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D" instance=ExtResource("1_jq1x4")]
+position = Vector2(129, 0)
+
+[node name="CharacterBody2D" parent="CharacterBody2D2/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D" instance=ExtResource("1_jq1x4")]
+position = Vector2(129, 0)
+
+[node name="CharacterBody2D" parent="CharacterBody2D2/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D" instance=ExtResource("1_jq1x4")]
+position = Vector2(129, 0)
+
+[node name="CharacterBody2D" parent="CharacterBody2D2/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D" instance=ExtResource("1_jq1x4")]
+position = Vector2(339, -10)
+
+[node name="CharacterBody2D" parent="CharacterBody2D2/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D/CharacterBody2D" instance=ExtResource("1_jq1x4")]
+position = Vector2(0, 153)
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("1_jq1x4")]
+position = Vector2(1199, 67)

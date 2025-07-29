@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b41c5onxn7aji"]
+
+[ext_resource type="Script" uid="uid://chdtuosveka6a" path="res://sprites/tankSample/turret_pivot.gd" id="1_c5apd"]
+[ext_resource type="Texture2D" uid="uid://bmhggyu88g5rq" path="res://sprites/tankSample/pixelTankTurret1.png" id="2_coqkk"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TurretPivot" type="Node2D" parent="."]
+script = ExtResource("1_c5apd")
+
+[node name="PixelTankTurret1" type="Sprite2D" parent="TurretPivot"]
+position = Vector2(-3, -9)
+scale = Vector2(0.64, 0.63)
+texture = ExtResource("2_coqkk")

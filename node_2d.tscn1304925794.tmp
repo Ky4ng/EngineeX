@@ -1,0 +1,52 @@
+[gd_scene load_steps=11 format=3 uid="uid://rcq5wdr2uvrx"]
+
+[ext_resource type="Script" uid="uid://bmqvmmk4og58j" path="res://node_2d.gd" id="1_ir8iy"]
+[ext_resource type="Texture2D" uid="uid://t1xxve8fmetp" path="res://sprites/thelma_animation/run-1.png" id="1_rj586"]
+[ext_resource type="Texture2D" uid="uid://bwhb7oqnwv8jk" path="res://sprites/thelma_animation/run-2.png" id="2_4d7sh"]
+[ext_resource type="Texture2D" uid="uid://blvspeinri0ep" path="res://sprites/thelma_animation/run-3.png" id="3_ir8iy"]
+[ext_resource type="Texture2D" uid="uid://bdckmfvo3rp6t" path="res://sprites/thelma_animation/run-4.png" id="4_hqns4"]
+[ext_resource type="Texture2D" uid="uid://bgsj3hl06wsen" path="res://sprites/thelma_animation/run-5.png" id="5_x0ka3"]
+[ext_resource type="Texture2D" uid="uid://c5pnu6tj5rstq" path="res://sprites/thelma_animation/run-6.png" id="6_0h7mo"]
+[ext_resource type="Texture2D" uid="uid://cfsvhk8bgudj6" path="res://sprites/thelma_animation/run-7.png" id="7_nr8wp"]
+[ext_resource type="Texture2D" uid="uid://bo73qagfbkf7t" path="res://sprites/thelma_animation/run-8.png" id="8_d2bti"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ta5nu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rj586")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4d7sh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ir8iy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hqns4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_x0ka3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0h7mo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nr8wp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_d2bti")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ir8iy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(478, 194)
+sprite_frames = SubResource("SpriteFrames_ta5nu")
+animation = &"run"
+frame_progress = 0.881511
