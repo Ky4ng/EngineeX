@@ -14,7 +14,7 @@ func _ready():
 
 	# Add a Timer node for reloading
 	var reload_timer = Timer.new()
-	reload_timer.wait_time = 1.0
+	reload_timer.wait_time = 0.5
 	reload_timer.one_shot = true
 	reload_timer.name = "ReloadTimer"
 	add_child(reload_timer)
