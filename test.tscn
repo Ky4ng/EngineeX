@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://clxkv0n0dfx6x"]
+[gd_scene load_steps=5 format=3 uid="uid://clxkv0n0dfx6x"]
 
 [ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://platforms.tscn" id="2_6uqi0"]
 [ext_resource type="PackedScene" uid="uid://eiqwuussh0vb" path="res://thelma.tscn" id="2_8uh7m"]
 [ext_resource type="PackedScene" uid="uid://cg7xhjxgqp1ce" path="res://platform2.tscn" id="3_6uqi0"]
+[ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://level_pass.tscn" id="4_ppyta"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(-9, 174)
@@ -42,3 +43,6 @@ position = Vector2(85, -128)
 
 [node name="CharacterBody2D3" parent="CharacterBody2D5/CharacterBody2D3/CharacterBody2D3/CharacterBody2D3/CharacterBody2D3" instance=ExtResource("2_6uqi0")]
 position = Vector2(-1057, -1)
+
+[node name="Area2D" parent="." instance=ExtResource("4_ppyta")]
+position = Vector2(945, 268)

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://mx6hjhfs5j1x"]
+[gd_scene load_steps=5 format=3 uid="uid://mx6hjhfs5j1x"]
 
 [ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://platforms.tscn" id="1_jq1x4"]
 [ext_resource type="PackedScene" uid="uid://eiqwuussh0vb" path="res://thelma.tscn" id="2_svvfb"]
 [ext_resource type="PackedScene" uid="uid://puunb8yf1ew7" path="res://spike.tscn" id="3_svvfb"]
+[ext_resource type="PackedScene" uid="uid://lopspnnxeb08" path="res://level_pass2.tscn" id="4_8hojv"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -44,10 +45,10 @@ position = Vector2(-57, 186)
 position = Vector2(-182, 196)
 
 [node name="CharacterBody2D9" parent="." instance=ExtResource("1_jq1x4")]
-position = Vector2(-185, 693)
+position = Vector2(-190, 705)
 
 [node name="CharacterBody2D10" parent="." instance=ExtResource("1_jq1x4")]
-position = Vector2(-313, 572)
+position = Vector2(-313, 697)
 
 [node name="CharacterBody2D11" parent="." instance=ExtResource("1_jq1x4")]
 position = Vector2(-54, 707)
@@ -184,3 +185,33 @@ position = Vector2(95, 434)
 
 [node name="Spike17" parent="." instance=ExtResource("3_svvfb")]
 position = Vector2(100, 396)
+
+[node name="Spike18" parent="." instance=ExtResource("3_svvfb")]
+position = Vector2(-443, 695)
+
+[node name="Spike19" parent="." instance=ExtResource("3_svvfb")]
+position = Vector2(-518, 695)
+
+[node name="Spike20" parent="." instance=ExtResource("3_svvfb")]
+position = Vector2(-591, 695)
+
+[node name="Spike21" parent="." instance=ExtResource("3_svvfb")]
+position = Vector2(-664, 698)
+
+[node name="Spike22" parent="." instance=ExtResource("3_svvfb")]
+position = Vector2(-733, 698)
+
+[node name="Spike23" parent="." instance=ExtResource("3_svvfb")]
+position = Vector2(-799, 698)
+
+[node name="Spike24" parent="." instance=ExtResource("3_svvfb")]
+position = Vector2(-872, 695)
+
+[node name="Spike25" parent="." instance=ExtResource("3_svvfb")]
+position = Vector2(-950, 698)
+
+[node name="Spike26" parent="." instance=ExtResource("3_svvfb")]
+position = Vector2(-1020, 695)
+
+[node name="Area2D" parent="." instance=ExtResource("4_8hojv")]
+position = Vector2(-257, 521)

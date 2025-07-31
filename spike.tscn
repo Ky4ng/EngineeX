@@ -14,6 +14,7 @@ position = Vector2(24, 5)
 script = ExtResource("1_7k7bx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+light_mask = 4
 position = Vector2(2, 33.5)
 shape = SubResource("RectangleShape2D_7k7bx")
 

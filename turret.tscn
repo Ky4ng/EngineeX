@@ -9,6 +9,6 @@
 script = ExtResource("1_c5apd")
 
 [node name="PixelTankTurret1" type="Sprite2D" parent="TurretPivot"]
-position = Vector2(-3, -9)
-scale = Vector2(0.64, 0.63)
+position = Vector2(-1, -4)
+scale = Vector2(0.25, 0.245)
 texture = ExtResource("2_coqkk")
