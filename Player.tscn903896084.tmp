@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://d2olvppacbh56"]
+
+[ext_resource type="Script" uid="uid://bx0a82snopv02" path="res://Player.gd" id="1_kne1u"]
+[ext_resource type="PackedScene" uid="uid://b41c5onxn7aji" path="res://turret.tscn" id="2_e80uo"]
+[ext_resource type="Texture2D" uid="uid://ejkgvsv786aq" path="res://sprites/Player/geasm_idle.png" id="3_cxr5p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4d7sh"]
+size = Vector2(20.4082, 27.8844)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gffvx"]
+atlas = ExtResource("3_cxr5p")
+region = Rect2(514, 0, 514, 737)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0p6x"]
+atlas = ExtResource("3_cxr5p")
+region = Rect2(51, 0, 514, 737)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_41y4m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gffvx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0p6x")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+collision_mask = 3
+script = ExtResource("1_kne1u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 14
+position = Vector2(-2.5, 5.7425)
+scale = Vector2(2.205, 2.205)
+shape = SubResource("RectangleShape2D_4d7sh")
+
+[node name="Node2D" parent="." instance=ExtResource("2_e80uo")]
+position = Vector2(-0.32, 11.85)
+rotation = -0.0174533
+scale = Vector2(2.28, 2.28)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(0, -31.7288)
+scale = Vector2(0.205, 0.198836)
+sprite_frames = SubResource("SpriteFrames_41y4m")
+animation = &"idle"
+frame_progress = 0.528496
