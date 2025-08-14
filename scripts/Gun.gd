@@ -2,7 +2,7 @@ extends Node2D
 
 var player: CharacterBody2D
 var launch_count := 0
-const MAX_LAUNCHES := 3
+const MAX_LAUNCHES := 100
 var mouse_was_pressed := false
 var can_launch := true
 var is_reloading := false
@@ -24,7 +24,7 @@ func _ready():
 func _process(_delta):
 	var mouse_pos = get_global_mouse_position()
 	rotation = (mouse_pos - global_position).angle() + deg_to_rad(90)
-
+	sprite.play("default")
 	var mouse_now = Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)
 
 	if mouse_now and not mouse_was_pressed and launch_count < MAX_LAUNCHES and can_launch:

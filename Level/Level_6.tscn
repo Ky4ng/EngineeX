@@ -1,0 +1,149 @@
+[gd_scene load_steps=6 format=3 uid="uid://cjxmip4p7sbkx"]
+
+[ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Tiles.tscn" id="1_gvcbt"]
+[ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player.tscn" id="2_ugxsx"]
+[ext_resource type="PackedScene" uid="uid://h5vyw1skbksk" path="res://air_spike.tscn" id="3_gvcbt"]
+[ext_resource type="PackedScene" uid="uid://puunb8yf1ew7" path="res://spike.tscn" id="4_ugxsx"]
+[ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://level_pass.tscn" id="5_b2ag1"]
+
+[node name="Level_6" type="Node2D"]
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("1_gvcbt")]
+position = Vector2(317, -26)
+
+[node name="CharacterBody2D2" parent="CharacterBody2D3" instance=ExtResource("1_gvcbt")]
+position = Vector2(-1, 127)
+
+[node name="CharacterBody2D2" parent="CharacterBody2D3/CharacterBody2D2" instance=ExtResource("1_gvcbt")]
+position = Vector2(-1, 127)
+
+[node name="CharacterBody2D2" parent="CharacterBody2D3/CharacterBody2D2/CharacterBody2D2" instance=ExtResource("1_gvcbt")]
+position = Vector2(-1, 127)
+
+[node name="CharacterBody2D2" parent="CharacterBody2D3/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2" instance=ExtResource("1_gvcbt")]
+position = Vector2(-1, 127)
+
+[node name="CharacterBody2D2" parent="CharacterBody2D3/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2" instance=ExtResource("1_gvcbt")]
+position = Vector2(-1, 127)
+
+[node name="CharacterBody2D2" parent="CharacterBody2D3/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2" instance=ExtResource("1_gvcbt")]
+position = Vector2(-1, 127)
+
+[node name="CharacterBody2D2" parent="CharacterBody2D3/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2" instance=ExtResource("1_gvcbt")]
+position = Vector2(-1, 127)
+
+[node name="CharacterBody2D2" parent="CharacterBody2D3/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2" instance=ExtResource("1_gvcbt")]
+position = Vector2(-1, 127)
+
+[node name="CharacterBody2D2" parent="CharacterBody2D3/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2" instance=ExtResource("1_gvcbt")]
+position = Vector2(-1, 127)
+
+[node name="CharacterBody2D2" parent="CharacterBody2D3/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2" instance=ExtResource("1_gvcbt")]
+position = Vector2(-1, 127)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_gvcbt")]
+position = Vector2(-270, -25)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("1_gvcbt")]
+position = Vector2(-270, 106)
+
+[node name="CharacterBody2D2" parent="CharacterBody2D2" instance=ExtResource("1_gvcbt")]
+position = Vector2(-1, 127)
+
+[node name="CharacterBody2D2" parent="CharacterBody2D2/CharacterBody2D2" instance=ExtResource("1_gvcbt")]
+position = Vector2(-1, 127)
+
+[node name="CharacterBody2D2" parent="CharacterBody2D2/CharacterBody2D2/CharacterBody2D2" instance=ExtResource("1_gvcbt")]
+position = Vector2(-1, 127)
+
+[node name="CharacterBody2D2" parent="CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2" instance=ExtResource("1_gvcbt")]
+position = Vector2(-1, 127)
+
+[node name="CharacterBody2D2" parent="CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2" instance=ExtResource("1_gvcbt")]
+position = Vector2(-1, 127)
+
+[node name="CharacterBody2D2" parent="CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2" instance=ExtResource("1_gvcbt")]
+position = Vector2(-1, 127)
+
+[node name="CharacterBody2D2" parent="CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2" instance=ExtResource("1_gvcbt")]
+position = Vector2(-1, 127)
+
+[node name="CharacterBody2D2" parent="CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2" instance=ExtResource("1_gvcbt")]
+position = Vector2(-1, 127)
+
+[node name="CharacterBody2D2" parent="CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2" instance=ExtResource("1_gvcbt")]
+position = Vector2(-1, 127)
+
+[node name="CharacterBody2D" parent="CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2" instance=ExtResource("1_gvcbt")]
+position = Vector2(435, 1098)
+
+[node name="CharacterBody2D3" parent="CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2" instance=ExtResource("1_gvcbt")]
+position = Vector2(91, 1087)
+
+[node name="CharacterBody2D4" parent="CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2" instance=ExtResource("1_gvcbt")]
+position = Vector2(327, 1220)
+
+[node name="CharacterBody2D5" parent="CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2/CharacterBody2D2" instance=ExtResource("1_gvcbt")]
+position = Vector2(197, 1207)
+
+[node name="Player" parent="." instance=ExtResource("2_ugxsx")]
+position = Vector2(-4, -24)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(60, 266)
+zoom = Vector2(0.5, 0.5)
+process_callback = 0
+limit_smoothed = true
+
+[node name="Air Spike" parent="." instance=ExtResource("3_gvcbt")]
+position = Vector2(-103, 61)
+
+[node name="Air Spike2" parent="." instance=ExtResource("3_gvcbt")]
+position = Vector2(101, 29)
+
+[node name="Air Spike3" parent="." instance=ExtResource("3_gvcbt")]
+position = Vector2(10, 326)
+
+[node name="Air Spike4" parent="." instance=ExtResource("3_gvcbt")]
+position = Vector2(-114, 599)
+
+[node name="Air Spike5" parent="." instance=ExtResource("3_gvcbt")]
+position = Vector2(88, 616)
+
+[node name="Air Spike5" parent="Air Spike5" instance=ExtResource("3_gvcbt")]
+position = Vector2(-119, 250)
+
+[node name="Air Spike5" parent="Air Spike5/Air Spike5" instance=ExtResource("3_gvcbt")]
+position = Vector2(-122, 222)
+
+[node name="Air Spike5" parent="Air Spike5/Air Spike5/Air Spike5" instance=ExtResource("3_gvcbt")]
+position = Vector2(305, 2)
+
+[node name="Air Spike6" parent="Air Spike5/Air Spike5/Air Spike5" instance=ExtResource("3_gvcbt")]
+position = Vector2(129, 193)
+
+[node name="Air Spike5" parent="Air Spike5/Air Spike5/Air Spike5/Air Spike6" instance=ExtResource("3_gvcbt")]
+position = Vector2(166, 267)
+
+[node name="Air Spike5" parent="Air Spike5/Air Spike5/Air Spike5/Air Spike6/Air Spike5" instance=ExtResource("3_gvcbt")]
+position = Vector2(-371, 92)
+
+[node name="Air Spike5" parent="Air Spike5/Air Spike5/Air Spike5/Air Spike6/Air Spike5/Air Spike5" instance=ExtResource("3_gvcbt")]
+position = Vector2(217, 170)
+
+[node name="Spike" parent="." instance=ExtResource("4_ugxsx")]
+position = Vector2(-146, 192)
+rotation = 1.57079
+
+[node name="Spike" parent="Spike" instance=ExtResource("4_ugxsx")]
+position = Vector2(258, 5.00058)
+
+[node name="Spike2" parent="." instance=ExtResource("4_ugxsx")]
+position = Vector2(191, 242)
+rotation = -1.57079
+
+[node name="Spike" parent="Spike2" instance=ExtResource("4_ugxsx")]
+position = Vector2(-282, 1.00063)
+
+[node name="Area2D" parent="." instance=ExtResource("5_b2ag1")]
+position = Vector2(-12, 2167)

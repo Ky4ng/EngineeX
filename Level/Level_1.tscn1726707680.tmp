@@ -1,0 +1,176 @@
+[gd_scene load_steps=9 format=3 uid="uid://drmgmoqc8qomn"]
+
+[ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://platforms.tscn" id="1_tedvs"]
+[ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://level_pass.tscn" id="2_gyeet"]
+[ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player.tscn" id="3_2wi7h"]
+[ext_resource type="Texture2D" uid="uid://bqxdm8xsdiu2t" path="res://icon.svg" id="4_4s4xf"]
+[ext_resource type="Texture2D" uid="uid://c6r3hc0vogs4m" path="res://sprites/Moon_Background.png" id="5_p7bnq"]
+[ext_resource type="PackedScene" uid="uid://drhe25uvs3fd2" path="res://falling_spikes.tscn" id="6_ar1si"]
+[ext_resource type="PackedScene" uid="uid://csjofk3uggncv" path="res://sprites/falling_rock.tscn" id="7_6fba8"]
+[ext_resource type="PackedScene" uid="uid://puunb8yf1ew7" path="res://spike.tscn" id="8_yaehp"]
+
+[node name="Level_1" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(6, 877)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(272, 886)
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-128, 877)
+
+[node name="CharacterBody2D4" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(142, 887)
+
+[node name="Area2D" parent="." instance=ExtResource("2_gyeet")]
+position = Vector2(539, -145)
+
+[node name="Player" parent="." instance=ExtResource("3_2wi7h")]
+position = Vector2(242, 135)
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(537, -143)
+texture = ExtResource("4_4s4xf")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(540, 201)
+zoom = Vector2(0.445, 0.445)
+
+[node name="MoonBackground" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(701, 375)
+scale = Vector2(2.63997, 2.62891)
+texture = ExtResource("5_p7bnq")
+
+[node name="CharacterBody2D5" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(409, 890)
+
+[node name="CharacterBody2D6" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(526, 898)
+
+[node name="CharacterBody2D7" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(648, 892)
+
+[node name="CharacterBody2D8" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(777, 889)
+
+[node name="CharacterBody2D9" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(900, 892)
+
+[node name="CharacterBody2D10" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(994, 890)
+
+[node name="CharacterBody2D11" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1081, 880)
+
+[node name="CharacterBody2D12" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1167, 875)
+
+[node name="CharacterBody2D13" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1291, 899)
+
+[node name="CharacterBody2D14" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1403, 922)
+
+[node name="CharacterBody2D15" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1534, 918)
+
+[node name="CharacterBody2D16" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(345, 67)
+
+[node name="CharacterBody2D17" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(465, 65)
+
+[node name="CharacterBody2D18" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(594, 73)
+
+[node name="CharacterBody2D19" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(723, 73)
+
+[node name="CharacterBody2D20" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-241, 870)
+
+[node name="CharacterBody2D21" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-352, 861)
+
+[node name="CharacterBody2D22" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-476, 847)
+
+[node name="CharacterBody2D23" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-595, 847)
+
+[node name="CharacterBody2D24" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-724, 861)
+
+[node name="CharacterBody2D25" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-724, 727)
+
+[node name="CharacterBody2D26" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-683, -486)
+
+[node name="CharacterBody2D27" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-434, 409)
+
+[node name="CharacterBody2D28" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-286, 409)
+
+[node name="CharacterBody2D29" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-151, 409)
+
+[node name="CharacterBody2D30" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1046, 463)
+
+[node name="CharacterBody2D31" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1180, 463)
+
+[node name="CharacterBody2D32" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1309, 477)
+
+[node name="CharacterBody2D33" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1665, 927)
+
+[node name="CharacterBody2D34" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1786, 927)
+
+[node name="CharacterBody2D35" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1800, 820)
+
+[node name="CharacterBody2D36" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1798, 698)
+
+[node name="CharacterBody2D37" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1807, 569)
+
+[node name="CharacterBody2D38" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1812, 445)
+
+[node name="CharacterBody2D39" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1747, 766)
+
+[node name="CharacterBody2D40" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1678, 849)
+
+[node name="CharacterBody2D41" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-601, 762)
+
+[node name="CharacterBody2D42" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-660, 669)
+
+[node name="CharacterBody2D43" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-720, 624)
+
+[node name="FallingSpikes" parent="." instance=ExtResource("6_ar1si")]
+position = Vector2(80, 290)
+
+[node name="FallingRock" parent="." instance=ExtResource("7_6fba8")]
+position = Vector2(657, 494)
+
+[node name="Spike" parent="." instance=ExtResource("8_yaehp")]
+position = Vector2(18, 760)
+
+[node name="Spike2" parent="." instance=ExtResource("8_yaehp")]
+position = Vector2(57, 781)
+
+[node name="Spike3" parent="." instance=ExtResource("8_yaehp")]
+position = Vector2(54, 760)

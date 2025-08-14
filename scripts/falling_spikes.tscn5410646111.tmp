@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bc4bhq4bd1i4u"]
+
+[ext_resource type="Texture2D" uid="uid://bgjbprpb82gbq" path="res://sprites/spike/fallingSpikes.png" id="1_7qxjg"]
+[ext_resource type="Script" uid="uid://sqj62t4knd0c" path="res://falling_spikes.gd" id="1_v3qgq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v3qgq"]
+size = Vector2(64, 144)
+
+[node name="FallingSpikes" type="Node2D"]
+script = ExtResource("1_v3qgq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.0527344, 0.0507813)
+texture = ExtResource("1_7qxjg")
+
+[node name="Hitbox" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
+polygon = PackedVector2Array(0, 16, -24, 8, -24, 0, -16, -16, 16, -16, 24, 0, 16, 8, 8, 16)
+
+[node name="PlayerDetect" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetect"]
+position = Vector2(0, 56)
+shape = SubResource("RectangleShape2D_v3qgq")

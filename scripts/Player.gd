@@ -1,13 +1,16 @@
 extends CharacterBody2D
 
 @export var speed: float = 600
-@export var gravity: float = 1200
+@export var gravity: float = 900
 @export var launch_strength: float = 300
 @export var stop_threshold: float = 10.0
 @export var deceleration: float = 0.985
+
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 var in_launch: bool = false
+var is_dead: bool = false  # Prevent multiple die() calls
+var drop_timer: float = 0.0
 
 func apply_launch(force: Vector2) -> void:
 	velocity = force
@@ -20,35 +23,42 @@ func _physics_process(delta: float) -> void:
 		direction -= 1.0
 	if Input.is_action_pressed("d"):
 		direction += 1.0
-		
+	if Input.is_action_pressed("restart"):
+		call_deferred("die") 
+
+	# Animation state
 	if direction != 0:
 		sprite.play("walk")
 		sprite.flip_h = direction < 0
 	else:
 		sprite.play("idle")
+
 	# Apply gravity when not grounded
 	if not is_on_floor():
+		velocity.y += gravity * delta
+
+	# Optional: glide effect when holding spacebar in air
+	if Input.is_action_pressed("spacebar") and not is_on_floor():
+		gravity = 600
 		velocity.y += gravity * delta
 
 	if in_launch:
 		# Add control influence on top of launch movement
 		var input_force: float = direction * 400 * delta
 		velocity.x += input_force
-	   
+
 		# Apply launch damping toward stopping
 		velocity = velocity.move_toward(Vector2(velocity.x, 0), launch_strength * delta)
-
-		# Dampen all movement when grounded
-
 
 		# Stop launch if mostly still and grounded
 		if is_on_floor() and velocity.length() <= stop_threshold:
 			velocity = Vector2.ZERO
-		if is_on_floor() && velocity.length() < 10000.0:
-			velocity = velocity * 0.985 
-		if is_on_floor() && velocity.length() <= 00.0:
+
+		if is_on_floor() and velocity.length() < 10000.0:
+			velocity = velocity * deceleration
+
+		if is_on_floor() and velocity.length() <= 0.0:
 			in_launch = false
-		
 	else:
 		# Normal grounded movement
 		velocity.x = direction * speed
@@ -56,12 +66,17 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func die():
+	if is_dead:
+		return  # Already dead, ignore extra calls
+	is_dead = true
+
 	print("Player died! Respawning...")
-	var sprite = $AnimatedSprite2D
 	sprite.modulate = Color(1, 0, 0)  # Flash red
 
-	await get_tree().create_timer(0.1).timeout  # Short flash duration
-	sprite.modulate = Color(1, 1, 1)  # Reset to normal
+	await get_tree().create_timer(0.1).timeout  # Short flash
+	sprite.modulate = Color(1, 1, 1)  # Reset color
 
-	await get_tree().create_timer(0.1).timeout  # Optional pause before reload
+	call_deferred("_reload_scene")  # Safer than direct reload in physics step
+
+func _reload_scene():
 	get_tree().reload_current_scene()

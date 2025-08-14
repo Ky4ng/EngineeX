@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnnk64u3u78su"]
+
+[ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Tiles.tscn" id="1_g3r0d"]
+[ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://level_pass.tscn" id="2_nt0ah"]
+[ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player.tscn" id="3_yqrqy"]
+
+[node name="Level_10" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(-57, 266)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(73, 269)
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(204, 266)
+
+[node name="Area2D" parent="." instance=ExtResource("2_nt0ah")]
+position = Vector2(189, 87)
+
+[node name="Player" parent="." instance=ExtResource("3_yqrqy")]
+position = Vector2(-72, 20)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="CharacterBody2D4" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(-66, 136)

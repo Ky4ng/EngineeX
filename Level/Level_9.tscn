@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://11ub6y10aboo"]
+
+[ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Tiles.tscn" id="1_rriw4"]
+[ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://level_pass.tscn" id="2_3mn4y"]
+[ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player.tscn" id="3_24y5s"]
+[ext_resource type="PackedScene" uid="uid://bw1rjtct6tg3r" path="res://danger_floor.tscn" id="4_24y5s"]
+[ext_resource type="PackedScene" uid="uid://8egvl15et33p" path="res://turret.tscn" id="5_sqbe6"]
+
+[node name="Level_9" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(-72, 280)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(56, 280)
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(184, 280)
+
+[node name="Area2D" parent="." instance=ExtResource("2_3mn4y")]
+position = Vector2(1241, 37)
+
+[node name="Player" parent="." instance=ExtResource("3_24y5s")]
+position = Vector2(-72, 20)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="CharacterBody2D4" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(824, 280)
+
+[node name="CharacterBody2D5" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(312, 280)
+
+[node name="CharacterBody2D6" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(440, 280)
+
+[node name="Node2D" parent="." instance=ExtResource("4_24y5s")]
+position = Vector2(568, 280)
+
+[node name="Node2D2" parent="." instance=ExtResource("4_24y5s")]
+position = Vector2(696, 280)
+
+[node name="Turret" parent="." instance=ExtResource("5_sqbe6")]
+position = Vector2(616, 16)
+
+[node name="Turret2" parent="." instance=ExtResource("5_sqbe6")]
+position = Vector2(224, 24)

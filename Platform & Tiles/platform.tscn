@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://bfewklmfo8bdb"]
+
+[ext_resource type="Script" uid="uid://4pbrhf32pi1u" path="res://platform.gd" id="1_ry5bi"]
+[ext_resource type="Texture2D" uid="uid://djpilrfwpq476" path="res://sprites/Moon/geasm_moon_tiles-ezgif.com-crop (11).png" id="2_ph1ng"]
+[ext_resource type="Texture2D" uid="uid://d02jnls7au0c7" path="res://sprites/Moon/geasm_moon_tiles-ezgif.com-crop (6).png" id="3_7u0im"]
+[ext_resource type="Texture2D" uid="uid://bca1b4d2rocij" path="res://sprites/geasm_shiptile-ezgif.com-crop (1).png" id="4_x8osn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ardar"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_7u0im")
+}],
+"loop": true,
+"name": &"cave",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ph1ng")
+}],
+"loop": true,
+"name": &"moon",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_x8osn")
+}],
+"loop": true,
+"name": &"spaceship",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ry5bi"]
+size = Vector2(123, 38)
+
+[node name="Platform" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_ry5bi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ardar")
+animation = &"moon"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 2
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_ry5bi")

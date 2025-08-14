@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://csjofk3uggncv"]
+
+[ext_resource type="Script" uid="uid://bu4586blduqkt" path="res://scripts/falling_rock.gd" id="1_v1pad"]
+[ext_resource type="Texture2D" uid="uid://cmucgtkrdpk30" path="res://sprites/Moon/falling_tile.png" id="2_3xv8a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0mr6n"]
+size = Vector2(265, 522)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ccnl"]
+
+[node name="FallingRock" type="Node2D"]
+script = ExtResource("1_v1pad")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.04487, 1.04583)
+texture = ExtResource("2_3xv8a")
+
+[node name="TriggerArea" type="Area2D" parent="."]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea"]
+position = Vector2(0.5, 200)
+shape = SubResource("RectangleShape2D_0mr6n")
+
+[node name="Killbox" type="Area2D" parent="."]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killbox"]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_4ccnl")
+
+[node name="SelfDestructTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="body_entered" from="TriggerArea" to="." method="_on_trigger_area_body_entered"]
+[connection signal="body_entered" from="Killbox" to="." method="_on_killbox_body_entered"]
+[connection signal="timeout" from="SelfDestructTimer" to="." method="_on_self_destruct_timer_timeout"]

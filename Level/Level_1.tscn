@@ -1,0 +1,168 @@
+[gd_scene load_steps=6 format=3 uid="uid://crtj7o7cmyjb"]
+
+[ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Platform & Tiles/Tiles.tscn" id="1_tedvs"]
+[ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://Level/level_pass.tscn" id="2_gyeet"]
+[ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player/Player.tscn" id="3_2wi7h"]
+[ext_resource type="Texture2D" uid="uid://c6r3hc0vogs4m" path="res://Background/Moon_Background.png" id="5_p7bnq"]
+[ext_resource type="PackedScene" uid="uid://bfewklmfo8bdb" path="res://Platform & Tiles/platform.tscn" id="9_gyeet"]
+
+[node name="Level_1" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-112, 856)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(216, 856)
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-400, 856)
+
+[node name="Area2D" parent="." instance=ExtResource("2_gyeet")]
+position = Vector2(-224, -352)
+
+[node name="Player" parent="." instance=ExtResource("3_2wi7h")]
+position = Vector2(-200, 624)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(540, 201)
+offset = Vector2(-0.39, 0)
+zoom = Vector2(0.47, 0.45)
+limit_left = -10000065
+
+[node name="Platform" parent="." instance=ExtResource("9_gyeet")]
+position = Vector2(1656, 24)
+
+[node name="Platform2" parent="." instance=ExtResource("9_gyeet")]
+position = Vector2(952, 24)
+
+[node name="Platform3" parent="." instance=ExtResource("9_gyeet")]
+position = Vector2(1056, 24)
+
+[node name="Platform4" parent="." instance=ExtResource("9_gyeet")]
+position = Vector2(1288, 24)
+
+[node name="Platform5" parent="." instance=ExtResource("9_gyeet")]
+position = Vector2(1408, 24)
+
+[node name="Platform6" parent="." instance=ExtResource("9_gyeet")]
+position = Vector2(1168, 24)
+
+[node name="Platform7" parent="." instance=ExtResource("9_gyeet")]
+position = Vector2(1528, 24)
+
+[node name="Tiles" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-400, 600)
+
+[node name="Tiles2" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-400, 312)
+
+[node name="Tiles3" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-400, 32)
+
+[node name="Tiles4" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-400, -408)
+
+[node name="Tiles5" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-400, -488)
+
+[node name="Tiles6" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(540, 856)
+
+[node name="Tiles7" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(840, 856)
+
+[node name="Tiles8" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1144, 856)
+
+[node name="Tiles9" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1448, 856)
+
+[node name="Tiles10" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1744, 856)
+
+[node name="Tiles11" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1744, 592)
+
+[node name="Tiles12" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1744, 328)
+
+[node name="Tiles13" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1744, 280)
+
+[node name="Platform8" parent="." instance=ExtResource("9_gyeet")]
+position = Vector2(1744, 24)
+
+[node name="Platform9" parent="." instance=ExtResource("9_gyeet")]
+position = Vector2(712, 160)
+
+[node name="Platform10" parent="." instance=ExtResource("9_gyeet")]
+position = Vector2(368, 472)
+
+[node name="Tiles14" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1168, 272)
+
+[node name="Tiles15" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1168, 488)
+
+[node name="Tiles16" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1168, 656)
+
+[node name="Tiles17" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1464, 656)
+
+[node name="Tiles18" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1472, 272)
+
+[node name="Tiles19" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1472, 464)
+
+[node name="MoonBackground" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(512, 144)
+scale = Vector2(1.94792, 2.00391)
+texture = ExtResource("5_p7bnq")
+
+[node name="Tiles20" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1768, -328)
+
+[node name="Tiles21" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1768, -56)
+
+[node name="Platform11" parent="." instance=ExtResource("9_gyeet")]
+position = Vector2(-279, -184)
+
+[node name="Platform12" parent="." instance=ExtResource("9_gyeet")]
+position = Vector2(-176, -184)
+
+[node name="Platform13" parent="." instance=ExtResource("9_gyeet")]
+position = Vector2(-72, -184)
+
+[node name="Platform14" parent="." instance=ExtResource("9_gyeet")]
+position = Vector2(24, -184)
+
+[node name="Platform15" parent="." instance=ExtResource("9_gyeet")]
+position = Vector2(128, -184)
+
+[node name="Platform16" parent="." instance=ExtResource("9_gyeet")]
+position = Vector2(448, -64)
+
+[node name="Platform17" parent="." instance=ExtResource("9_gyeet")]
+position = Vector2(1576, 24)
+
+[node name="Tiles22" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1304, -48)
+
+[node name="Tiles22" parent="Tiles22" instance=ExtResource("1_tedvs")]
+position = Vector2(200, 0)
+
+[node name="Tiles22" parent="Tiles22/Tiles22" instance=ExtResource("1_tedvs")]
+position = Vector2(-200, -280)
+
+[node name="Tiles22" parent="Tiles22/Tiles22/Tiles22" instance=ExtResource("1_tedvs")]
+position = Vector2(224, 0)
+
+[node name="Platform18" parent="." instance=ExtResource("9_gyeet")]
+position = Vector2(-278, -184)
+
+[node name="Tiles23" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-400, 24)

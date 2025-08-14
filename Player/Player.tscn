@@ -1,0 +1,61 @@
+[gd_scene load_steps=10 format=3 uid="uid://d2olvppacbh56"]
+
+[ext_resource type="Script" uid="uid://bx0a82snopv02" path="res://scripts/Player.gd" id="1_kne1u"]
+[ext_resource type="PackedScene" uid="uid://b41c5onxn7aji" path="res://Gun.tscn" id="2_e80uo"]
+[ext_resource type="Texture2D" uid="uid://crrfak2dvbmvr" path="res://sprites/Player/geasm_idle-ezgif.com-crop.png" id="3_dtqjt"]
+[ext_resource type="Texture2D" uid="uid://bvrrknimc42bx" path="res://sprites/Player/geasm_idle-ezgif.com-crop (1).png" id="4_5ncpa"]
+[ext_resource type="Texture2D" uid="uid://b0p3kirpilhhp" path="res://sprites/Player/geasm_walk-ezgif.com-crop.png" id="5_wi0c6"]
+[ext_resource type="Texture2D" uid="uid://cdu6phg4exoqc" path="res://sprites/Player/geasm_walk-ezgif.com-crop (1).png" id="6_hp6x6"]
+[ext_resource type="Texture2D" uid="uid://b3y0dd1m2g06i" path="res://sprites/Player/geasm_walk-ezgif.com-crop (2).png" id="7_3tkgg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4d7sh"]
+size = Vector2(20.4082, 27.8844)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_41y4m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_dtqjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5ncpa")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_wi0c6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hp6x6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3tkgg")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+collision_mask = 3
+script = ExtResource("1_kne1u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 14
+scale = Vector2(2.205, 2.205)
+shape = SubResource("RectangleShape2D_4d7sh")
+
+[node name="Node2D" parent="." instance=ExtResource("2_e80uo")]
+position = Vector2(0, -6)
+rotation = -0.0174533
+scale = Vector2(2.28, 2.28)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(0, -3.8147e-06)
+scale = Vector2(0.205, 0.198836)
+sprite_frames = SubResource("SpriteFrames_41y4m")
+animation = &"walk"
