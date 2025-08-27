@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://d2olvppacbh56"]
 
 [ext_resource type="Script" uid="uid://bx0a82snopv02" path="res://scripts/Player.gd" id="1_kne1u"]
-[ext_resource type="PackedScene" uid="uid://b41c5onxn7aji" path="res://Gun.tscn" id="2_e80uo"]
-[ext_resource type="Texture2D" uid="uid://crrfak2dvbmvr" path="res://sprites/Player/geasm_idle-ezgif.com-crop.png" id="3_dtqjt"]
-[ext_resource type="Texture2D" uid="uid://bvrrknimc42bx" path="res://sprites/Player/geasm_idle-ezgif.com-crop (1).png" id="4_5ncpa"]
-[ext_resource type="Texture2D" uid="uid://b0p3kirpilhhp" path="res://sprites/Player/geasm_walk-ezgif.com-crop.png" id="5_wi0c6"]
-[ext_resource type="Texture2D" uid="uid://cdu6phg4exoqc" path="res://sprites/Player/geasm_walk-ezgif.com-crop (1).png" id="6_hp6x6"]
-[ext_resource type="Texture2D" uid="uid://b3y0dd1m2g06i" path="res://sprites/Player/geasm_walk-ezgif.com-crop (2).png" id="7_3tkgg"]
+[ext_resource type="PackedScene" uid="uid://b41c5onxn7aji" path="res://Player/Gun.tscn" id="2_e80uo"]
+[ext_resource type="Texture2D" uid="uid://crrfak2dvbmvr" path="res://sprites/Player/idle_1.png" id="3_dtqjt"]
+[ext_resource type="Texture2D" uid="uid://bvrrknimc42bx" path="res://sprites/Player/idle_2.png" id="4_5ncpa"]
+[ext_resource type="Texture2D" uid="uid://b0p3kirpilhhp" path="res://sprites/Player/walk_1.png" id="5_wi0c6"]
+[ext_resource type="Texture2D" uid="uid://cdu6phg4exoqc" path="res://sprites/Player/walk_2.png" id="6_hp6x6"]
+[ext_resource type="Texture2D" uid="uid://b3y0dd1m2g06i" path="res://sprites/Player/walk_3.png" id="7_3tkgg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4d7sh"]
 size = Vector2(20.4082, 27.8844)
@@ -40,6 +40,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
+self_modulate = Color(0.682353, 0.682353, 0.682353, 1)
 collision_mask = 3
 script = ExtResource("1_kne1u")
 

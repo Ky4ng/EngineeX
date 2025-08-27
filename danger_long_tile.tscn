@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgid0yohv4rvv"]
+
+[ext_resource type="Texture2D" uid="uid://bk7xkplnb140v" path="res://sprites/Cave/long_danger_cave_tile.png" id="1_n3e54"]
+[ext_resource type="Script" uid="uid://bbscofn3gew6n" path="res://scripts/danger_floor.gd" id="1_po5e8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_po5e8"]
+size = Vector2(128, 33)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_14jxp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_n3e54")
+}],
+"loop": true,
+"name": &"cave",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_n3e54")
+}],
+"loop": true,
+"name": &"spaceship",
+"speed": 5.0
+}]
+
+[node name="danger_long_tile" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_po5e8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -0.5)
+scale = Vector2(0.965, 1.24)
+shape = SubResource("RectangleShape2D_po5e8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+sprite_frames = SubResource("SpriteFrames_14jxp")
+animation = &"cave"

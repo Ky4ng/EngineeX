@@ -5,7 +5,7 @@ extends Control
 @onready var panel_2: Panel = $Panel2
 
 
-
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 func _on_pause_pressed():
 	print("Pause pressed")
 	panel_2.visible = true

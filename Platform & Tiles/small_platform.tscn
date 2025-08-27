@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://dnkdwm0fsgamy"]
+
+[ext_resource type="Script" uid="uid://4pbrhf32pi1u" path="res://scripts/platform.gd" id="1_j2u2v"]
+[ext_resource type="Texture2D" uid="uid://cbinusmhjmyli" path="res://sprites/Moon/small_platform.png" id="1_yro85"]
+[ext_resource type="Texture2D" uid="uid://dc8ra5xu6c731" path="res://sprites/Spaceship/small_spaceship_platform.png" id="2_j2u2v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2cvm4"]
+size = Vector2(36.2812, 10.8844)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f6uvq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yro85")
+}],
+"loop": true,
+"name": &"cave",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yro85")
+}],
+"loop": true,
+"name": &"moon",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_j2u2v")
+}],
+"loop": true,
+"name": &"spaceship",
+"speed": 5.0
+}]
+
+[node name="Small_Platform" type="CharacterBody2D"]
+modulate = Color(0.545098, 0.545098, 0.545098, 1)
+self_modulate = Color(0.545098, 0.545098, 0.545098, 1)
+script = ExtResource("1_j2u2v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 2
+position = Vector2(0, -4)
+scale = Vector2(2.205, 2.205)
+shape = SubResource("RectangleShape2D_2cvm4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2.2, 2.2)
+sprite_frames = SubResource("SpriteFrames_f6uvq")
+animation = &"cave"

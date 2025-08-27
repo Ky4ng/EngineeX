@@ -11,9 +11,15 @@ config_version=5
 [application]
 
 config/name="engineeX"
-run/main_scene="uid://mx6hjhfs5j1x"
+run/main_scene="uid://8egvl15et33p"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/mode=2
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [input]
 

@@ -1,39 +1,61 @@
-[gd_scene load_steps=6 format=3 uid="uid://puunb8yf1ew7"]
+[gd_scene load_steps=9 format=3 uid="uid://byvb8bloglxbt"]
 
-[ext_resource type="Script" uid="uid://bsb0b2vfioxyw" path="res://scripts/spike.gd" id="1_7k7bx"]
-[ext_resource type="Texture2D" uid="uid://bkikj1xb2jtep" path="res://sprites/spike/geasm_spike.png" id="2_7k7bx"]
+[ext_resource type="Script" uid="uid://bsb0b2vfioxyw" path="res://scripts/spike.gd" id="1_u4bql"]
+[ext_resource type="Texture2D" uid="uid://r57uedr4h8ho" path="res://sprites/spike/moonside_spike.png" id="2_2qvxk"]
+[ext_resource type="Texture2D" uid="uid://bas3yi8kcaol8" path="res://sprites/spike/cave_spike.png" id="2_h70w3"]
+[ext_resource type="Texture2D" uid="uid://c6i2j6mlm5fh2" path="res://sprites/spike/ship_spike.png" id="3_h70w3"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7k7bx"]
-size = Vector2(76, 41)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ekdme"]
+size = Vector2(63, 27)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tggh8"]
-atlas = ExtResource("2_7k7bx")
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f4kdo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4bql"]
+atlas = SubResource("CompressedTexture2D_f4kdo")
 region = Rect2(39, 0, 39, 41)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_5sso0"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_2qvxk"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tggh8")
+"texture": ExtResource("2_h70w3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4bql")
 }],
 "loop": true,
-"name": &"default",
+"name": &"cave",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2qvxk")
+}],
+"loop": true,
+"name": &"moon",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_h70w3")
+}],
+"loop": true,
+"name": &"spaceship",
 "speed": 5.0
 }]
 
-[node name="Spike" type="Node2D"]
-position = Vector2(-1, -2)
+[node name="Node2D" type="Node2D"]
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(24, 5)
-script = ExtResource("1_7k7bx")
+script = ExtResource("1_u4bql")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-light_mask = 4
-position = Vector2(2, 33.5)
-shape = SubResource("RectangleShape2D_7k7bx")
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_ekdme")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
-position = Vector2(5.50001, 34.5)
-scale = Vector2(2.38462, 1.29268)
-sprite_frames = SubResource("SpriteFrames_5sso0")
+modulate = Color(0.662452, 0.662452, 0.662452, 1)
+position = Vector2(1, 2.98023e-08)
+scale = Vector2(1.97436, 0.902439)
+sprite_frames = SubResource("SpriteFrames_2qvxk")
+animation = &"cave"

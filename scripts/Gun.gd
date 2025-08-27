@@ -1,8 +1,9 @@
 extends Node2D
 
 var player: CharacterBody2D
+var ammo_ui
 var launch_count := 0
-const MAX_LAUNCHES := 100
+const MAX_LAUNCHES := 3  # 3 shoot per times
 var mouse_was_pressed := false
 var can_launch := true
 var is_reloading := false
@@ -12,6 +13,10 @@ func _ready():
 	for node in get_tree().get_root().get_children():
 		if node.has_node("Player"):
 			player = node.get_node("Player") as CharacterBody2D
+
+	for node in get_tree().get_root().get_children():
+		if node.has_node("Ammo"): 
+			ammo_ui = node.get_node("Ammo")
 
 	# Add a Timer node for reloadingSSS
 	var reload_timer = Timer.new()
@@ -33,9 +38,12 @@ func _process(_delta):
 			var force = -direction * 900.0
 			player.apply_launch(force)
 			launch_count += 1
-			print("Launch", launch_count,)
+			print("Fire", launch_count,)
+			
+			if ammo_ui:
+				ammo_ui.shoot()
+				
 		sprite.play("fire")
-
 
 	mouse_was_pressed = mouse_now
 
@@ -45,6 +53,8 @@ func _process(_delta):
 		can_launch = false
 		print("Reloading")
 		get_node("ReloadTimer").start()
+		if ammo_ui:
+			ammo_ui.reload()
 
 func _on_reload_timer_timeout():
 	launch_count = 0

@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=3 uid="uid://bebg0kwbh7b1q"]
+
+[ext_resource type="Script" uid="uid://cajcpia1lvka" path="res://scripts/ammo.gd" id="1_0k314"]
+[ext_resource type="FontFile" uid="uid://bvmb75d0vr7ft" path="res://grapesoda_2/GrapeSoda.ttf" id="1_twjmf"]
+
+[node name="Ammo" type="CanvasLayer"]
+script = ExtResource("1_0k314")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 19.0
+offset_top = -56.0
+offset_right = 228.0
+offset_bottom = -16.0
+grow_vertical = 0
+
+[node name="AmmoTextContainer" type="HBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/AmmoTextContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.882353, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_twjmf")
+theme_override_font_sizes/font_size = 40
+text = "Ammo : "
+
+[node name="AmmoContainer" type="HBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="CurrentAmmo" type="Label" parent="HBoxContainer/AmmoContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_twjmf")
+theme_override_font_sizes/font_size = 40
+text = "3"
+
+[node name="AmmoSeperator" type="Label" parent="HBoxContainer/AmmoContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.882353, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_twjmf")
+theme_override_font_sizes/font_size = 35
+text = " / "
+
+[node name="MaxAmmo" type="Label" parent="HBoxContainer/AmmoContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_twjmf")
+theme_override_font_sizes/font_size = 40
+text = "3"
+
+[node name="ReloadLabel" type="Label" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.0
+offset_top = -80.0
+offset_right = 138.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("1_twjmf")
+theme_override_font_sizes/font_size = 40
+text = "Need Reloaded !!!"
+horizontal_alignment = 1
+vertical_alignment = 1

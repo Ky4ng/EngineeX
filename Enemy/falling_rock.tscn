@@ -1,37 +1,81 @@
-[gd_scene load_steps=5 format=3 uid="uid://csjofk3uggncv"]
+[gd_scene load_steps=9 format=3 uid="uid://csjofk3uggncv"]
 
 [ext_resource type="Script" uid="uid://bu4586blduqkt" path="res://scripts/falling_rock.gd" id="1_v1pad"]
-[ext_resource type="Texture2D" uid="uid://cmucgtkrdpk30" path="res://sprites/Moon/falling_tile.png" id="2_3xv8a"]
+[ext_resource type="Texture2D" uid="uid://rlrmh4vp0e6o" path="res://sprites/Cave/danger_cave_tile.png" id="2_qesd0"]
+[ext_resource type="Texture2D" uid="uid://dbtftmfs2u6d8" path="res://sprites/Moon/moon_tile.png" id="3_la51q"]
+[ext_resource type="Texture2D" uid="uid://bwi54jfd27l2m" path="res://sprites/Spaceship/danger_spaceship_tile.png" id="4_la51q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0mr6n"]
-size = Vector2(265, 522)
+size = Vector2(328, 1752)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ccnl"]
+size = Vector2(55.4167, 13.4512)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qesd0"]
+size = Vector2(344, 296)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hxxxr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qesd0")
+}],
+"loop": true,
+"name": &"cave",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_la51q")
+}],
+"loop": true,
+"name": &"moon",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_la51q")
+}],
+"loop": true,
+"name": &"spaceship",
+"speed": 5.0
+}]
 
 [node name="FallingRock" type="Node2D"]
 script = ExtResource("1_v1pad")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1.04487, 1.04583)
-texture = ExtResource("2_3xv8a")
 
 [node name="TriggerArea" type="Area2D" parent="."]
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea"]
-position = Vector2(0.5, 200)
+position = Vector2(40, 840)
 shape = SubResource("RectangleShape2D_0mr6n")
 
 [node name="Killbox" type="Area2D" parent="."]
 collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killbox"]
+position = Vector2(33.75, 192.354)
 scale = Vector2(6, 6)
 shape = SubResource("RectangleShape2D_4ccnl")
 
 [node name="SelfDestructTimer" type="Timer" parent="."]
-wait_time = 5.0
-one_shot = true
+wait_time = 32.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+light_mask = 2
+position = Vector2(36, 84)
+shape = SubResource("RectangleShape2D_qesd0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+self_modulate = Color(0.791999, 0.791999, 0.791999, 1)
+light_mask = 2
+position = Vector2(38, 88)
+scale = Vector2(2.76613, 2.38727)
+sprite_frames = SubResource("SpriteFrames_hxxxr")
+animation = &"spaceship"
 
 [connection signal="body_entered" from="TriggerArea" to="." method="_on_trigger_area_body_entered"]
 [connection signal="body_entered" from="Killbox" to="." method="_on_killbox_body_entered"]

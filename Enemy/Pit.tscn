@@ -1,9 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2qn3ujgpk7ml"]
+[gd_scene load_steps=4 format=3 uid="uid://d2qn3ujgpk7ml"]
 
 [ext_resource type="Script" uid="uid://bsb0b2vfioxyw" path="res://scripts/spike.gd" id="1_x744a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q5lw7"]
 size = Vector2(732, 122.5)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bsijt"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"cave",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"moon",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"spaceship",
+"speed": 5.0
+}]
 
 [node name="Pit" type="Node2D"]
 
@@ -13,3 +31,7 @@ script = ExtResource("1_x744a")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 light_mask = 4
 shape = SubResource("RectangleShape2D_q5lw7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+sprite_frames = SubResource("SpriteFrames_bsijt")
+animation = &"spaceship"

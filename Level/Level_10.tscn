@@ -1,27 +1,347 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnnk64u3u78su"]
+[gd_scene load_steps=12 format=3 uid="uid://cnnk64u3u78su"]
 
-[ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Tiles.tscn" id="1_g3r0d"]
-[ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://level_pass.tscn" id="2_nt0ah"]
-[ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player.tscn" id="3_yqrqy"]
+[ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Platform & Tiles/Tiles.tscn" id="1_g3r0d"]
+[ext_resource type="PackedScene" uid="uid://bfewklmfo8bdb" path="res://Platform & Tiles/platform.tscn" id="2_ipx2j"]
+[ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://Level/level_pass.tscn" id="2_nt0ah"]
+[ext_resource type="Texture2D" uid="uid://0m66r2ouljv8" path="res://Background/Spaceship_Background.png" id="3_7w3cb"]
+[ext_resource type="PackedScene" uid="uid://cfoaj7moyyqvp" path="res://Platform & Tiles/Tiny_tiles.tscn" id="3_u4wev"]
+[ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player/Player.tscn" id="3_yqrqy"]
+[ext_resource type="PackedScene" uid="uid://bw1rjtct6tg3r" path="res://Enemy/danger_tile.tscn" id="6_dcn26"]
+[ext_resource type="PackedScene" uid="uid://d2qn3ujgpk7ml" path="res://Enemy/Pit.tscn" id="7_2e1wr"]
+[ext_resource type="PackedScene" uid="uid://csjofk3uggncv" path="res://Enemy/falling_rock.tscn" id="8_2e1wr"]
+[ext_resource type="PackedScene" uid="uid://8egvl15et33p" path="res://Enemy/turret.tscn" id="9_p1vo7"]
+[ext_resource type="PackedScene" uid="uid://bebg0kwbh7b1q" path="res://Player/ammo.tscn" id="11_3hy2x"]
 
-[node name="Level_10" type="Node2D"]
+[node name="Node2D" type="Node2D"]
+metadata/_edit_vertical_guides_ = [1410.0, -1120.0]
+metadata/_edit_horizontal_guides_ = [-312.0, 1854.0]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_g3r0d")]
-position = Vector2(-57, 266)
+[node name="Tiles3" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(344, 384)
 
-[node name="CharacterBody2D2" parent="." instance=ExtResource("1_g3r0d")]
-position = Vector2(73, 269)
-
-[node name="CharacterBody2D3" parent="." instance=ExtResource("1_g3r0d")]
-position = Vector2(204, 266)
-
-[node name="Area2D" parent="." instance=ExtResource("2_nt0ah")]
-position = Vector2(189, 87)
+[node name="Tiles4" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(1024, 384)
 
 [node name="Player" parent="." instance=ExtResource("3_yqrqy")]
-position = Vector2(-72, 20)
+position = Vector2(1260, 64)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(0.515, 0.515)
+limit_left = -1100
+limit_top = -312
+limit_right = 1410
+limit_bottom = 1854
 
-[node name="CharacterBody2D4" parent="." instance=ExtResource("1_g3r0d")]
-position = Vector2(-66, 136)
+[node name="Tiles6" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(1368, 384)
+
+[node name="Tiles13" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(-336, 888)
+
+[node name="Tiles14" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(-336, 1120)
+
+[node name="Tiles15" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(-336, 1384)
+
+[node name="Tiles16" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(1368, -120)
+
+[node name="Tiles17" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(-622, -120)
+
+[node name="Tiles18" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(-872, 1832)
+
+[node name="Tiles19" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(1024, -120)
+
+[node name="Tiles20" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(688, -120)
+
+[node name="Tiles21" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(352, -120)
+
+[node name="Tiles22" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(24, -120)
+
+[node name="Tiles23" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(-296, -120)
+
+[node name="Tiles24" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(-872, -112)
+
+[node name="Tiles25" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(-872, 176)
+
+[node name="Tiles26" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(-872, 464)
+
+[node name="Tiles27" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(-872, 752)
+
+[node name="Tiles28" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(-872, 1033)
+
+[node name="Tiles29" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(-872, 1297)
+
+[node name="Tiles30" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(-872, 1560)
+
+[node name="Tiles31" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(-551, 1840)
+
+[node name="Platform" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(-136, 1416)
+
+[node name="Platform2" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(132, 1416)
+
+[node name="Platform3" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(408, 1416)
+
+[node name="Platform4" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(680, 1416)
+
+[node name="Platform5" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(832, 1305.33)
+rotation = 1.5708
+
+[node name="Platform6" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(832, 1040)
+rotation = 1.5708
+
+[node name="Platform7" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(720, 664)
+
+[node name="Platform8" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(456, 664)
+
+[node name="Platform9" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(184, 664)
+
+[node name="Platform10" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(-32, 784)
+rotation = 1.5708
+
+[node name="Platform11" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(832, 800)
+rotation = 1.5708
+
+[node name="Platform12" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(95, 664)
+
+[node name="Platform13" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(-32, 1064)
+rotation = 1.5708
+
+[node name="Platform14" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(88, 1208)
+
+[node name="Platform15" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(352, 1208)
+
+[node name="Platform16" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(520, 1210)
+
+[node name="Platform17" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(636, 1096)
+rotation = 1.5708
+
+[node name="Platform18" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(640, 1000)
+rotation = 1.5708
+
+[node name="Platform19" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(528, 872)
+
+[node name="Platform20" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(384, 872)
+
+[node name="Platform21" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(272, 872)
+
+[node name="Platform22" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(144, 968)
+rotation = 1.5708
+scale = Vector2(0.815, 0.815)
+
+[node name="Area2D" parent="." instance=ExtResource("2_nt0ah")]
+position = Vector2(400, 1032)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_u4wev")]
+position = Vector2(830, 665)
+scale = Vector2(0.66, 0.66)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("3_u4wev")]
+position = Vector2(-29, 664)
+scale = Vector2(0.66, 0.66)
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("3_u4wev")]
+position = Vector2(831, 1416)
+scale = Vector2(0.66, 0.66)
+
+[node name="CharacterBody2D4" parent="." instance=ExtResource("3_u4wev")]
+position = Vector2(635, 1209)
+scale = Vector2(0.66, 0.66)
+
+[node name="CharacterBody2D5" parent="." instance=ExtResource("3_u4wev")]
+position = Vector2(-29, 1210)
+scale = Vector2(0.66, 0.66)
+
+[node name="CharacterBody2D6" parent="." instance=ExtResource("3_u4wev")]
+position = Vector2(640, 872)
+scale = Vector2(0.66, 0.66)
+
+[node name="CharacterBody2D7" parent="." instance=ExtResource("3_u4wev")]
+position = Vector2(151, 872)
+scale = Vector2(0.66, 0.66)
+
+[node name="CharacterBody2D8" parent="." instance=ExtResource("3_u4wev")]
+position = Vector2(-248, 1416)
+scale = Vector2(0.66, 0.66)
+
+[node name="Danger_Tile" parent="." instance=ExtResource("6_dcn26")]
+position = Vector2(680, 384)
+
+[node name="Danger_Tile2" parent="." instance=ExtResource("6_dcn26")]
+position = Vector2(0, 384)
+
+[node name="Danger_Tile3" parent="." instance=ExtResource("6_dcn26")]
+position = Vector2(1480, 1256)
+
+[node name="Danger_Tile4" parent="." instance=ExtResource("6_dcn26")]
+position = Vector2(1480, 1552)
+
+[node name="Danger_Tile5" parent="." instance=ExtResource("6_dcn26")]
+position = Vector2(1480, 680)
+
+[node name="Danger_Tile6" parent="." instance=ExtResource("6_dcn26")]
+position = Vector2(1480, 976)
+
+[node name="Danger_Tile7" parent="." instance=ExtResource("6_dcn26")]
+position = Vector2(1481, 1840)
+
+[node name="Pit" parent="." instance=ExtResource("7_2e1wr")]
+position = Vector2(-280, 1832)
+
+[node name="Pit2" parent="." instance=ExtResource("7_2e1wr")]
+position = Vector2(404, 1832)
+
+[node name="Platform23" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(-120, 1712)
+
+[node name="Platform24" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(480, 1720)
+
+[node name="Platform25" parent="." instance=ExtResource("2_ipx2j")]
+position = Vector2(200, 1592)
+
+[node name="Danger_Tile8" parent="." instance=ExtResource("6_dcn26")]
+position = Vector2(1320, 2000)
+
+[node name="Danger_Tile9" parent="." instance=ExtResource("6_dcn26")]
+position = Vector2(1016, 2000)
+
+[node name="Tiles2" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(-472, 1840)
+
+[node name="Turret" parent="." instance=ExtResource("9_p1vo7")]
+position = Vector2(829, 665)
+scale = Vector2(0.635, 0.635)
+
+[node name="Turret2" parent="." instance=ExtResource("9_p1vo7")]
+position = Vector2(830, 1417)
+scale = Vector2(0.635, 0.635)
+
+[node name="Turret3" parent="." instance=ExtResource("9_p1vo7")]
+position = Vector2(-29, 1210)
+scale = Vector2(0.635, 0.635)
+
+[node name="Turret4" parent="." instance=ExtResource("9_p1vo7")]
+position = Vector2(635, 1210)
+scale = Vector2(0.635, 0.635)
+
+[node name="Turret5" parent="." instance=ExtResource("9_p1vo7")]
+position = Vector2(150, 872)
+scale = Vector2(0.635, 0.635)
+
+[node name="Turret6" parent="." instance=ExtResource("9_p1vo7")]
+position = Vector2(-32, 665)
+scale = Vector2(0.95, 0.95)
+
+[node name="Turret7" parent="." instance=ExtResource("9_p1vo7")]
+position = Vector2(639, 872)
+scale = Vector2(0.635, 0.635)
+
+[node name="Turret8" parent="." instance=ExtResource("9_p1vo7")]
+position = Vector2(-248, 1416)
+scale = Vector2(0.635, 0.635)
+
+[node name="FallingRock2" parent="." instance=ExtResource("8_2e1wr")]
+position = Vector2(-600, 72)
+rotation = 4.71239
+scale = Vector2(0.635, 0.19)
+fall_speed = 10.0
+
+[node name="Tiles" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(-336, 384)
+
+[node name="Tiles5" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(-336, 632)
+
+[node name="Turret9" parent="." instance=ExtResource("9_p1vo7")]
+position = Vector2(-120, -568)
+scale = Vector2(2, 2)
+
+[node name="Turret10" parent="." instance=ExtResource("9_p1vo7")]
+position = Vector2(423, -568)
+scale = Vector2(2, 2)
+
+[node name="Turret11" parent="." instance=ExtResource("9_p1vo7")]
+position = Vector2(960, -568)
+scale = Vector2(2, 2)
+
+[node name="Turret12" parent="." instance=ExtResource("9_p1vo7")]
+position = Vector2(-1688, 1363)
+scale = Vector2(2, 2)
+
+[node name="Turret13" parent="." instance=ExtResource("9_p1vo7")]
+position = Vector2(-1688, 1592)
+scale = Vector2(2, 2)
+
+[node name="Turret14" parent="." instance=ExtResource("9_p1vo7")]
+position = Vector2(-1672, 1136)
+scale = Vector2(2, 2)
+
+[node name="Turret15" parent="." instance=ExtResource("9_p1vo7")]
+position = Vector2(-1664, 544)
+scale = Vector2(2, 2)
+
+[node name="Turret16" parent="." instance=ExtResource("9_p1vo7")]
+position = Vector2(-1672, 760)
+scale = Vector2(2, 2)
+
+[node name="Turret17" parent="." instance=ExtResource("9_p1vo7")]
+position = Vector2(-1672, 964)
+scale = Vector2(2, 2)
+
+[node name="Turret18" parent="." instance=ExtResource("9_p1vo7")]
+position = Vector2(-1664, 64)
+scale = Vector2(2, 2)
+
+[node name="Turret19" parent="." instance=ExtResource("9_p1vo7")]
+position = Vector2(-1664, 296)
+scale = Vector2(2, 2)
+
+[node name="Tiles7" parent="." instance=ExtResource("1_g3r0d")]
+position = Vector2(1696, 128)
+
+[node name="SpaceshipBackground" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(-152, 4456)
+scale = Vector2(3.79688, 3.82031)
+texture = ExtResource("3_7w3cb")
+
+[node name="Ammo" parent="." instance=ExtResource("11_3hy2x")]

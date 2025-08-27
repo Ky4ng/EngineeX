@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://cfoaj7moyyqvp"]
 
-[ext_resource type="Texture2D" uid="uid://onuaxwd0gsfh" path="res://sprites/Moon/geasm_moon_tiles-ezgif.com-crop (7).png" id="1_6qnsc"]
-[ext_resource type="Script" uid="uid://4pbrhf32pi1u" path="res://platform.gd" id="1_g7884"]
-[ext_resource type="Texture2D" uid="uid://c7ol4w8fwflee" path="res://sprites/Moon/geasm_moon_tiles-ezgif.com-crop (10).png" id="2_g7884"]
-[ext_resource type="Texture2D" uid="uid://dvi2dpwdowa8j" path="res://sprites/geasm_shiptile-ezgif.com-crop (3).png" id="3_s3r6w"]
+[ext_resource type="Texture2D" uid="uid://onuaxwd0gsfh" path="res://sprites/Cave/tiny_cave_tile.png" id="1_6qnsc"]
+[ext_resource type="Script" uid="uid://4pbrhf32pi1u" path="res://scripts/platform.gd" id="1_g7884"]
+[ext_resource type="Texture2D" uid="uid://c7ol4w8fwflee" path="res://sprites/Moon/tiny_moon_tile.png" id="2_g7884"]
+[ext_resource type="Texture2D" uid="uid://dvi2dpwdowa8j" path="res://sprites/Spaceship/tiny_spaceship_tile.png" id="3_s3r6w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xxn4c"]
 size = Vector2(39, 36)
@@ -36,12 +36,17 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+modulate = Color(0.545098, 0.545098, 0.545098, 1)
+self_modulate = Color(0.545098, 0.545098, 0.545098, 1)
 script = ExtResource("1_g7884")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.5, -1)
+scale = Vector2(2.2, 2.2)
 shape = SubResource("RectangleShape2D_xxn4c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2.60125, -2.38419e-07)
+scale = Vector2(2.07811, 2)
 sprite_frames = SubResource("SpriteFrames_awcd0")
 animation = &"cave"

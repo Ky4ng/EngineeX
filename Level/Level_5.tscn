@@ -1,30 +1,435 @@
-[gd_scene load_steps=4 format=3 uid="uid://cyefihto015ce"]
+[gd_scene load_steps=15 format=3 uid="uid://cyefihto015ce"]
 
-[ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Tiles.tscn" id="1_qfoqn"]
-[ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://level_pass.tscn" id="2_f7hy0"]
-[ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player.tscn" id="3_kfybv"]
+[ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Platform & Tiles/Tiles.tscn" id="1_qfoqn"]
+[ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://Level/level_pass.tscn" id="2_f7hy0"]
+[ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player/Player.tscn" id="3_kfybv"]
+[ext_resource type="PackedScene" uid="uid://bw1rjtct6tg3r" path="res://Enemy/danger_tile.tscn" id="4_wvdpd"]
+[ext_resource type="PackedScene" uid="uid://cfoaj7moyyqvp" path="res://Platform & Tiles/Tiny_tiles.tscn" id="5_iufrt"]
+[ext_resource type="PackedScene" uid="uid://d2qn3ujgpk7ml" path="res://Enemy/Pit.tscn" id="6_4narv"]
+[ext_resource type="PackedScene" uid="uid://dgid0yohv4rvv" path="res://danger_long_tile.tscn" id="7_1tqyn"]
+[ext_resource type="PackedScene" uid="uid://c1xjsxg06jpus" path="res://danger_tiny_tile.tscn" id="8_ob5uj"]
+[ext_resource type="PackedScene" uid="uid://bepg3b4gbwv3l" path="res://Platform & Tiles/Long_Tile.tscn" id="9_1tqyn"]
+[ext_resource type="PackedScene" uid="uid://h5vyw1skbksk" path="res://Enemy/air_spike.tscn" id="10_0uka0"]
+[ext_resource type="PackedScene" uid="uid://drhe25uvs3fd2" path="res://Enemy/falling_spikes.tscn" id="11_o3nov"]
+[ext_resource type="PackedScene" uid="uid://csjofk3uggncv" path="res://Enemy/falling_rock.tscn" id="12_o3nov"]
+[ext_resource type="Texture2D" uid="uid://d17i8l3kngcnw" path="res://Background/Cave_Background.png" id="13_2fq8m"]
+[ext_resource type="PackedScene" uid="uid://bebg0kwbh7b1q" path="res://Player/ammo.tscn" id="14_5xwo5"]
 
 [node name="Level_5" type="Node2D"]
+metadata/_edit_vertical_guides_ = [-535.0, 2449.0, -1808.0]
+metadata/_edit_horizontal_guides_ = [-864.0, -536.0, 3784.0]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_qfoqn")]
-position = Vector2(-57, 266)
+position = Vector2(-256, 280)
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("1_qfoqn")]
-position = Vector2(73, 269)
+position = Vector2(40, 280)
 
 [node name="CharacterBody2D3" parent="." instance=ExtResource("1_qfoqn")]
-position = Vector2(204, 266)
+position = Vector2(272, 280)
 
 [node name="Area2D" parent="." instance=ExtResource("2_f7hy0")]
-position = Vector2(189, 87)
+position = Vector2(-104, 3480)
 
 [node name="Player" parent="." instance=ExtResource("3_kfybv")]
 position = Vector2(-72, 20)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-
-[node name="CharacterBody2D4" parent="." instance=ExtResource("1_qfoqn")]
-position = Vector2(329, 158)
+zoom = Vector2(0.64, 0.64)
+limit_left = -535
+limit_top = -492
+limit_right = 2448
+limit_bottom = 3784
 
 [node name="CharacterBody2D5" parent="." instance=ExtResource("1_qfoqn")]
-position = Vector2(448, 67)
+self_modulate = Color(0.0885599, 0.0885599, 0.0885599, 1)
+position = Vector2(272, 568)
+
+[node name="Tiles" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(272, 848)
+
+[node name="Tiles2" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(272, 1096)
+
+[node name="Tiles3" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(272, 1328)
+
+[node name="Tiles4" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(-48, 3864)
+
+[node name="Tiles5" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(272, 1584)
+
+[node name="Tiles7" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(272, 2096)
+
+[node name="Tiles8" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(272, 2632)
+
+[node name="Tiles9" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(272, 2352)
+
+[node name="Tiles10" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(272, 2924)
+
+[node name="Tiles11" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(272, 3184)
+
+[node name="Tiles12" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(-48, 3272)
+
+[node name="Tiles13" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(272, 3272)
+
+[node name="Tiles14" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(272, 3864)
+
+[node name="Tiles15" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(608, 832)
+
+[node name="Tiles17" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(584, 2784)
+
+[node name="Tiles18" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(-320, -256)
+
+[node name="Tiles19" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(-24, -256)
+
+[node name="Tiles20" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(256, -256)
+
+[node name="Danger_Tile" parent="." instance=ExtResource("4_wvdpd")]
+position = Vector2(592, -256)
+
+[node name="Danger_Tile2" parent="." instance=ExtResource("4_wvdpd")]
+position = Vector2(904, -256)
+
+[node name="Danger_Tile3" parent="." instance=ExtResource("4_wvdpd")]
+position = Vector2(1216, -256)
+
+[node name="Danger_Tile4" parent="." instance=ExtResource("4_wvdpd")]
+position = Vector2(1504, -256)
+
+[node name="Danger_Tile5" parent="." instance=ExtResource("4_wvdpd")]
+position = Vector2(1784, -256)
+
+[node name="Danger_Tile6" parent="." instance=ExtResource("4_wvdpd")]
+position = Vector2(2088, -256)
+
+[node name="Danger_Tile7" parent="." instance=ExtResource("4_wvdpd")]
+position = Vector2(2384, -264)
+
+[node name="Tiles21" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(-600, 32)
+
+[node name="Tiles22" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(2384, 20)
+
+[node name="Tiles23" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(2384, 288)
+
+[node name="Tiles24" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(2384, 545)
+
+[node name="Tiles26" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(2384, 1080)
+
+[node name="Tiles27" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(2384, 1344)
+
+[node name="Tiles28" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(2384, 1608)
+
+[node name="Tiles29" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(2384, 1864)
+
+[node name="Tiles30" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(2384, 2118)
+
+[node name="Tiles31" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(2384, 2384)
+
+[node name="Tiles32" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(2384, 2632)
+
+[node name="Tiles33" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(2384, 2904)
+
+[node name="Tiles34" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(2384, 3176)
+
+[node name="Tiles35" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(2384, 3432)
+
+[node name="Tiles36" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(2384, 3696)
+
+[node name="Tiles38" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(1131, 3864)
+
+[node name="Tiles42" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(1968, 3864)
+
+[node name="Tiles43" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(2240, 3864)
+
+[node name="Tiles44" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(2384, 3864)
+
+[node name="Danger_Tile8" parent="." instance=ExtResource("4_wvdpd")]
+position = Vector2(1232, 824)
+
+[node name="Danger_Tile9" parent="." instance=ExtResource("4_wvdpd")]
+position = Vector2(1552, 824)
+
+[node name="CharacterBody2D6" parent="." instance=ExtResource("5_iufrt")]
+position = Vector2(632, 295)
+
+[node name="CharacterBody2D7" parent="." instance=ExtResource("5_iufrt")]
+position = Vector2(632, 360)
+
+[node name="CharacterBody2D8" parent="." instance=ExtResource("5_iufrt")]
+position = Vector2(960, 168)
+
+[node name="CharacterBody2D9" parent="." instance=ExtResource("5_iufrt")]
+position = Vector2(954, 480)
+
+[node name="CharacterBody2D10" parent="." instance=ExtResource("5_iufrt")]
+position = Vector2(1304, 296)
+
+[node name="CharacterBody2D11" parent="." instance=ExtResource("5_iufrt")]
+position = Vector2(1304, 368)
+
+[node name="CharacterBody2D12" parent="." instance=ExtResource("5_iufrt")]
+position = Vector2(1632, 175)
+
+[node name="CharacterBody2D13" parent="." instance=ExtResource("5_iufrt")]
+position = Vector2(1632, 481)
+
+[node name="Danger_Tile10" parent="." instance=ExtResource("4_wvdpd")]
+position = Vector2(1784, 824)
+
+[node name="Danger_Tile11" parent="." instance=ExtResource("4_wvdpd")]
+position = Vector2(2384, 816)
+
+[node name="Tiles25" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(2072, 1832)
+
+[node name="Tiles46" parent="." instance=ExtResource("1_qfoqn")]
+visible = false
+position = Vector2(1240, 1832)
+
+[node name="Danger_Tile13" parent="." instance=ExtResource("4_wvdpd")]
+position = Vector2(264, 1848)
+
+[node name="Danger_Tile14" parent="." instance=ExtResource("4_wvdpd")]
+position = Vector2(2384, 2776)
+
+[node name="Danger_Tile15" parent="." instance=ExtResource("4_wvdpd")]
+position = Vector2(896, 2784)
+
+[node name="Danger_Tile16" parent="." instance=ExtResource("4_wvdpd")]
+position = Vector2(1904, 2784)
+
+[node name="Pit" parent="." instance=ExtResource("6_4narv")]
+position = Vector2(1448, 3856)
+
+[node name="Pit2" parent="." instance=ExtResource("6_4narv")]
+position = Vector2(496, 3856)
+
+[node name="danger_long_tile" parent="." instance=ExtResource("7_1tqyn")]
+position = Vector2(968, 1096)
+
+[node name="danger_tiny_tile" parent="." instance=ExtResource("8_ob5uj")]
+position = Vector2(1176, 1152)
+scale = Vector2(2.245, 2.245)
+
+[node name="danger_long_tile4" parent="." instance=ExtResource("7_1tqyn")]
+position = Vector2(1404, 1488)
+
+[node name="danger_long_tile5" parent="." instance=ExtResource("7_1tqyn")]
+position = Vector2(1752, 1088)
+
+[node name="Long_Tile" parent="." instance=ExtResource("9_1tqyn")]
+modulate = Color(0.545098, 0.545098, 0.545098, 1)
+position = Vector2(1397, 1096)
+
+[node name="Long_Tile2" parent="." instance=ExtResource("9_1tqyn")]
+modulate = Color(0.545098, 0.545098, 0.545098, 1)
+position = Vector2(969, 1489)
+
+[node name="Long_Tile3" parent="." instance=ExtResource("9_1tqyn")]
+modulate = Color(0.545098, 0.545098, 0.545098, 1)
+self_modulate = Color(0.545098, 0.545098, 0.545098, 1)
+position = Vector2(1752, 1488)
+
+[node name="danger_tiny_tile3" parent="." instance=ExtResource("8_ob5uj")]
+position = Vector2(1607, 1380)
+scale = Vector2(2.19, 2.19)
+
+[node name="CharacterBody2D14" parent="." instance=ExtResource("5_iufrt")]
+position = Vector2(1608, 1144)
+
+[node name="CharacterBody2D15" parent="." instance=ExtResource("5_iufrt")]
+position = Vector2(1176, 1360)
+
+[node name="Danger_Tile21" parent="." instance=ExtResource("4_wvdpd")]
+position = Vector2(920, 824)
+
+[node name="Danger_Tile22" parent="." instance=ExtResource("4_wvdpd")]
+position = Vector2(1563, 2784)
+
+[node name="Danger_Tile23" parent="." instance=ExtResource("4_wvdpd")]
+position = Vector2(1221, 2784)
+
+[node name="Air Spike" parent="." instance=ExtResource("10_0uka0")]
+position = Vector2(725, 2040)
+
+[node name="Air Spike2" parent="." instance=ExtResource("10_0uka0")]
+position = Vector2(736, 2400)
+
+[node name="Air Spike3" parent="." instance=ExtResource("10_0uka0")]
+position = Vector2(976, 2042)
+
+[node name="Air Spike4" parent="." instance=ExtResource("10_0uka0")]
+position = Vector2(976, 2400)
+
+[node name="Air Spike5" parent="." instance=ExtResource("10_0uka0")]
+position = Vector2(1480, 2032)
+
+[node name="Air Spike6" parent="." instance=ExtResource("10_0uka0")]
+position = Vector2(1472, 2400)
+
+[node name="Air Spike7" parent="." instance=ExtResource("10_0uka0")]
+position = Vector2(1717, 2400)
+
+[node name="Air Spike8" parent="." instance=ExtResource("10_0uka0")]
+position = Vector2(1728, 2032)
+
+[node name="Long_Tile4" parent="." instance=ExtResource("9_1tqyn")]
+position = Vector2(1248, 2440)
+
+[node name="Long_Tile5" parent="." instance=ExtResource("9_1tqyn")]
+position = Vector2(872, 2440)
+
+[node name="Long_Tile6" parent="." instance=ExtResource("9_1tqyn")]
+position = Vector2(1632, 2450)
+
+[node name="FallingSpikes" parent="." instance=ExtResource("11_o3nov")]
+position = Vector2(1096, 1913)
+scale = Vector2(2.04, 2.04)
+
+[node name="FallingSpikes2" parent="." instance=ExtResource("11_o3nov")]
+position = Vector2(1384, 1920)
+scale = Vector2(2, 2)
+
+[node name="FallingSpikes3" parent="." instance=ExtResource("11_o3nov")]
+position = Vector2(849, 1913)
+scale = Vector2(2.065, 2.065)
+
+[node name="FallingSpikes4" parent="." instance=ExtResource("11_o3nov")]
+position = Vector2(1608, 1913)
+scale = Vector2(2.085, 2.085)
+
+[node name="Danger_Tile24" parent="." instance=ExtResource("4_wvdpd")]
+position = Vector2(1480, 3312)
+
+[node name="Danger_Tile25" parent="." instance=ExtResource("4_wvdpd")]
+position = Vector2(1152, 3312)
+
+[node name="FallingSpikes5" parent="." instance=ExtResource("11_o3nov")]
+position = Vector2(616, 1920)
+scale = Vector2(2.065, 2.065)
+
+[node name="Danger_Tile20" parent="." instance=ExtResource("4_wvdpd")]
+position = Vector2(1787, 3312)
+
+[node name="Danger_Tile26" parent="." instance=ExtResource("4_wvdpd")]
+position = Vector2(808, 3312)
+
+[node name="FallingRock" parent="." instance=ExtResource("12_o3nov")]
+position = Vector2(976, -1856)
+scale = Vector2(5.445, 2.505)
+
+[node name="Tiles6" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(-384, 3272)
+
+[node name="Tiles16" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(-376, 3864)
+
+[node name="CaveBackground" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(232, 1464)
+scale = Vector2(5.79688, 5.39062)
+texture = ExtResource("13_2fq8m")
+
+[node name="Air Spike9" parent="." instance=ExtResource("10_0uka0")]
+position = Vector2(1627, 1536)
+scale = Vector2(2.985, 2.985)
+
+[node name="Air Spike10" parent="." instance=ExtResource("10_0uka0")]
+position = Vector2(1432, 1536)
+scale = Vector2(2.985, 2.985)
+
+[node name="Air Spike11" parent="." instance=ExtResource("10_0uka0")]
+position = Vector2(464, 1535)
+scale = Vector2(2.985, 2.985)
+
+[node name="Air Spike12" parent="." instance=ExtResource("10_0uka0")]
+position = Vector2(849, 1535)
+scale = Vector2(2.985, 2.985)
+
+[node name="Air Spike13" parent="." instance=ExtResource("10_0uka0")]
+position = Vector2(656, 1535)
+scale = Vector2(2.985, 2.985)
+
+[node name="Air Spike14" parent="." instance=ExtResource("10_0uka0")]
+position = Vector2(1045, 1535)
+scale = Vector2(2.985, 2.985)
+
+[node name="Air Spike15" parent="." instance=ExtResource("10_0uka0")]
+position = Vector2(1240, 1536)
+scale = Vector2(2.985, 2.985)
+
+[node name="Tiles37" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(1768, 1864)
+scale = Vector2(0.42, 0.42)
+
+[node name="Tiles39" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(1368, 1864)
+scale = Vector2(0.42, 0.42)
+
+[node name="Tiles40" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(1498, 1864)
+scale = Vector2(0.42, 0.42)
+
+[node name="Tiles41" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(1232, 1864)
+scale = Vector2(0.42, 0.42)
+
+[node name="Tiles45" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(1631, 1864)
+scale = Vector2(0.42, 0.42)
+
+[node name="Tiles47" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(959, 1864)
+scale = Vector2(0.42, 0.42)
+
+[node name="Tiles48" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(1096, 1864)
+scale = Vector2(0.42, 0.42)
+
+[node name="Tiles49" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(824, 1864)
+scale = Vector2(0.42, 0.42)
+
+[node name="Tiles50" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(688, 1864)
+scale = Vector2(0.42, 0.42)
+
+[node name="Tiles51" parent="." instance=ExtResource("1_qfoqn")]
+position = Vector2(552, 1864)
+scale = Vector2(0.42, 0.42)
+
+[node name="Ammo" parent="." instance=ExtResource("14_5xwo5")]

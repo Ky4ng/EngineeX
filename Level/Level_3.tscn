@@ -1,25 +1,397 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfvxwiwl2np0d"]
+[gd_scene load_steps=14 format=3 uid="uid://cfvxwiwl2np0d"]
 
-[ext_resource type="PackedScene" uid="uid://bfewklmfo8bdb" path="res://platform.tscn" id="3_qulvd"]
-[ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player.tscn" id="4_qj7nf"]
-[ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://level_pass.tscn" id="7_1mclj"]
+[ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Platform & Tiles/Tiles.tscn" id="3_bkaik"]
+[ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player/Player.tscn" id="4_qj7nf"]
+[ext_resource type="PackedScene" uid="uid://dnkdwm0fsgamy" path="res://Platform & Tiles/small_platform.tscn" id="4_uhnmm"]
+[ext_resource type="PackedScene" uid="uid://d2qn3ujgpk7ml" path="res://Enemy/Pit.tscn" id="5_qgjqt"]
+[ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://Level/level_pass.tscn" id="7_1mclj"]
+[ext_resource type="PackedScene" uid="uid://cfoaj7moyyqvp" path="res://Platform & Tiles/Tiny_tiles.tscn" id="7_52bbu"]
+[ext_resource type="Texture2D" uid="uid://cplqgy16vi1y5" path="res://sprites/Moon/mooncave_column.png" id="7_o5v8y"]
+[ext_resource type="PackedScene" uid="uid://csjofk3uggncv" path="res://Enemy/falling_rock.tscn" id="8_q1vk6"]
+[ext_resource type="PackedScene" uid="uid://byvb8bloglxbt" path="res://Enemy/spike.tscn" id="9_o5v8y"]
+[ext_resource type="PackedScene" uid="uid://h5vyw1skbksk" path="res://Enemy/air_spike.tscn" id="10_bfslr"]
+[ext_resource type="Texture2D" uid="uid://c6r3hc0vogs4m" path="res://Background/Moon_Background.png" id="11_kgp7g"]
+[ext_resource type="PackedScene" uid="uid://bepg3b4gbwv3l" path="res://Platform & Tiles/Long_Tile.tscn" id="12_r0yry"]
+[ext_resource type="PackedScene" uid="uid://bebg0kwbh7b1q" path="res://Player/ammo.tscn" id="13_s4bsi"]
 
 [node name="Level_3" type="Node2D"]
+z_as_relative = false
 
 [node name="Player" parent="." instance=ExtResource("4_qj7nf")]
-position = Vector2(80, 68)
+position = Vector2(-584, -472)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(60, 266)
-zoom = Vector2(0.5, 0.5)
-process_callback = 0
-limit_smoothed = true
+zoom = Vector2(0.445, 0.445)
+limit_left = -1047
+limit_top = -922
+limit_right = 1688
+limit_bottom = 1076
 
 [node name="Area2D" parent="." instance=ExtResource("7_1mclj")]
-position = Vector2(1060, -283)
+position = Vector2(888, 792)
 
-[node name="Platform" parent="." instance=ExtResource("3_qulvd")]
-position = Vector2(67, 365)
+[node name="Tiles" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(-768, -528)
 
-[node name="Platform2" parent="." instance=ExtResource("3_qulvd")]
-position = Vector2(601, 70)
+[node name="Tiles2" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(-768, -296)
+
+[node name="Tiles3" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(-768, -96)
+
+[node name="Tiles4" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(-768, 120)
+
+[node name="Tiles5" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(-768, 320)
+
+[node name="Tiles6" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(-768, 560)
+
+[node name="Tiles7" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(-768, 768)
+
+[node name="Small_Platform" parent="." instance=ExtResource("4_uhnmm")]
+position = Vector2(-664, -416)
+
+[node name="Small_Platform2" parent="." instance=ExtResource("4_uhnmm")]
+position = Vector2(-608, -416)
+
+[node name="Small_Platform3" parent="." instance=ExtResource("4_uhnmm")]
+position = Vector2(-552, -416)
+
+[node name="Small_Platform4" parent="." instance=ExtResource("4_uhnmm")]
+position = Vector2(-496, -416)
+
+[node name="Tiles8" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(-8, -544)
+
+[node name="Tiles9" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(-8, -272)
+
+[node name="Tiles10" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(-8, -32)
+
+[node name="Tiles11" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(-8, 216)
+
+[node name="Tiles12" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(-8, 448)
+
+[node name="Tiles13" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(-768, 1016)
+
+[node name="Tiles15" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(712, 1016)
+
+[node name="Tiles16" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(712, 728)
+
+[node name="Tiles17" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(712, 440)
+
+[node name="Tiles18" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(706, 168)
+
+[node name="Tiles20" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(712, 1312)
+
+[node name="Tiles21" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(1296, 1024)
+
+[node name="Tiles22" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(1296, 1312)
+
+[node name="Tiles23" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(1296, 736)
+
+[node name="Tiles24" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(1296, 440)
+
+[node name="Tiles25" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(1296, 160)
+
+[node name="Tiles26" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(1296, -128)
+
+[node name="Tiles27" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(1296, -420)
+
+[node name="Tiles28" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(1296, -688)
+
+[node name="MooncaveColumn3" type="Sprite2D" parent="."]
+position = Vector2(-96, 688)
+scale = Vector2(1, 2.795)
+texture = ExtResource("7_o5v8y")
+
+[node name="MooncaveColumn5" type="Sprite2D" parent="."]
+position = Vector2(37, 688)
+scale = Vector2(1, 2.8)
+texture = ExtResource("7_o5v8y")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("7_52bbu")]
+position = Vector2(-248, 904)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("7_52bbu")]
+position = Vector2(-121, 904)
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("7_52bbu")]
+position = Vector2(-8, 904)
+
+[node name="CharacterBody2D4" parent="." instance=ExtResource("7_52bbu")]
+position = Vector2(-72, 904)
+
+[node name="CharacterBody2D5" parent="." instance=ExtResource("7_52bbu")]
+position = Vector2(-184, 904)
+
+[node name="CharacterBody2D6" parent="." instance=ExtResource("7_52bbu")]
+position = Vector2(47, 904)
+
+[node name="Pit" parent="." instance=ExtResource("5_qgjqt")]
+position = Vector2(-144, 1136)
+scale = Vector2(1.63, 1)
+
+[node name="MooncaveColumn8" type="Sprite2D" parent="."]
+position = Vector2(-249, 688)
+scale = Vector2(1, 2.8)
+texture = ExtResource("7_o5v8y")
+
+[node name="Tiles14" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(-768, -808)
+
+[node name="Tiles29" parent="." instance=ExtResource("3_bkaik")]
+position = Vector2(-8, -832)
+
+[node name="FallingRock3" parent="." instance=ExtResource("8_q1vk6")]
+position = Vector2(-552, -1328)
+fall_speed = 500.0
+
+[node name="Node2D" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(-312, -378)
+rotation = 4.71239
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D2" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(-312, -248)
+rotation = 4.71239
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D3" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(-312, 280)
+rotation = 4.71239
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D4" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(-312, 176)
+rotation = 4.71239
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D5" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(-312, 40)
+rotation = 4.71239
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D6" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(-312, -104)
+rotation = 4.71239
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D7" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(-312, 416)
+rotation = 4.71239
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D8" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(-680, -336)
+rotation = 1.5708
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D9" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(-680, -206)
+rotation = 1.5708
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D10" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(-680, 322)
+rotation = 1.5708
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D11" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(-680, 218)
+rotation = 1.5708
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D12" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(-680, 82)
+rotation = 1.5708
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D13" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(-680, -62)
+rotation = 1.5708
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D14" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(-680, 458)
+rotation = 1.5708
+scale = Vector2(2.325, 2.015)
+
+[node name="Air Spike9" parent="." instance=ExtResource("10_bfslr")]
+position = Vector2(358, 608)
+
+[node name="Small_Platform7" parent="." instance=ExtResource("4_uhnmm")]
+position = Vector2(392, 464)
+
+[node name="Small_Platform8" parent="." instance=ExtResource("4_uhnmm")]
+position = Vector2(336, 462)
+
+[node name="Small_Platform9" parent="." instance=ExtResource("4_uhnmm")]
+position = Vector2(336, 788)
+
+[node name="Small_Platform10" parent="." instance=ExtResource("4_uhnmm")]
+position = Vector2(274, 788)
+
+[node name="Small_Platform11" parent="." instance=ExtResource("4_uhnmm")]
+position = Vector2(392, 788)
+
+[node name="Small_Platform15" parent="." instance=ExtResource("4_uhnmm")]
+position = Vector2(392, 140)
+
+[node name="Small_Platform16" parent="." instance=ExtResource("4_uhnmm")]
+position = Vector2(312, 140)
+
+[node name="Node2D15" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(81.9999, -392)
+rotation = 1.5708
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D16" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(82, -262)
+rotation = 1.5708
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D17" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(82, 266)
+rotation = 1.5708
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D18" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(82, 162)
+rotation = 1.5708
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D19" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(82, 26)
+rotation = 1.5708
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D20" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(82, -118)
+rotation = 1.5708
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D21" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(81.9999, 402)
+rotation = 1.5708
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D22" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(992, -376)
+rotation = 4.71239
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D23" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(992, -248)
+rotation = 4.71239
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D24" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(992, 280)
+rotation = 4.71239
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D25" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(992, 168)
+rotation = 4.71239
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D26" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(992, 33)
+rotation = 4.71239
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D27" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(992, -104)
+rotation = 4.71239
+scale = Vector2(2.325, 2.015)
+
+[node name="Node2D28" parent="." instance=ExtResource("9_o5v8y")]
+position = Vector2(992, 416)
+rotation = 4.71239
+scale = Vector2(2.325, 2.015)
+
+[node name="MoonBackground" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(96, 256)
+scale = Vector2(2.57292, 2.39844)
+texture = ExtResource("11_kgp7g")
+
+[node name="Air Spike" parent="." instance=ExtResource("10_bfslr")]
+position = Vector2(360, 192)
+
+[node name="Air Spike2" parent="." instance=ExtResource("10_bfslr")]
+position = Vector2(648, -283)
+
+[node name="Air Spike3" parent="." instance=ExtResource("10_bfslr")]
+position = Vector2(520, -392)
+
+[node name="Air Spike4" parent="." instance=ExtResource("10_bfslr")]
+position = Vector2(640, -488)
+
+[node name="Air Spike5" parent="." instance=ExtResource("10_bfslr")]
+position = Vector2(528, -171)
+
+[node name="Long_Tile" parent="." instance=ExtResource("12_r0yry")]
+modulate = Color(0.470076, 0.470076, 0.470076, 1)
+self_modulate = Color(0.721569, 0.721569, 0.721569, 0.721569)
+position = Vector2(604, -736)
+scale = Vector2(2.865, 1)
+
+[node name="MooncaveColumn" type="Sprite2D" parent="."]
+position = Vector2(480, -392)
+scale = Vector2(1, 5.15)
+texture = ExtResource("7_o5v8y")
+
+[node name="MooncaveColumn2" type="Sprite2D" parent="."]
+position = Vector2(608, -392)
+scale = Vector2(1, 5.15)
+texture = ExtResource("7_o5v8y")
+
+[node name="MooncaveColumn4" type="Sprite2D" parent="."]
+position = Vector2(736, -392)
+scale = Vector2(1, 5.1)
+texture = ExtResource("7_o5v8y")
+
+[node name="Air Spike6" parent="." instance=ExtResource("10_bfslr")]
+position = Vector2(520, -568)
+
+[node name="Air Spike7" parent="." instance=ExtResource("10_bfslr")]
+position = Vector2(112, -856)
+
+[node name="Air Spike8" parent="." instance=ExtResource("10_bfslr")]
+position = Vector2(232, -856)
+
+[node name="Air Spike10" parent="." instance=ExtResource("10_bfslr")]
+position = Vector2(352, -856)
+
+[node name="Air Spike11" parent="." instance=ExtResource("10_bfslr")]
+position = Vector2(768, -856)
+
+[node name="Air Spike12" parent="." instance=ExtResource("10_bfslr")]
+position = Vector2(864, -856)
+
+[node name="Air Spike13" parent="." instance=ExtResource("10_bfslr")]
+position = Vector2(952, -856)
+
+[node name="Ammo" parent="." instance=ExtResource("13_s4bsi")]

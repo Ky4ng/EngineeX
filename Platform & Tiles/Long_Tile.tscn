@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://bepg3b4gbwv3l"]
+
+[ext_resource type="Texture2D" uid="uid://d02jnls7au0c7" path="res://sprites/Cave/long_cave_tile.png" id="1_i63kv"]
+[ext_resource type="Script" uid="uid://b1i6drqen03e7" path="res://scripts/Tiles.gd" id="1_x0l8k"]
+[ext_resource type="Texture2D" uid="uid://djpilrfwpq476" path="res://sprites/Moon/long_moon_tile.png" id="2_mon8c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_foljw"]
+size = Vector2(120, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0iire"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_i63kv")
+}],
+"loop": true,
+"name": &"cave",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mon8c")
+}],
+"loop": true,
+"name": &"moon",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"spaceship",
+"speed": 5.0
+}]
+
+[node name="Long_Tile" type="CharacterBody2D"]
+script = ExtResource("1_x0l8k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_foljw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.97561, 0.881579)
+sprite_frames = SubResource("SpriteFrames_0iire")
+animation = &"moon"

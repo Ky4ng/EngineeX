@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://8egvl15et33p"]
 
-[ext_resource type="Script" uid="uid://bk8i0djv8bbng" path="res://turret.gd" id="1_c5apd"]
+[ext_resource type="Script" uid="uid://bk8i0djv8bbng" path="res://scripts/turret.gd" id="1_c5apd"]
 [ext_resource type="Texture2D" uid="uid://ury3npo6t7n5" path="res://sprites/Turret/turret_BASE.png" id="1_tjdg3"]
 [ext_resource type="Texture2D" uid="uid://dohorpg1l0drq" path="res://sprites/Turret/turret_FACE.png" id="2_c5apd"]
-[ext_resource type="PackedScene" uid="uid://c85647en5c284" path="res://Bullet.tscn" id="4_coqkk"]
+[ext_resource type="PackedScene" uid="uid://c85647en5c284" path="res://Enemy/Bullet.tscn" id="4_coqkk"]
 
 [node name="Turret" type="Node2D"]
 script = ExtResource("1_c5apd")

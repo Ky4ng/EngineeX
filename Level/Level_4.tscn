@@ -1,31 +1,221 @@
-[gd_scene load_steps=5 format=3 uid="uid://bc224rwtfd3cp"]
+[gd_scene load_steps=10 format=3 uid="uid://bc224rwtfd3cp"]
 
-[ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Tiles.tscn" id="1_xb7j6"]
-[ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://level_pass.tscn" id="2_7u8b5"]
-[ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player.tscn" id="3_mfdj8"]
-[ext_resource type="PackedScene" uid="uid://bw1rjtct6tg3r" path="res://danger_floor.tscn" id="4_7u8b5"]
+[ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Platform & Tiles/Tiles.tscn" id="1_xb7j6"]
+[ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://Level/level_pass.tscn" id="2_7u8b5"]
+[ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player/Player.tscn" id="3_mfdj8"]
+[ext_resource type="PackedScene" uid="uid://bw1rjtct6tg3r" path="res://Enemy/danger_tile.tscn" id="4_7u8b5"]
+[ext_resource type="PackedScene" uid="uid://bepg3b4gbwv3l" path="res://Platform & Tiles/Long_Tile.tscn" id="5_0myqd"]
+[ext_resource type="Texture2D" uid="uid://d17i8l3kngcnw" path="res://Background/Cave_Background.png" id="6_l68tw"]
+[ext_resource type="PackedScene" uid="uid://drhe25uvs3fd2" path="res://Enemy/falling_spikes.tscn" id="7_4om0a"]
+[ext_resource type="PackedScene" uid="uid://dnkdwm0fsgamy" path="res://Platform & Tiles/small_platform.tscn" id="8_fy8o2"]
+[ext_resource type="PackedScene" uid="uid://bebg0kwbh7b1q" path="res://Player/ammo.tscn" id="9_fy8o2"]
 
 [node name="Level_4" type="Node2D"]
+metadata/_edit_vertical_guides_ = [-2120.0, -3240.0]
+metadata/_edit_horizontal_guides_ = [-656.0, 1784.0]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_xb7j6")]
-position = Vector2(-57, 266)
+position = Vector2(-520, -432)
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("1_xb7j6")]
-position = Vector2(73, 269)
+position = Vector2(96, -440)
 
 [node name="CharacterBody2D3" parent="." instance=ExtResource("1_xb7j6")]
-position = Vector2(204, 266)
+position = Vector2(-520, -160)
 
 [node name="Area2D" parent="." instance=ExtResource("2_7u8b5")]
-position = Vector2(691, 115)
+position = Vector2(2064, 632)
 
 [node name="Player" parent="." instance=ExtResource("3_mfdj8")]
-position = Vector2(-72, 20)
+position = Vector2(-336, -640)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(0.535, 0.535)
+limit_left = -792
+limit_top = -656
+limit_right = 2216
+limit_bottom = 1776
 
 [node name="CharacterBody2D5" parent="." instance=ExtResource("1_xb7j6")]
-position = Vector2(454, 392)
+position = Vector2(96, -160)
 
 [node name="CharacterBody2D4" parent="." instance=ExtResource("4_7u8b5")]
-position = Vector2(367, 253)
+position = Vector2(896, 1752)
+
+[node name="Tiles" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(96, 112)
+
+[node name="Tiles2" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(96, 384)
+
+[node name="Tiles3" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(96, 656)
+
+[node name="Tiles4" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(-520, 124)
+
+[node name="Tiles5" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(-520, 408)
+
+[node name="Tiles6" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(-520, 672)
+
+[node name="Tiles7" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(-520, 944)
+
+[node name="Tiles8" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(-520, 1216)
+
+[node name="Tiles9" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(96, 936)
+
+[node name="Tiles10" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(96, 1224)
+
+[node name="Tiles11" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(-520, 1512)
+
+[node name="Tiles12" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(-520, 1752)
+
+[node name="Tiles13" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(-224, 1752)
+
+[node name="Tiles14" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(56, 1752)
+
+[node name="Tiles18" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(1240, 1752)
+
+[node name="Tiles19" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(2160, 1040)
+
+[node name="Tiles20" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(1840, 1040)
+
+[node name="Tiles21" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(1544, 1040)
+
+[node name="Tiles22" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(1240, 1504)
+
+[node name="Tiles23" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(1240, 1240)
+
+[node name="Tiles24" parent="." instance=ExtResource("1_xb7j6")]
+texture_repeat = 2
+position = Vector2(1240, 984)
+
+[node name="Tiles25" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(1240, 720)
+
+[node name="Tiles26" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(1240, 438)
+
+[node name="Tiles27" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(1848, 438)
+
+[node name="Tiles28" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(2176, 440)
+
+[node name="Tiles29" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(2176, 144)
+
+[node name="Tiles30" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(2168, -136)
+
+[node name="Tiles31" parent="." instance=ExtResource("1_xb7j6")]
+position = Vector2(2168, -408)
+
+[node name="Node2D" parent="." instance=ExtResource("4_7u8b5")]
+position = Vector2(424, -432)
+
+[node name="Node2D2" parent="." instance=ExtResource("4_7u8b5")]
+position = Vector2(768, -432)
+
+[node name="Node2D3" parent="." instance=ExtResource("4_7u8b5")]
+position = Vector2(1112, -432)
+
+[node name="Node2D4" parent="." instance=ExtResource("4_7u8b5")]
+position = Vector2(1448, -432)
+
+[node name="Node2D5" parent="." instance=ExtResource("4_7u8b5")]
+position = Vector2(1760, -432)
+
+[node name="Node2D6" parent="." instance=ExtResource("4_7u8b5")]
+position = Vector2(1826, -432)
+
+[node name="Node2D7" parent="." instance=ExtResource("4_7u8b5")]
+position = Vector2(1832, -144)
+
+[node name="Node2D8" parent="." instance=ExtResource("4_7u8b5")]
+position = Vector2(1840, 144)
+
+[node name="Node2D9" parent="." instance=ExtResource("4_7u8b5")]
+position = Vector2(568, 1752)
+
+[node name="Node2D10" parent="." instance=ExtResource("4_7u8b5")]
+position = Vector2(392, 1752)
+
+[node name="Long_Tile" parent="." instance=ExtResource("5_0myqd")]
+modulate = Color(0.545098, 0.545098, 0.545098, 1)
+self_modulate = Color(0.545098, 0.545098, 0.545098, 1)
+position = Vector2(352, 1305)
+
+[node name="Long_Tile2" parent="." instance=ExtResource("5_0myqd")]
+modulate = Color(0.545098, 0.545098, 0.545098, 1)
+self_modulate = Color(0.545098, 0.545098, 0.545098, 1)
+position = Vector2(776, 1305)
+
+[node name="Danger_Tile" parent="." instance=ExtResource("4_7u8b5")]
+position = Vector2(1240, 144)
+
+[node name="CaveBackground" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(458, 704)
+scale = Vector2(2.72917, 3.125)
+texture = ExtResource("6_l68tw")
+
+[node name="FallingSpikes" parent="." instance=ExtResource("7_4om0a")]
+position = Vector2(200, -320)
+scale = Vector2(2.835, 3.075)
+
+[node name="FallingSpikes2" parent="." instance=ExtResource("7_4om0a")]
+position = Vector2(848, -280)
+scale = Vector2(2.705, 5.78)
+
+[node name="Small_Platform" parent="." instance=ExtResource("8_fy8o2")]
+position = Vector2(552, 1152)
+
+[node name="Small_Platform2" parent="." instance=ExtResource("8_fy8o2")]
+position = Vector2(568, 776)
+
+[node name="Long_Tile3" parent="." instance=ExtResource("5_0myqd")]
+modulate = Color(0.545098, 0.545098, 0.545098, 1)
+self_modulate = Color(0.545098, 0.545098, 0.545098, 1)
+position = Vector2(360, 976)
+
+[node name="Long_Tile4" parent="." instance=ExtResource("5_0myqd")]
+modulate = Color(0.545098, 0.545098, 0.545098, 1)
+self_modulate = Color(0.545098, 0.545098, 0.545098, 1)
+position = Vector2(784, 968)
+
+[node name="Long_Tile5" parent="." instance=ExtResource("5_0myqd")]
+modulate = Color(0.545098, 0.545098, 0.545098, 1)
+self_modulate = Color(0.545098, 0.545098, 0.545098, 1)
+position = Vector2(376, 624)
+
+[node name="Long_Tile6" parent="." instance=ExtResource("5_0myqd")]
+modulate = Color(0.545098, 0.545098, 0.545098, 1)
+self_modulate = Color(0.545098, 0.545098, 0.545098, 1)
+position = Vector2(784, 633)
+
+[node name="Long_Tile7" parent="." instance=ExtResource("5_0myqd")]
+modulate = Color(0.545098, 0.545098, 0.545098, 1)
+position = Vector2(568, 264)
+
+[node name="FallingSpikes3" parent="." instance=ExtResource("7_4om0a")]
+position = Vector2(536, -296)
+scale = Vector2(2.705, 4.41)
+
+[node name="Ammo" parent="." instance=ExtResource("9_fy8o2")]

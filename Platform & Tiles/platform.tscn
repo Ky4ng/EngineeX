@@ -1,15 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://bfewklmfo8bdb"]
+[gd_scene load_steps=6 format=3 uid="uid://bfewklmfo8bdb"]
 
-[ext_resource type="Script" uid="uid://4pbrhf32pi1u" path="res://platform.gd" id="1_ry5bi"]
-[ext_resource type="Texture2D" uid="uid://djpilrfwpq476" path="res://sprites/Moon/geasm_moon_tiles-ezgif.com-crop (11).png" id="2_ph1ng"]
-[ext_resource type="Texture2D" uid="uid://d02jnls7au0c7" path="res://sprites/Moon/geasm_moon_tiles-ezgif.com-crop (6).png" id="3_7u0im"]
-[ext_resource type="Texture2D" uid="uid://bca1b4d2rocij" path="res://sprites/geasm_shiptile-ezgif.com-crop (1).png" id="4_x8osn"]
+[ext_resource type="Script" uid="uid://4pbrhf32pi1u" path="res://scripts/platform.gd" id="1_ry5bi"]
+[ext_resource type="Texture2D" uid="uid://djf0hu2npsefy" path="res://sprites/Moon/platform.png" id="2_w4fuq"]
+[ext_resource type="Texture2D" uid="uid://bca1b4d2rocij" path="res://sprites/Spaceship/spaceship_platform.png" id="4_x8osn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ardar"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_7u0im")
+"texture": ExtResource("2_w4fuq")
 }],
 "loop": true,
 "name": &"cave",
@@ -17,7 +16,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ph1ng")
+"texture": ExtResource("2_w4fuq")
 }],
 "loop": true,
 "name": &"moon",
@@ -33,7 +32,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ry5bi"]
-size = Vector2(123, 38)
+size = Vector2(280, 51)
 
 [node name="Platform" type="CharacterBody2D"]
 collision_layer = 2
@@ -41,10 +40,15 @@ collision_mask = 3
 script = ExtResource("1_ry5bi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+self_modulate = Color(0.544974, 0.544974, 0.544974, 1)
+position = Vector2(-0.5, 0)
+scale = Vector2(2.21, 2.21)
 sprite_frames = SubResource("SpriteFrames_ardar")
 animation = &"moon"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
 light_mask = 2
-position = Vector2(0.5, 0)
+position = Vector2(-4, 0)
 shape = SubResource("RectangleShape2D_ry5bi")

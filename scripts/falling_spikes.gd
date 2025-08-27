@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var fall_speed: float = 200.0
+@export var fall_speed: float = 600.0
 var is_falling: bool = false
 
 @onready var hitbox: Area2D = $Area2D

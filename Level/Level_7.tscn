@@ -1,30 +1,161 @@
-[gd_scene load_steps=4 format=3 uid="uid://cvw34baox7v2a"]
+[gd_scene load_steps=9 format=3 uid="uid://cvw34baox7v2a"]
 
-[ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Tiles.tscn" id="1_goiux"]
-[ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://level_pass.tscn" id="2_cxlnm"]
-[ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player.tscn" id="3_o7uev"]
+[ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Platform & Tiles/Tiles.tscn" id="1_goiux"]
+[ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://Level/level_pass.tscn" id="2_cxlnm"]
+[ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player/Player.tscn" id="3_o7uev"]
+[ext_resource type="Texture2D" uid="uid://0m66r2ouljv8" path="res://Background/Spaceship_Background.png" id="4_4pvmy"]
+[ext_resource type="PackedScene" uid="uid://bfewklmfo8bdb" path="res://Platform & Tiles/platform.tscn" id="5_nucui"]
+[ext_resource type="PackedScene" uid="uid://8egvl15et33p" path="res://Enemy/turret.tscn" id="6_7pw3f"]
+[ext_resource type="PackedScene" uid="uid://bw1rjtct6tg3r" path="res://Enemy/danger_tile.tscn" id="7_ehoe1"]
+[ext_resource type="PackedScene" uid="uid://bebg0kwbh7b1q" path="res://Player/ammo.tscn" id="8_x8ual"]
 
 [node name="Level_7" type="Node2D"]
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_goiux")]
-position = Vector2(-57, 266)
+metadata/_edit_vertical_guides_ = [-1064.0, 1112.0]
+metadata/_edit_horizontal_guides_ = [-536.0, 800.0]
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("1_goiux")]
-position = Vector2(73, 269)
+position = Vector2(-832, 776)
 
 [node name="CharacterBody2D3" parent="." instance=ExtResource("1_goiux")]
-position = Vector2(204, 266)
-
-[node name="Area2D" parent="." instance=ExtResource("2_cxlnm")]
-position = Vector2(189, 87)
+position = Vector2(-832, -88)
 
 [node name="Player" parent="." instance=ExtResource("3_o7uev")]
-position = Vector2(-72, 20)
+position = Vector2(-664, -96)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(0.715, 0.715)
+limit_left = -1072
+limit_top = -536
+limit_right = 1112
+limit_bottom = 808
 
 [node name="CharacterBody2D4" parent="." instance=ExtResource("1_goiux")]
-position = Vector2(377, 138)
+position = Vector2(1072, 736)
 
-[node name="CharacterBody2D5" parent="." instance=ExtResource("1_goiux")]
-position = Vector2(479, 268)
+[node name="SpaceshipBackground" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(72, 72)
+scale = Vector2(1.92708, 1.64844)
+texture = ExtResource("4_4pvmy")
+
+[node name="Platform" parent="." instance=ExtResource("5_nucui")]
+position = Vector2(-640, 0)
+
+[node name="Turret" parent="." instance=ExtResource("6_7pw3f")]
+position = Vector2(128, 2)
+scale = Vector2(1.67, 1.67)
+FIRE_RATE = 0.05
+
+[node name="Platform2" parent="." instance=ExtResource("5_nucui")]
+position = Vector2(-360, 0)
+
+[node name="Platform3" parent="." instance=ExtResource("5_nucui")]
+position = Vector2(-32, 2)
+
+[node name="Platform4" parent="." instance=ExtResource("5_nucui")]
+position = Vector2(296, 2)
+
+[node name="Turret2" parent="." instance=ExtResource("6_7pw3f")]
+position = Vector2(-200, 0)
+scale = Vector2(1.67, 1.67)
+FIRE_RATE = 0.05
+
+[node name="Tiles2" parent="." instance=ExtResource("1_goiux")]
+position = Vector2(-832, -384)
+
+[node name="Tiles3" parent="." instance=ExtResource("1_goiux")]
+position = Vector2(-500, -384)
+
+[node name="Tiles4" parent="." instance=ExtResource("1_goiux")]
+position = Vector2(-192, -384)
+
+[node name="Tiles5" parent="." instance=ExtResource("1_goiux")]
+position = Vector2(112, -384)
+
+[node name="Tiles6" parent="." instance=ExtResource("1_goiux")]
+position = Vector2(440, -384)
+
+[node name="Tiles7" parent="." instance=ExtResource("1_goiux")]
+position = Vector2(752, -384)
+
+[node name="Area2D2" parent="." instance=ExtResource("2_cxlnm")]
+position = Vector2(664, 456)
+
+[node name="Platform5" parent="." instance=ExtResource("5_nucui")]
+position = Vector2(528, 2)
+
+[node name="Tiles8" parent="." instance=ExtResource("1_goiux")]
+position = Vector2(1072, -384)
+
+[node name="Tiles9" parent="." instance=ExtResource("1_goiux")]
+position = Vector2(1072, -96)
+
+[node name="Tiles12" parent="." instance=ExtResource("1_goiux")]
+position = Vector2(1072, 776)
+
+[node name="Platform6" parent="." instance=ExtResource("5_nucui")]
+position = Vector2(664, 288)
+
+[node name="Platform7" parent="." instance=ExtResource("5_nucui")]
+position = Vector2(384, 288)
+
+[node name="Platform8" parent="." instance=ExtResource("5_nucui")]
+position = Vector2(56, 288)
+
+[node name="Turret3" parent="." instance=ExtResource("6_7pw3f")]
+position = Vector2(216, 288)
+scale = Vector2(1.67, 1.67)
+FIRE_RATE = 0.05
+
+[node name="Turret4" parent="." instance=ExtResource("6_7pw3f")]
+position = Vector2(-112, 288)
+scale = Vector2(1.67, 1.67)
+FIRE_RATE = 0.05
+
+[node name="Platform9" parent="." instance=ExtResource("5_nucui")]
+position = Vector2(-272, 288)
+
+[node name="Platform10" parent="." instance=ExtResource("5_nucui")]
+position = Vector2(-496, 288)
+
+[node name="Platform11" parent="." instance=ExtResource("5_nucui")]
+position = Vector2(-624, 616)
+
+[node name="Platform12" parent="." instance=ExtResource("5_nucui")]
+position = Vector2(312, 616)
+
+[node name="Danger_Tile" parent="." instance=ExtResource("7_ehoe1")]
+position = Vector2(-832, 480)
+
+[node name="Danger_Tile2" parent="." instance=ExtResource("7_ehoe1")]
+position = Vector2(-832, 208)
+
+[node name="Danger_Tile3" parent="." instance=ExtResource("7_ehoe1")]
+position = Vector2(1072, 200)
+
+[node name="Danger_Tile4" parent="." instance=ExtResource("7_ehoe1")]
+position = Vector2(1072, 440)
+
+[node name="Platform13" parent="." instance=ExtResource("5_nucui")]
+position = Vector2(-344, 616)
+
+[node name="Platform14" parent="." instance=ExtResource("5_nucui")]
+position = Vector2(592, 616)
+
+[node name="Turret5" parent="." instance=ExtResource("6_7pw3f")]
+position = Vector2(-184, 616)
+scale = Vector2(1.67, 1.67)
+FIRE_RATE = 0.05
+
+[node name="Turret6" parent="." instance=ExtResource("6_7pw3f")]
+position = Vector2(144, 616)
+scale = Vector2(1.67, 1.67)
+FIRE_RATE = 0.05
+
+[node name="Platform15" parent="." instance=ExtResource("5_nucui")]
+position = Vector2(-16, 616)
+
+[node name="Platform16" parent="." instance=ExtResource("5_nucui")]
+position = Vector2(664, 616)
+
+[node name="Ammo" parent="." instance=ExtResource("8_x8ual")]

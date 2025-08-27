@@ -1,23 +1,33 @@
 [gd_scene load_steps=6 format=3 uid="uid://h5vyw1skbksk"]
 
 [ext_resource type="Script" uid="uid://bsb0b2vfioxyw" path="res://scripts/spike.gd" id="1_afurm"]
-[ext_resource type="Texture2D" uid="uid://bkikj1xb2jtep" path="res://sprites/spike/geasm_spike.png" id="2_1c3y0"]
+[ext_resource type="Texture2D" uid="uid://d4gejymdg0r1u" path="res://sprites/spike/cave_floating_spike.png" id="2_1br2u"]
+[ext_resource type="Texture2D" uid="uid://cn8y1v78vr14s" path="res://sprites/spike/meteor_spike.png" id="2_d4pml"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l7xsa"]
 size = Vector2(68, 63)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ombkx"]
-atlas = ExtResource("2_1c3y0")
-region = Rect2(0, 0, 39, 41)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d5ja7"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ombkx")
+"texture": ExtResource("2_1br2u")
 }],
 "loop": true,
-"name": &"default",
+"name": &"cave",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_d4pml")
+}],
+"loop": true,
+"name": &"moon",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"spaceship",
 "speed": 5.0
 }]
 
@@ -30,9 +40,11 @@ script = ExtResource("1_afurm")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 light_mask = 4
 position = Vector2(-2, 44.5)
+scale = Vector2(0.96, 0.875)
 shape = SubResource("RectangleShape2D_l7xsa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
-position = Vector2(-4.19617e-05, 45)
+position = Vector2(-2, 45)
 scale = Vector2(2.10257, 1.80488)
 sprite_frames = SubResource("SpriteFrames_d5ja7")
+animation = &"cave"

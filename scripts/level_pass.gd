@@ -22,6 +22,7 @@ func _on_body_entered(body: Node2D) -> void:
 				call_deferred("_change_level", next_level_path)
 			else:
 				print("You are at the final level!")
+				get_tree().change_scene_to_file("res://Menu/maiin_menu.tscn")
 		else:
 			print("No number found in scene name — cannot determine next level.")
 

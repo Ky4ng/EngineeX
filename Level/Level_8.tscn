@@ -1,27 +1,174 @@
-[gd_scene load_steps=4 format=3 uid="uid://wibvqk67nvq4"]
+[gd_scene load_steps=9 format=3 uid="uid://wibvqk67nvq4"]
 
-[ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Tiles.tscn" id="1_l8r04"]
-[ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://level_pass.tscn" id="2_au520"]
-[ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player.tscn" id="3_p8nx0"]
+[ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Platform & Tiles/Tiles.tscn" id="1_l8r04"]
+[ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://Level/level_pass.tscn" id="2_au520"]
+[ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player/Player.tscn" id="3_p8nx0"]
+[ext_resource type="PackedScene" uid="uid://8egvl15et33p" path="res://Enemy/turret.tscn" id="4_dyqly"]
+[ext_resource type="PackedScene" uid="uid://csjofk3uggncv" path="res://Enemy/falling_rock.tscn" id="5_018r6"]
+[ext_resource type="Texture2D" uid="uid://bqxdm8xsdiu2t" path="res://icon.svg" id="6_lr87v"]
+[ext_resource type="Texture2D" uid="uid://0m66r2ouljv8" path="res://Background/Spaceship_Background.png" id="7_wlygy"]
+[ext_resource type="PackedScene" uid="uid://bebg0kwbh7b1q" path="res://Player/ammo.tscn" id="8_hwlmr"]
 
 [node name="Level_8" type="Node2D"]
+metadata/_edit_vertical_guides_ = [-840.0, 1640.0]
+metadata/_edit_horizontal_guides_ = [-944.0, 688.0]
+
+[node name="Tiles2" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(-1280, -759)
+
+[node name="Tiles" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(-968, -760)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_l8r04")]
-position = Vector2(-57, 266)
+position = Vector2(-632, 688)
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("1_l8r04")]
-position = Vector2(73, 269)
+position = Vector2(-312, 688)
 
 [node name="CharacterBody2D3" parent="." instance=ExtResource("1_l8r04")]
-position = Vector2(204, 266)
+position = Vector2(-8, 688)
 
 [node name="Area2D" parent="." instance=ExtResource("2_au520")]
-position = Vector2(189, 87)
+position = Vector2(1536, 312)
 
 [node name="Player" parent="." instance=ExtResource("3_p8nx0")]
-position = Vector2(-72, 20)
+position = Vector2(-1400, 396)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-16, 12)
+zoom = Vector2(0.4, 0.4)
+limit_left = -840
+limit_top = -940
+limit_right = 1640
+limit_bottom = 712
 
 [node name="CharacterBody2D4" parent="." instance=ExtResource("1_l8r04")]
-position = Vector2(44, -65)
+position = Vector2(1280, 112)
+
+[node name="Turret" parent="." instance=ExtResource("4_dyqly")]
+position = Vector2(592, -392)
+scale = Vector2(4.485, 4.485)
+FIRE_RATE = 50.0
+
+[node name="FallingRock" parent="." instance=ExtResource("5_018r6")]
+position = Vector2(1208, 400)
+rotation = 3.14159
+
+[node name="Tiles3" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(-1320, 128)
+
+[node name="Tiles4" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(-1312, -432)
+
+[node name="Tiles5" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(320, 688)
+
+[node name="Tiles6" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(640, 688)
+
+[node name="Tiles7" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(968, 688)
+
+[node name="Tiles8" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(1280, 688)
+
+[node name="Tiles9" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(1280, -184)
+
+[node name="Tiles10" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(1608, -468)
+
+[node name="Tiles11" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(1606, -760)
+
+[node name="Tiles12" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(1280, -760)
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(1144, -568)
+texture = ExtResource("6_lr87v")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+position = Vector2(1192, -544)
+texture = ExtResource("6_lr87v")
+
+[node name="Tiles13" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(952, -760)
+
+[node name="Tiles14" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(656, -759)
+
+[node name="Tiles15" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(368, -759)
+
+[node name="Tiles16" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(96, -759)
+
+[node name="Tiles17" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(-192, -759)
+
+[node name="Tiles18" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(-488, -759)
+
+[node name="Tiles19" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(-640, -760)
+
+[node name="Tiles20" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(1616, -184)
+
+[node name="Tiles21" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(1616, 112)
+
+[node name="Tiles22" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(1616, 688)
+
+[node name="Turret2" parent="." instance=ExtResource("4_dyqly")]
+position = Vector2(592, 200)
+scale = Vector2(4.485, 4.485)
+FIRE_RATE = 50.0
+
+[node name="Turret3" parent="." instance=ExtResource("4_dyqly")]
+position = Vector2(-168, -400)
+scale = Vector2(4.485, 4.485)
+FIRE_RATE = 50.0
+
+[node name="Turret4" parent="." instance=ExtResource("4_dyqly")]
+position = Vector2(-168, 192)
+scale = Vector2(4.485, 4.485)
+FIRE_RATE = 50.0
+
+[node name="SpaceshipBackground" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(184, -456)
+scale = Vector2(3.60938, 3.03125)
+texture = ExtResource("7_wlygy")
+
+[node name="Tiles23" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(-1320, -160)
+
+[node name="Tiles24" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(-976, 688)
+
+[node name="Tiles25" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(-1312, 688)
+
+[node name="Tiles26" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(-1576, 416)
+
+[node name="Tiles27" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(-1312, -648)
+
+[node name="Tiles28" parent="." instance=ExtResource("1_l8r04")]
+position = Vector2(-1320, -776)
+
+[node name="Turret5" parent="." instance=ExtResource("4_dyqly")]
+position = Vector2(-840, -400)
+scale = Vector2(4.485, 4.485)
+FIRE_RATE = 50.0
+
+[node name="Turret6" parent="." instance=ExtResource("4_dyqly")]
+position = Vector2(-840, 192)
+scale = Vector2(4.485, 4.485)
+FIRE_RATE = 50.0
+
+[node name="Ammo" parent="." instance=ExtResource("8_hwlmr")]

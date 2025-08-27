@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
 @export var speed: float = 600
-@export var gravity: float = 900
+@export var normal_gravity: float = 900
+@export var glide_gravity: float = 400  # Lower gravity for gliding
 @export var launch_strength: float = 300
 @export var stop_threshold: float = 10.0
 @export var deceleration: float = 0.985
@@ -33,14 +34,14 @@ func _physics_process(delta: float) -> void:
 	else:
 		sprite.play("idle")
 
+	# Choose gravity based on spacebar press in air
+	var current_gravity = normal_gravity
+	if Input.is_action_pressed("spacebar") and not is_on_floor():
+		current_gravity = glide_gravity 
+
 	# Apply gravity when not grounded
 	if not is_on_floor():
-		velocity.y += gravity * delta
-
-	# Optional: glide effect when holding spacebar in air
-	if Input.is_action_pressed("spacebar") and not is_on_floor():
-		gravity = 600
-		velocity.y += gravity * delta
+		velocity.y += current_gravity * delta
 
 	if in_launch:
 		# Add control influence on top of launch movement

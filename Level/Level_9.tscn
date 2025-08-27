@@ -1,47 +1,175 @@
-[gd_scene load_steps=6 format=3 uid="uid://11ub6y10aboo"]
+[gd_scene load_steps=10 format=3 uid="uid://11ub6y10aboo"]
 
-[ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Tiles.tscn" id="1_rriw4"]
-[ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://level_pass.tscn" id="2_3mn4y"]
-[ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player.tscn" id="3_24y5s"]
-[ext_resource type="PackedScene" uid="uid://bw1rjtct6tg3r" path="res://danger_floor.tscn" id="4_24y5s"]
-[ext_resource type="PackedScene" uid="uid://8egvl15et33p" path="res://turret.tscn" id="5_sqbe6"]
+[ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Platform & Tiles/Tiles.tscn" id="1_rriw4"]
+[ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://Level/level_pass.tscn" id="2_3mn4y"]
+[ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player/Player.tscn" id="3_24y5s"]
+[ext_resource type="PackedScene" uid="uid://bw1rjtct6tg3r" path="res://Enemy/danger_tile.tscn" id="4_24y5s"]
+[ext_resource type="PackedScene" uid="uid://8egvl15et33p" path="res://Enemy/turret.tscn" id="5_sqbe6"]
+[ext_resource type="PackedScene" uid="uid://csjofk3uggncv" path="res://Enemy/falling_rock.tscn" id="6_paf51"]
+[ext_resource type="PackedScene" uid="uid://d2qn3ujgpk7ml" path="res://Enemy/Pit.tscn" id="7_5jidq"]
+[ext_resource type="Texture2D" uid="uid://0m66r2ouljv8" path="res://Background/Spaceship_Background.png" id="8_5jidq"]
+[ext_resource type="PackedScene" uid="uid://bebg0kwbh7b1q" path="res://Player/ammo.tscn" id="9_p6cg3"]
 
 [node name="Level_9" type="Node2D"]
+metadata/_edit_vertical_guides_ = [-640.0, 2128.0]
+metadata/_edit_horizontal_guides_ = [-1344.0, 904.0]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_rriw4")]
 position = Vector2(-72, 280)
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("1_rriw4")]
-position = Vector2(56, 280)
+position = Vector2(-408, -888)
 
 [node name="CharacterBody2D3" parent="." instance=ExtResource("1_rriw4")]
-position = Vector2(184, 280)
+position = Vector2(-408, -1168)
 
 [node name="Area2D" parent="." instance=ExtResource("2_3mn4y")]
-position = Vector2(1241, 37)
-
-[node name="Player" parent="." instance=ExtResource("3_24y5s")]
-position = Vector2(-72, 20)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-544, 496)
 
 [node name="CharacterBody2D4" parent="." instance=ExtResource("1_rriw4")]
-position = Vector2(824, 280)
+position = Vector2(1256, 280)
 
 [node name="CharacterBody2D5" parent="." instance=ExtResource("1_rriw4")]
-position = Vector2(312, 280)
+position = Vector2(1720, -888)
 
 [node name="CharacterBody2D6" parent="." instance=ExtResource("1_rriw4")]
-position = Vector2(440, 280)
+position = Vector2(1400, -608)
 
 [node name="Node2D" parent="." instance=ExtResource("4_24y5s")]
-position = Vector2(568, 280)
+position = Vector2(256, 280)
 
-[node name="Node2D2" parent="." instance=ExtResource("4_24y5s")]
-position = Vector2(696, 280)
+[node name="FallingRock" parent="." instance=ExtResource("6_paf51")]
+position = Vector2(1336, 80)
+rotation = 3.14159
+scale = Vector2(0.9, 1)
+fall_speed = 10.0
 
-[node name="Turret" parent="." instance=ExtResource("5_sqbe6")]
-position = Vector2(616, 16)
+[node name="Tiles" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(592, 280)
 
-[node name="Turret2" parent="." instance=ExtResource("5_sqbe6")]
-position = Vector2(224, 24)
+[node name="Tiles2" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(1408, 280)
+
+[node name="Tiles3" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(-408, 280)
+
+[node name="Tiles5" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(2152, 896)
+
+[node name="Tiles6" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(-720, -15)
+
+[node name="Tiles7" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(-408, -600)
+
+[node name="Tiles9" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(-72, 880)
+
+[node name="Tiles10" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(-408, 880)
+
+[node name="Tiles11" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(608, 880)
+
+[node name="Tiles13" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(1216, 880)
+
+[node name="Tiles14" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(1400, 880)
+
+[node name="Pit" parent="." instance=ExtResource("7_5jidq")]
+position = Vector2(1840, 880)
+
+[node name="Tiles15" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(1736, -888)
+
+[node name="Tiles16" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(2080, -888)
+
+[node name="Tiles17" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(2152, 616)
+
+[node name="Tiles18" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(2152, 340)
+
+[node name="Tiles19" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(2152, 72)
+
+[node name="Tiles20" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(2152, -208)
+
+[node name="Tiles21" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(2152, -456)
+
+[node name="Tiles22" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(2152, -696)
+
+[node name="Tiles23" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(2152, -888)
+
+[node name="Tiles24" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(1728, -1176)
+
+[node name="Tiles25" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(1400, -1176)
+
+[node name="Tiles26" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(1080, -1176)
+
+[node name="Tiles27" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(760, -1176)
+
+[node name="Tiles28" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(464, -1176)
+
+[node name="Tiles29" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(184, -1176)
+
+[node name="Tiles30" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(-72, -1168)
+
+[node name="Tiles31" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(-408, -312)
+
+[node name="Danger_Tile" parent="." instance=ExtResource("4_24y5s")]
+position = Vector2(928, 280)
+
+[node name="Player" parent="." instance=ExtResource("3_24y5s")]
+position = Vector2(-240, -56)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(0.45, 0.45)
+limit_left = -640
+limit_top = -1344
+limit_right = 2144
+limit_bottom = 900
+
+[node name="Turret2" parent="Player" instance=ExtResource("5_sqbe6")]
+position = Vector2(-362, -144)
+FIRE_RATE = 0.5
+
+[node name="Tiles4" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(1400, -336)
+
+[node name="Tiles32" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(1400, -104)
+
+[node name="Tiles33" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(2032, -1176)
+
+[node name="Tiles34" parent="." instance=ExtResource("1_rriw4")]
+position = Vector2(2152, -1176)
+
+[node name="SpaceshipBackground" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(352, -38)
+scale = Vector2(3.29688, 3.28906)
+texture = ExtResource("8_5jidq")
+
+[node name="Danger_Tile2" parent="." instance=ExtResource("4_24y5s")]
+position = Vector2(920, 880)
+
+[node name="Danger_Tile3" parent="." instance=ExtResource("4_24y5s")]
+position = Vector2(264, 880)
+
+[node name="Ammo" parent="." instance=ExtResource("9_p6cg3")]
