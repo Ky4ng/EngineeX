@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c3t0y4qvyre8x"]
 
 [ext_resource type="Script" uid="uid://cw6pstt140ljs" path="res://scripts/level_pass.gd" id="1_0b0ec"]
-[ext_resource type="Texture2D" uid="uid://bqxdm8xsdiu2t" path="res://icon.svg" id="2_ha85j"]
+[ext_resource type="Texture2D" uid="uid://wvuat4xdi6y1" path="res://sprites/geasm_flag.PNG" id="2_f741y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ha85j"]
 radius = 144.0
@@ -13,6 +13,7 @@ script = ExtResource("1_0b0ec")
 light_mask = 8
 shape = SubResource("CircleShape2D_ha85j")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(6, -4)
-texture = ExtResource("2_ha85j")
+[node name="GeasmFlag" type="Sprite2D" parent="."]
+position = Vector2(-8, -8)
+scale = Vector2(4.426, 4.051)
+texture = ExtResource("2_f741y")

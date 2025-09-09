@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://crtj7o7cmyjb"]
+[gd_scene load_steps=9 format=3 uid="uid://crtj7o7cmyjb"]
 
 [ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Platform & Tiles/Tiles.tscn" id="1_tedvs"]
 [ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://Level/level_pass.tscn" id="2_gyeet"]
@@ -7,6 +7,48 @@
 [ext_resource type="Texture2D" uid="uid://c6r3hc0vogs4m" path="res://Background/Moon_Background.png" id="5_4ouur"]
 [ext_resource type="AudioStream" uid="uid://c15ohdfuiagcs" path="res://scripts/pixel-245147.mp3" id="6_b2ndw"]
 [ext_resource type="PackedScene" uid="uid://dnkdwm0fsgamy" path="res://Platform & Tiles/small_platform.tscn" id="7_ckrbt"]
+
+[sub_resource type="FontFile" id="FontFile_ckrbt"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/70/0/ascent = 0.0
+cache/0/70/0/descent = 0.0
+cache/0/70/0/underline_position = 0.0
+cache/0/70/0/underline_thickness = 0.0
+cache/0/70/0/scale = 1.0
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/35/0/ascent = 0.0
+cache/0/35/0/descent = 0.0
+cache/0/35/0/underline_position = 0.0
+cache/0/35/0/underline_thickness = 0.0
+cache/0/35/0/scale = 1.0
+cache/0/37/0/ascent = 0.0
+cache/0/37/0/descent = 0.0
+cache/0/37/0/underline_position = 0.0
+cache/0/37/0/underline_thickness = 0.0
+cache/0/37/0/scale = 1.0
+cache/0/36/0/ascent = 0.0
+cache/0/36/0/descent = 0.0
+cache/0/36/0/underline_position = 0.0
+cache/0/36/0/underline_thickness = 0.0
+cache/0/36/0/scale = 1.0
 
 [node name="Level_1" type="Node2D"]
 metadata/_edit_vertical_guides_ = [1808.0]
@@ -176,3 +218,16 @@ position = Vector2(48, -192)
 position = Vector2(376, -88)
 
 [node name="Ammo" parent="." instance=ExtResource("4_ckrbt")]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 104.0
+offset_top = -376.0
+offset_right = 848.0
+offset_bottom = -128.0
+theme_override_fonts/normal_font = SubResource("FontFile_ckrbt")
+theme_override_font_sizes/bold_italics_font_size = 1311
+theme_override_font_sizes/normal_font_size = 36
+text = "WASD to move.
+Click to lauch yourself in the opposite direction.
+Hold Space to Glide.
+Press 'H' to restart."
