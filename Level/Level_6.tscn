@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bebg0kwbh7b1q" path="res://Player/ammo.tscn" id="1_axpqe"]
 [ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Platform & Tiles/Tiles.tscn" id="1_gvcbt"]
 [ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player/Player.tscn" id="2_ugxsx"]
-[ext_resource type="PackedScene" uid="uid://dgid0yohv4rvv" path="res://danger_long_tile.tscn" id="3_md1ft"]
+[ext_resource type="PackedScene" uid="uid://dgid0yohv4rvv" path="res://Enemy/danger_long_tile.tscn" id="3_md1ft"]
 [ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://Level/level_pass.tscn" id="3_rdh8l"]
 [ext_resource type="PackedScene" uid="uid://h5vyw1skbksk" path="res://Enemy/air_spike.tscn" id="4_y8yer"]
 [ext_resource type="PackedScene" uid="uid://bw1rjtct6tg3r" path="res://Enemy/danger_tile.tscn" id="5_svy13"]

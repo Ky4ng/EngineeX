@@ -31,5 +31,5 @@ script = ExtResource("1_tjdg3")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Gun"]
 position = Vector2(-4.76837e-07, 0)
 rotation = -1.57326
-scale = Vector2(0.721894, 0.678358)
+scale = Vector2(1.007, 0.946)
 sprite_frames = SubResource("SpriteFrames_coqkk")
