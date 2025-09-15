@@ -75,7 +75,7 @@ light_mask = 2
 position = Vector2(38, 88)
 scale = Vector2(2.76613, 2.38727)
 sprite_frames = SubResource("SpriteFrames_hxxxr")
-animation = &"spaceship"
+animation = &"cave"
 
 [connection signal="body_entered" from="TriggerArea" to="." method="_on_trigger_area_body_entered"]
 [connection signal="body_entered" from="Killbox" to="." method="_on_killbox_body_entered"]

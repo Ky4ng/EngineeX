@@ -1,8 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://cyefihto015ce"]
+[gd_scene load_steps=17 format=3 uid="uid://cyefihto015ce"]
 
 [ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Platform & Tiles/Tiles.tscn" id="1_qfoqn"]
 [ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://Level/level_pass.tscn" id="2_f7hy0"]
 [ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player/Player.tscn" id="3_kfybv"]
+[ext_resource type="PackedScene" uid="uid://b7o7hxeo8yie4" path="res://Menu/Pause_menu.tscn" id="4_g28r7"]
+[ext_resource type="PackedScene" uid="uid://dntupwovotypx" path="res://Music/music.tscn" id="4_wtege"]
 [ext_resource type="PackedScene" uid="uid://bw1rjtct6tg3r" path="res://Enemy/danger_tile.tscn" id="4_wvdpd"]
 [ext_resource type="PackedScene" uid="uid://cfoaj7moyyqvp" path="res://Platform & Tiles/Tiny_tiles.tscn" id="5_iufrt"]
 [ext_resource type="PackedScene" uid="uid://d2qn3ujgpk7ml" path="res://Enemy/Pit.tscn" id="6_4narv"]
@@ -10,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c1xjsxg06jpus" path="res://Enemy/danger_tiny_tile.tscn" id="8_ob5uj"]
 [ext_resource type="PackedScene" uid="uid://bepg3b4gbwv3l" path="res://Platform & Tiles/Long_Tile.tscn" id="9_1tqyn"]
 [ext_resource type="PackedScene" uid="uid://h5vyw1skbksk" path="res://Enemy/air_spike.tscn" id="10_0uka0"]
-[ext_resource type="PackedScene" uid="uid://drhe25uvs3fd2" path="res://Enemy/falling_spikes.tscn" id="11_o3nov"]
+[ext_resource type="PackedScene" uid="uid://4p0pxyaly33t" path="res://Enemy/falling_spikes.tscn" id="11_o3nov"]
 [ext_resource type="PackedScene" uid="uid://csjofk3uggncv" path="res://Enemy/falling_rock.tscn" id="12_o3nov"]
 [ext_resource type="Texture2D" uid="uid://d17i8l3kngcnw" path="res://Background/Cave_Background.png" id="13_2fq8m"]
 [ext_resource type="PackedScene" uid="uid://bebg0kwbh7b1q" path="res://Player/ammo.tscn" id="14_5xwo5"]
@@ -32,6 +34,7 @@ position = Vector2(272, 280)
 position = Vector2(-104, 3480)
 
 [node name="Player" parent="." instance=ExtResource("3_kfybv")]
+top_level = true
 position = Vector2(-72, 20)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -40,6 +43,14 @@ limit_left = -535
 limit_top = -492
 limit_right = 2448
 limit_bottom = 3784
+
+[node name="AudioStreamPlayer2D" parent="Player/Camera2D" instance=ExtResource("4_wtege")]
+
+[node name="Control" parent="Player" instance=ExtResource("4_g28r7")]
+offset_left = 80.0
+offset_top = 12.0
+offset_right = 80.0
+offset_bottom = 17.0
 
 [node name="CharacterBody2D5" parent="." instance=ExtResource("1_qfoqn")]
 self_modulate = Color(0.0885599, 0.0885599, 0.0885599, 1)
@@ -318,19 +329,23 @@ position = Vector2(1632, 2450)
 
 [node name="FallingSpikes" parent="." instance=ExtResource("11_o3nov")]
 position = Vector2(1096, 1913)
-scale = Vector2(2.04, 2.04)
+scale = Vector2(2.04, 3.855)
+destroy_y = 2450.0
 
 [node name="FallingSpikes2" parent="." instance=ExtResource("11_o3nov")]
 position = Vector2(1384, 1920)
-scale = Vector2(2, 2)
+scale = Vector2(2, 3.805)
+destroy_y = 2450.0
 
 [node name="FallingSpikes3" parent="." instance=ExtResource("11_o3nov")]
 position = Vector2(849, 1913)
-scale = Vector2(2.065, 2.065)
+scale = Vector2(2.065, 3.91)
+destroy_y = 2450.0
 
 [node name="FallingSpikes4" parent="." instance=ExtResource("11_o3nov")]
 position = Vector2(1608, 1913)
-scale = Vector2(2.085, 2.085)
+scale = Vector2(2.085, 3.99)
+destroy_y = 2450.0
 
 [node name="Danger_Tile24" parent="." instance=ExtResource("4_wvdpd")]
 position = Vector2(1480, 3312)
@@ -340,7 +355,8 @@ position = Vector2(1152, 3312)
 
 [node name="FallingSpikes5" parent="." instance=ExtResource("11_o3nov")]
 position = Vector2(616, 1920)
-scale = Vector2(2.065, 2.065)
+scale = Vector2(2.065, 4.015)
+destroy_y = 2450.0
 
 [node name="Danger_Tile20" parent="." instance=ExtResource("4_wvdpd")]
 position = Vector2(1787, 3312)
@@ -360,16 +376,16 @@ position = Vector2(-376, 3864)
 
 [node name="CaveBackground" type="Sprite2D" parent="."]
 show_behind_parent = true
-position = Vector2(232, 1464)
+position = Vector2(648, 1745)
 scale = Vector2(5.79688, 5.39062)
 texture = ExtResource("13_2fq8m")
 
 [node name="Air Spike9" parent="." instance=ExtResource("10_0uka0")]
-position = Vector2(1627, 1536)
+position = Vector2(1639.18, 1537.79)
 scale = Vector2(2.985, 2.985)
 
 [node name="Air Spike10" parent="." instance=ExtResource("10_0uka0")]
-position = Vector2(1432, 1536)
+position = Vector2(1439.95, 1537.36)
 scale = Vector2(2.985, 2.985)
 
 [node name="Air Spike11" parent="." instance=ExtResource("10_0uka0")]
@@ -377,19 +393,19 @@ position = Vector2(464, 1535)
 scale = Vector2(2.985, 2.985)
 
 [node name="Air Spike12" parent="." instance=ExtResource("10_0uka0")]
-position = Vector2(849, 1535)
+position = Vector2(853.305, 1535)
 scale = Vector2(2.985, 2.985)
 
 [node name="Air Spike13" parent="." instance=ExtResource("10_0uka0")]
-position = Vector2(656, 1535)
+position = Vector2(660.35, 1535)
 scale = Vector2(2.985, 2.985)
 
 [node name="Air Spike14" parent="." instance=ExtResource("10_0uka0")]
-position = Vector2(1045, 1535)
+position = Vector2(1049.79, 1535)
 scale = Vector2(2.985, 2.985)
 
 [node name="Air Spike15" parent="." instance=ExtResource("10_0uka0")]
-position = Vector2(1240, 1536)
+position = Vector2(1245.06, 1536)
 scale = Vector2(2.985, 2.985)
 
 [node name="Tiles37" parent="." instance=ExtResource("1_qfoqn")]

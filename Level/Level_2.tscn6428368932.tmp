@@ -1,0 +1,179 @@
+[gd_scene load_steps=11 format=3 uid="uid://856q800rhoxh"]
+
+[ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Platform & Tiles/Tiles.tscn" id="1_jyudl"]
+[ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player/Player.tscn" id="2_3djxs"]
+[ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://Level/level_pass.tscn" id="3_rlddw"]
+[ext_resource type="PackedScene" uid="uid://byvb8bloglxbt" path="res://Enemy/spike.tscn" id="4_d1yuh"]
+[ext_resource type="PackedScene" uid="uid://b7o7hxeo8yie4" path="res://scene/sampleScene.tscn" id="4_y1m86"]
+[ext_resource type="PackedScene" uid="uid://dnkdwm0fsgamy" path="res://Platform & Tiles/small_platform.tscn" id="5_w1rdx"]
+[ext_resource type="PackedScene" uid="uid://d2qn3ujgpk7ml" path="res://Enemy/Pit.tscn" id="6_w1rdx"]
+[ext_resource type="PackedScene" uid="uid://h5vyw1skbksk" path="res://Enemy/air_spike.tscn" id="7_m870p"]
+[ext_resource type="Texture2D" uid="uid://c6r3hc0vogs4m" path="res://Background/Moon_Background.png" id="8_catqn"]
+[ext_resource type="PackedScene" uid="uid://bebg0kwbh7b1q" path="res://Player/ammo.tscn" id="9_rb7sf"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(1088, -56)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(1088, -648)
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(1088, 224)
+
+[node name="Area2D" parent="." instance=ExtResource("3_rlddw")]
+position = Vector2(-872, 776)
+
+[node name="Player" parent="." instance=ExtResource("2_3djxs")]
+position = Vector2(1064, -408)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-8, 8)
+zoom = Vector2(0.545, 0.545)
+limit_left = -1144
+limit_top = -888
+limit_right = 1142
+limit_bottom = 856
+drag_horizontal_offset = -1.0
+drag_vertical_offset = -1.0
+
+[node name="Control" parent="Player/Camera2D" instance=ExtResource("4_y1m86")]
+offset_left = -1.0
+offset_top = 2.0
+offset_right = -1.0
+offset_bottom = 8.0
+
+[node name="CharacterBody2D4" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(1080, -920)
+
+[node name="Tiles" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(1088, 512)
+
+[node name="Tiles2" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(1087, 782)
+
+[node name="Tiles3" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(1088, 992)
+
+[node name="Tiles4" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(-432, 920)
+
+[node name="Tiles5" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(-432, 112)
+
+[node name="Tiles6" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(-432, 392)
+
+[node name="Tiles7" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(-432, 664)
+
+[node name="Pit" parent="." instance=ExtResource("6_w1rdx")]
+position = Vector2(440, 960)
+scale = Vector2(2.575, 1.345)
+
+[node name="Small_Platform" parent="." instance=ExtResource("5_w1rdx")]
+position = Vector2(-216, -112)
+
+[node name="Small_Platform2" parent="." instance=ExtResource("5_w1rdx")]
+position = Vector2(-160, -112)
+
+[node name="Small_Platform3" parent="." instance=ExtResource("5_w1rdx")]
+position = Vector2(-114, -112)
+
+[node name="Small_Platform4" parent="." instance=ExtResource("5_w1rdx")]
+position = Vector2(64, -200)
+
+[node name="Small_Platform5" parent="." instance=ExtResource("5_w1rdx")]
+position = Vector2(96, -200)
+
+[node name="Small_Platform6" parent="." instance=ExtResource("5_w1rdx")]
+position = Vector2(142, -200)
+
+[node name="Small_Platform9" parent="." instance=ExtResource("5_w1rdx")]
+position = Vector2(376, -224)
+
+[node name="Small_Platform10" parent="." instance=ExtResource("5_w1rdx")]
+position = Vector2(432, -224)
+
+[node name="Small_Platform11" parent="." instance=ExtResource("5_w1rdx")]
+position = Vector2(472, -224)
+
+[node name="Tiles8" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(760, -464)
+
+[node name="Node2D" parent="." instance=ExtResource("4_d1yuh")]
+position = Vector2(872, -504)
+rotation = 1.5708
+scale = Vector2(3.175, 3.175)
+
+[node name="Tiles9" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(760, -736)
+
+[node name="Tiles10" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(760, -968)
+
+[node name="Tiles11" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(-1096, 912)
+
+[node name="Tiles12" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(-1096, 640)
+
+[node name="Tiles13" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(-1096, 376)
+
+[node name="Tiles14" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(-1096, 137)
+
+[node name="Tiles15" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(-1096, -136)
+
+[node name="Tiles16" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(-1096, -400)
+
+[node name="Tiles17" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(-1096, -588)
+
+[node name="Tiles18" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(-1096, -864)
+
+[node name="Tiles19" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(-1096, -1128)
+
+[node name="Node2D2" parent="." instance=ExtResource("4_d1yuh")]
+position = Vector2(480, -248)
+
+[node name="Node2D3" parent="." instance=ExtResource("4_d1yuh")]
+position = Vector2(56, -224)
+
+[node name="Node2D4" parent="." instance=ExtResource("4_d1yuh")]
+position = Vector2(-232, -136)
+
+[node name="Node2D5" parent="." instance=ExtResource("4_d1yuh")]
+position = Vector2(-104, -136)
+
+[node name="Air Spike" parent="." instance=ExtResource("7_m870p")]
+position = Vector2(-352, -266)
+
+[node name="Air Spike2" parent="." instance=ExtResource("7_m870p")]
+position = Vector2(40, -532)
+
+[node name="Air Spike3" parent="." instance=ExtResource("7_m870p")]
+position = Vector2(240, -352)
+
+[node name="Air Spike4" parent="." instance=ExtResource("7_m870p")]
+position = Vector2(-312, -520)
+
+[node name="Air Spike5" parent="." instance=ExtResource("7_m870p")]
+position = Vector2(-80, -296)
+
+[node name="MoonBackground" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(128, -64)
+scale = Vector2(2.48698, 2.42969)
+texture = ExtResource("8_catqn")
+
+[node name="Tiles20" parent="." instance=ExtResource("1_jyudl")]
+position = Vector2(1424, -352)
+
+[node name="Ammo" parent="." instance=ExtResource("9_rb7sf")]

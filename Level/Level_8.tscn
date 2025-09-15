@@ -1,13 +1,30 @@
-[gd_scene load_steps=9 format=3 uid="uid://wibvqk67nvq4"]
+[gd_scene load_steps=13 format=3 uid="uid://wibvqk67nvq4"]
 
 [ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Platform & Tiles/Tiles.tscn" id="1_l8r04"]
 [ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://Level/level_pass.tscn" id="2_au520"]
 [ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player/Player.tscn" id="3_p8nx0"]
 [ext_resource type="PackedScene" uid="uid://8egvl15et33p" path="res://Enemy/turret.tscn" id="4_dyqly"]
+[ext_resource type="PackedScene" uid="uid://b7o7hxeo8yie4" path="res://Menu/Pause_menu.tscn" id="4_vvjv7"]
 [ext_resource type="PackedScene" uid="uid://csjofk3uggncv" path="res://Enemy/falling_rock.tscn" id="5_018r6"]
-[ext_resource type="Texture2D" uid="uid://bqxdm8xsdiu2t" path="res://icon.svg" id="6_lr87v"]
+[ext_resource type="PackedScene" uid="uid://dntupwovotypx" path="res://Music/music.tscn" id="5_qhlll"]
 [ext_resource type="Texture2D" uid="uid://0m66r2ouljv8" path="res://Background/Spaceship_Background.png" id="7_wlygy"]
 [ext_resource type="PackedScene" uid="uid://bebg0kwbh7b1q" path="res://Player/ammo.tscn" id="8_hwlmr"]
+[ext_resource type="Texture2D" uid="uid://c2fy5k12lhswm" path="res://sprites/button/button_geasm.png" id="10_qhlll"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwesr"]
+atlas = ExtResource("10_qhlll")
+region = Rect2(0, 0, 20, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0e8q1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwesr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Level_8" type="Node2D"]
 metadata/_edit_vertical_guides_ = [-840.0, 1640.0]
@@ -32,7 +49,12 @@ position = Vector2(-8, 688)
 position = Vector2(1536, 312)
 
 [node name="Player" parent="." instance=ExtResource("3_p8nx0")]
+top_level = true
 position = Vector2(-1400, 396)
+
+[node name="Control" parent="Player" instance=ExtResource("4_vvjv7")]
+offset_left = 80.0
+offset_right = 80.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-16, 12)
@@ -41,6 +63,8 @@ limit_left = -840
 limit_top = -940
 limit_right = 1640
 limit_bottom = 712
+
+[node name="AudioStreamPlayer2D" parent="Player" instance=ExtResource("5_qhlll")]
 
 [node name="CharacterBody2D4" parent="." instance=ExtResource("1_l8r04")]
 position = Vector2(1280, 112)
@@ -83,14 +107,6 @@ position = Vector2(1606, -760)
 
 [node name="Tiles12" parent="." instance=ExtResource("1_l8r04")]
 position = Vector2(1280, -760)
-
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(1144, -568)
-texture = ExtResource("6_lr87v")
-
-[node name="Icon2" type="Sprite2D" parent="."]
-position = Vector2(1192, -544)
-texture = ExtResource("6_lr87v")
 
 [node name="Tiles13" parent="." instance=ExtResource("1_l8r04")]
 position = Vector2(952, -760)
@@ -139,7 +155,7 @@ FIRE_RATE = 50.0
 
 [node name="SpaceshipBackground" type="Sprite2D" parent="."]
 show_behind_parent = true
-position = Vector2(184, -456)
+position = Vector2(1.52588e-05, 272)
 scale = Vector2(3.60938, 3.03125)
 texture = ExtResource("7_wlygy")
 
@@ -172,3 +188,8 @@ scale = Vector2(4.485, 4.485)
 FIRE_RATE = 50.0
 
 [node name="Ammo" parent="." instance=ExtResource("8_hwlmr")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1096, -504)
+scale = Vector2(9.8625, 9.06667)
+sprite_frames = SubResource("SpriteFrames_0e8q1")

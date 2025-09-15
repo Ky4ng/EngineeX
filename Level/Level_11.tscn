@@ -1,0 +1,394 @@
+[gd_scene load_steps=23 format=3 uid="uid://ctqbk0lhlrlo4"]
+
+[ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Platform & Tiles/Tiles.tscn" id="1_nfcgr"]
+[ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://Level/level_pass.tscn" id="2_10t8n"]
+[ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player/Player.tscn" id="3_bydlp"]
+[ext_resource type="AudioStream" uid="uid://mmjdd6na2nek" path="res://Music/win-and-win-368106.mp3" id="4_k0oya"]
+[ext_resource type="FontFile" uid="uid://bvmb75d0vr7ft" path="res://grapesoda_2/GrapeSoda.ttf" id="5_80x03"]
+[ext_resource type="Texture2D" uid="uid://cig6ex0dc1o7y" path="res://sprites/Jetpack/player_jetpack.png" id="6_k0oya"]
+[ext_resource type="Texture2D" uid="uid://h7ute0reqj8x" path="res://sprites/Gun/gun.png" id="7_80x03"]
+[ext_resource type="Texture2D" uid="uid://crrfak2dvbmvr" path="res://sprites/Player/idle_1.png" id="8_6p2lj"]
+[ext_resource type="Texture2D" uid="uid://tpwxa2iuy4wx" path="res://Background/Background _image.jpeg" id="9_80x03"]
+[ext_resource type="Texture2D" uid="uid://cn8y1v78vr14s" path="res://sprites/spike/meteor_spike.png" id="10_rkgq5"]
+[ext_resource type="Texture2D" uid="uid://r57uedr4h8ho" path="res://sprites/spike/moonside_spike.png" id="11_go74a"]
+[ext_resource type="Texture2D" uid="uid://ury3npo6t7n5" path="res://sprites/Turret/turret_BASE.png" id="12_2rc0m"]
+[ext_resource type="Texture2D" uid="uid://dohorpg1l0drq" path="res://sprites/Turret/turret_FACE.png" id="13_wv7h7"]
+[ext_resource type="PackedScene" uid="uid://bebg0kwbh7b1q" path="res://Player/ammo.tscn" id="14_gbj2k"]
+[ext_resource type="Texture2D" uid="uid://c56er5ifs0e85" path="res://sprites/Cave/cave_tile.png" id="15_jwa40"]
+[ext_resource type="Texture2D" uid="uid://d02jnls7au0c7" path="res://sprites/Cave/long_cave_tile.png" id="16_knd4t"]
+[ext_resource type="Texture2D" uid="uid://bk7xkplnb140v" path="res://sprites/Cave/long_danger_cave_tile.png" id="17_apqxh"]
+[ext_resource type="Texture2D" uid="uid://dbtftmfs2u6d8" path="res://sprites/Moon/moon_tile.png" id="18_qun14"]
+[ext_resource type="Texture2D" uid="uid://dhls5w65kc7ry" path="res://sprites/Spaceship/spaceship_tile.png" id="19_waa4u"]
+[ext_resource type="Texture2D" uid="uid://bca1b4d2rocij" path="res://sprites/Spaceship/spaceship_platform.png" id="20_8gsog"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3chyc"]
+atlas = ExtResource("13_wv7h7")
+region = Rect2(0, 0, 32, 35)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dpg28"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3chyc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+metadata/_edit_vertical_guides_ = [912.0]
+metadata/_edit_horizontal_guides_ = [3312.0]
+
+[node name="Tiles" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(-104, 16)
+
+[node name="Tiles2" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(-104, 333)
+
+[node name="Tiles3" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(880, 8)
+
+[node name="Tiles4" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(-104, 624)
+
+[node name="Tiles5" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(480, 320)
+
+[node name="Tiles6" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(228, 320)
+
+[node name="Tiles7" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(-104, -272)
+
+[node name="Tiles8" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(-104, -560)
+
+[node name="Tiles9" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(888, -272)
+
+[node name="Tiles10" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(888, -552)
+
+[node name="Tiles11" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(232, -552)
+
+[node name="Tiles12" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(560, -552)
+
+[node name="Area2D" parent="." instance=ExtResource("2_10t8n")]
+position = Vector2(1264, 1376)
+
+[node name="Player" parent="." instance=ExtResource("3_bydlp")]
+top_level = true
+position = Vector2(104, -96)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(0.98, 0.65)
+limit_left = -344
+limit_top = -730
+limit_right = 912
+limit_bottom = 3300
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
+position = Vector2(-104, 96)
+stream = ExtResource("4_k0oya")
+volume_db = -10.857
+autoplay = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -32.0
+offset_top = -486.0
+offset_right = 616.0
+offset_bottom = -310.0
+theme_override_fonts/normal_font = ExtResource("5_80x03")
+theme_override_font_sizes/normal_font_size = 60
+text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = -32.0
+offset_top = -352.0
+offset_right = 616.0
+offset_bottom = -176.0
+theme_override_fonts/normal_font = ExtResource("5_80x03")
+theme_override_font_sizes/normal_font_size = 60
+text = "Mechanics Programmer & Level Designer"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="."]
+offset_left = -24.0
+offset_top = -232.0
+offset_right = 624.0
+offset_bottom = -56.0
+theme_override_fonts/normal_font = ExtResource("5_80x03")
+theme_override_font_sizes/normal_font_size = 60
+text = "Chua Yun Sheng"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerJetpack" type="Sprite2D" parent="."]
+position = Vector2(456, -24)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("6_k0oya")
+
+[node name="Gun" type="Sprite2D" parent="."]
+position = Vector2(288, -24)
+scale = Vector2(4.1129, 6.36667)
+texture = ExtResource("7_80x03")
+
+[node name="Idle1" type="Sprite2D" parent="."]
+position = Vector2(96, -16)
+scale = Vector2(0.778261, 0.521807)
+texture = ExtResource("8_6p2lj")
+
+[node name="BackgroundImage" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(433.001, 1376)
+scale = Vector2(2.61852, 6.53056)
+texture = ExtResource("9_80x03")
+
+[node name="Tiles13" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(-104, 904)
+
+[node name="Tiles14" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(-104, 1176)
+
+[node name="Tiles15" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(328, 1192)
+
+[node name="Tiles16" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(616, 1192)
+
+[node name="Tiles17" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(880, 280)
+
+[node name="Tiles18" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(880, 537)
+
+[node name="Tiles19" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(880, 800)
+
+[node name="Tiles20" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(888, 1040)
+
+[node name="Tiles21" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(888, 1192)
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+offset_left = -16.0
+offset_top = 464.0
+offset_right = 632.0
+offset_bottom = 640.0
+theme_override_fonts/normal_font = ExtResource("5_80x03")
+theme_override_font_sizes/normal_font_size = 60
+text = "Obstacles Programmer"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="."]
+offset_left = -8.0
+offset_top = 584.0
+offset_right = 640.0
+offset_bottom = 760.0
+theme_override_fonts/normal_font = ExtResource("5_80x03")
+theme_override_font_sizes/normal_font_size = 60
+text = "Dilan Rhaj "
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="MeteorSpike" type="Sprite2D" parent="."]
+position = Vector2(496, 832)
+scale = Vector2(3.95, 3.62195)
+texture = ExtResource("10_rkgq5")
+
+[node name="MoonsideSpike" type="Sprite2D" parent="."]
+position = Vector2(328, 840)
+scale = Vector2(4.68421, 3.62195)
+texture = ExtResource("11_go74a")
+
+[node name="TurretBase" type="Sprite2D" parent="."]
+position = Vector2(136, 848)
+scale = Vector2(4, 3.5)
+texture = ExtResource("12_2rc0m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(152, 856)
+scale = Vector2(4.25, 3.42857)
+sprite_frames = SubResource("SpriteFrames_dpg28")
+
+[node name="Tiles22" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(-112, 1456)
+
+[node name="Tiles23" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(-112, 1728)
+
+[node name="Tiles24" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(-120, 1976)
+
+[node name="Tiles25" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(888, 1432)
+
+[node name="Tiles26" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(888, 1680)
+
+[node name="Tiles27" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(880, 1928)
+
+[node name="Tiles28" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(168, 1976)
+
+[node name="Tiles29" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(392, 1976)
+
+[node name="Tiles30" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(880, 2184)
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="."]
+offset_left = -40.0
+offset_top = 1258.0
+offset_right = 608.0
+offset_bottom = 1434.0
+theme_override_fonts/normal_font = ExtResource("5_80x03")
+theme_override_font_sizes/normal_font_size = 60
+text = "UI Programmer"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="."]
+offset_left = -32.0
+offset_top = 1378.0
+offset_right = 616.0
+offset_bottom = 1554.0
+theme_override_fonts/normal_font = ExtResource("5_80x03")
+theme_override_font_sizes/normal_font_size = 60
+text = "Zhen Yang Liew "
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Ammo" parent="." instance=ExtResource("14_gbj2k")]
+
+[node name="CaveTile" type="Sprite2D" parent="."]
+position = Vector2(120, 1648)
+texture = ExtResource("15_jwa40")
+
+[node name="LongCaveTile" type="Sprite2D" parent="."]
+position = Vector2(312, 1656)
+texture = ExtResource("16_knd4t")
+
+[node name="LongDangerCaveTile" type="Sprite2D" parent="."]
+position = Vector2(496, 1664)
+texture = ExtResource("17_apqxh")
+
+[node name="Tiles31" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(880, 2424)
+
+[node name="Tiles32" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(880, 2672)
+
+[node name="Tiles33" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(880, 2928)
+
+[node name="Tiles34" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(-118, 2240)
+
+[node name="Tiles35" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(-118, 2504)
+
+[node name="Tiles36" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(-120, 2768)
+
+[node name="Tiles37" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(-120, 2937)
+
+[node name="Tiles38" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(592, 2937)
+
+[node name="Tiles39" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(344, 2937)
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="."]
+offset_left = -16.0
+offset_top = 2080.0
+offset_right = 632.0
+offset_bottom = 2256.0
+theme_override_fonts/normal_font = ExtResource("5_80x03")
+theme_override_font_sizes/normal_font_size = 60
+text = "Sprite Maker"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel9" type="RichTextLabel" parent="."]
+offset_left = -8.0
+offset_top = 2200.0
+offset_right = 640.0
+offset_bottom = 2376.0
+theme_override_fonts/normal_font = ExtResource("5_80x03")
+theme_override_font_sizes/normal_font_size = 60
+text = "Chua Kek Yang "
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="MoonTile" type="Sprite2D" parent="."]
+position = Vector2(106, 2544)
+scale = Vector2(1.71774, 1.67073)
+texture = ExtResource("18_qun14")
+
+[node name="SpaceshipTile" type="Sprite2D" parent="."]
+position = Vector2(336, 2536)
+scale = Vector2(1.43023, 1.5625)
+texture = ExtResource("19_waa4u")
+
+[node name="SpaceshipPlatform" type="Sprite2D" parent="."]
+position = Vector2(528, 2528)
+texture = ExtResource("20_8gsog")
+
+[node name="Tiles40" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(-120, 3216)
+
+[node name="Tiles41" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(-120, 3480)
+
+[node name="Tiles42" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(176, 3480)
+
+[node name="Tiles43" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(488, 3480)
+
+[node name="Tiles44" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(760, 3480)
+
+[node name="Tiles45" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(1160, 3208)
+
+[node name="Tiles46" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(1052, 3480)
+
+[node name="Area2D2" parent="." instance=ExtResource("2_10t8n")]
+position = Vector2(720, 3121)
+
+[node name="RichTextLabel10" type="RichTextLabel" parent="."]
+offset_left = -64.0
+offset_top = 3040.0
+offset_right = 584.0
+offset_bottom = 3216.0
+theme_override_fonts/normal_font = ExtResource("5_80x03")
+theme_override_font_sizes/normal_font_size = 60
+text = "Thank You For Playing!!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Tiles47" parent="." instance=ExtResource("1_nfcgr")]
+position = Vector2(-104, 240)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c3t0y4qvyre8x"]
 
 [ext_resource type="Script" uid="uid://cw6pstt140ljs" path="res://scripts/level_pass.gd" id="1_0b0ec"]
-[ext_resource type="Texture2D" uid="uid://wvuat4xdi6y1" path="res://sprites/geasm_flag.PNG" id="2_f741y"]
+[ext_resource type="Texture2D" uid="uid://wvuat4xdi6y1" path="res://sprites/Flag/geasm_flag.PNG" id="2_f741y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ha85j"]
 radius = 144.0

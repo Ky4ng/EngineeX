@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://drhe25uvs3fd2"]
+[gd_scene load_steps=8 format=3 uid="uid://4p0pxyaly33t"]
 
 [ext_resource type="Script" uid="uid://sqj62t4knd0c" path="res://scripts/falling_spikes.gd" id="1_hlh8f"]
 [ext_resource type="Texture2D" uid="uid://bas3yi8kcaol8" path="res://sprites/spike/cave_spike.png" id="2_pqyv8"]
@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://c6i2j6mlm5fh2" path="res://sprites/spike/ship_spike.png" id="3_pqyv8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7qxjg"]
-size = Vector2(56, 48)
+size = Vector2(48, 40)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_fiysq"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_cn6wg"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -36,7 +36,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v3qgq"]
-size = Vector2(57.5, 328)
+size = Vector2(51, 149)
 
 [node name="FallingSpikes" type="Node2D"]
 script = ExtResource("1_hlh8f")
@@ -44,18 +44,24 @@ script = ExtResource("1_hlh8f")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(12, 8)
+position = Vector2(0, 12)
+scale = Vector2(1.045, 1.07)
 shape = SubResource("RectangleShape2D_7qxjg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
-position = Vector2(11.6895, 8.6929)
+position = Vector2(1.49012e-08, 12)
 rotation = 3.14159
-scale = Vector2(1.91108, 1.51109)
-sprite_frames = SubResource("SpriteFrames_fiysq")
+scale = Vector2(1.60038, 1.37923)
+sprite_frames = SubResource("SpriteFrames_cn6wg")
 animation = &"cave"
 
 [node name="PlayerDetect" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetect"]
-position = Vector2(11.25, 148)
+position = Vector2(0, 64)
 shape = SubResource("RectangleShape2D_v3qgq")
+
+[node name="FloorDetect" type="Area2D" parent="."]
+collision_layer = 6
+
+[node name="RayCast2D" type="RayCast2D" parent="FloorDetect"]

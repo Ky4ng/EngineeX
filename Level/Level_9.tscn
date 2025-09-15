@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://11ub6y10aboo"]
+[gd_scene load_steps=15 format=3 uid="uid://11ub6y10aboo"]
 
 [ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Platform & Tiles/Tiles.tscn" id="1_rriw4"]
 [ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://Level/level_pass.tscn" id="2_3mn4y"]
@@ -7,8 +7,26 @@
 [ext_resource type="PackedScene" uid="uid://8egvl15et33p" path="res://Enemy/turret.tscn" id="5_sqbe6"]
 [ext_resource type="PackedScene" uid="uid://csjofk3uggncv" path="res://Enemy/falling_rock.tscn" id="6_paf51"]
 [ext_resource type="PackedScene" uid="uid://d2qn3ujgpk7ml" path="res://Enemy/Pit.tscn" id="7_5jidq"]
+[ext_resource type="PackedScene" uid="uid://dntupwovotypx" path="res://Music/music.tscn" id="7_jfwcu"]
 [ext_resource type="Texture2D" uid="uid://0m66r2ouljv8" path="res://Background/Spaceship_Background.png" id="8_5jidq"]
+[ext_resource type="PackedScene" uid="uid://b7o7hxeo8yie4" path="res://Menu/Pause_menu.tscn" id="8_gpjpy"]
 [ext_resource type="PackedScene" uid="uid://bebg0kwbh7b1q" path="res://Player/ammo.tscn" id="9_p6cg3"]
+[ext_resource type="Texture2D" uid="uid://c2fy5k12lhswm" path="res://sprites/button/button_geasm.png" id="12_n4mw0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwesr"]
+atlas = ExtResource("12_n4mw0")
+region = Rect2(0, 0, 20, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h688x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwesr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Level_9" type="Node2D"]
 metadata/_edit_vertical_guides_ = [-640.0, 2128.0]
@@ -42,7 +60,6 @@ position = Vector2(256, 280)
 position = Vector2(1336, 80)
 rotation = 3.14159
 scale = Vector2(0.9, 1)
-fall_speed = 10.0
 
 [node name="Tiles" parent="." instance=ExtResource("1_rriw4")]
 position = Vector2(592, 280)
@@ -135,6 +152,7 @@ position = Vector2(-408, -312)
 position = Vector2(928, 280)
 
 [node name="Player" parent="." instance=ExtResource("3_24y5s")]
+top_level = true
 position = Vector2(-240, -56)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -144,9 +162,17 @@ limit_top = -1344
 limit_right = 2144
 limit_bottom = 900
 
+[node name="AudioStreamPlayer2D" parent="Player" instance=ExtResource("7_jfwcu")]
+
 [node name="Turret2" parent="Player" instance=ExtResource("5_sqbe6")]
 position = Vector2(-362, -144)
 FIRE_RATE = 0.5
+
+[node name="Control" parent="Player" instance=ExtResource("8_gpjpy")]
+offset_left = 80.0
+offset_top = 16.0
+offset_right = 80.0
+offset_bottom = 21.0
 
 [node name="Tiles4" parent="." instance=ExtResource("1_rriw4")]
 position = Vector2(1400, -336)
@@ -162,7 +188,7 @@ position = Vector2(2152, -1176)
 
 [node name="SpaceshipBackground" type="Sprite2D" parent="."]
 show_behind_parent = true
-position = Vector2(352, -38)
+position = Vector2(816, -200)
 scale = Vector2(3.29688, 3.28906)
 texture = ExtResource("8_5jidq")
 
@@ -173,3 +199,8 @@ position = Vector2(920, 880)
 position = Vector2(264, 880)
 
 [node name="Ammo" parent="." instance=ExtResource("9_p6cg3")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1208, -936)
+scale = Vector2(8.525, 6.93334)
+sprite_frames = SubResource("SpriteFrames_h688x")

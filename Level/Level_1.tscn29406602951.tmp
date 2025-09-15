@@ -1,0 +1,245 @@
+[gd_scene load_steps=10 format=3 uid="uid://crtj7o7cmyjb"]
+
+[ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Platform & Tiles/Tiles.tscn" id="1_tedvs"]
+[ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://Level/level_pass.tscn" id="2_gyeet"]
+[ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player/Player.tscn" id="3_2wi7h"]
+[ext_resource type="PackedScene" uid="uid://bebg0kwbh7b1q" path="res://Player/ammo.tscn" id="4_ckrbt"]
+[ext_resource type="Texture2D" uid="uid://c6r3hc0vogs4m" path="res://Background/Moon_Background.png" id="5_4ouur"]
+[ext_resource type="AudioStream" uid="uid://c15ohdfuiagcs" path="res://Music/pixel-245147.mp3" id="6_b2ndw"]
+[ext_resource type="PackedScene" uid="uid://dnkdwm0fsgamy" path="res://Platform & Tiles/small_platform.tscn" id="7_ckrbt"]
+[ext_resource type="PackedScene" uid="uid://b7o7hxeo8yie4" path="res://scene/sampleScene.tscn" id="8_j7kct"]
+
+[sub_resource type="FontFile" id="FontFile_ckrbt"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/70/0/ascent = 0.0
+cache/0/70/0/descent = 0.0
+cache/0/70/0/underline_position = 0.0
+cache/0/70/0/underline_thickness = 0.0
+cache/0/70/0/scale = 1.0
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/35/0/ascent = 0.0
+cache/0/35/0/descent = 0.0
+cache/0/35/0/underline_position = 0.0
+cache/0/35/0/underline_thickness = 0.0
+cache/0/35/0/scale = 1.0
+cache/0/37/0/ascent = 0.0
+cache/0/37/0/descent = 0.0
+cache/0/37/0/underline_position = 0.0
+cache/0/37/0/underline_thickness = 0.0
+cache/0/37/0/scale = 1.0
+cache/0/36/0/ascent = 0.0
+cache/0/36/0/descent = 0.0
+cache/0/36/0/underline_position = 0.0
+cache/0/36/0/underline_thickness = 0.0
+cache/0/36/0/scale = 1.0
+
+[node name="Level_1" type="Node2D"]
+metadata/_edit_vertical_guides_ = [1808.0]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-112, 856)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(216, 856)
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-400, 856)
+
+[node name="Area2D" parent="." instance=ExtResource("2_gyeet")]
+position = Vector2(-248, -296)
+scale = Vector2(0.79, 0.79)
+
+[node name="Player" parent="." instance=ExtResource("3_2wi7h")]
+position = Vector2(-200, 512)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(540, 201)
+offset = Vector2(-0.39, 0)
+zoom = Vector2(0.49, 0.49)
+limit_left = -670
+limit_right = 1808
+
+[node name="Control" parent="Camera2D" instance=ExtResource("8_j7kct")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -1172.0
+offset_top = -665.0
+offset_right = 1212.0
+offset_bottom = 655.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Tiles" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-400, 600)
+
+[node name="Tiles2" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-400, 312)
+
+[node name="Tiles3" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-400, 32)
+
+[node name="Tiles4" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-400, -408)
+
+[node name="Tiles5" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-712, -408)
+
+[node name="Tiles6" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(540, 856)
+
+[node name="Tiles7" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(840, 856)
+
+[node name="Tiles8" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1144, 856)
+
+[node name="Tiles9" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1448, 856)
+
+[node name="Tiles10" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1744, 856)
+
+[node name="Tiles11" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1744, 592)
+
+[node name="Tiles12" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1744, 328)
+
+[node name="Tiles13" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1744, 280)
+
+[node name="Tiles14" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1168, 272)
+
+[node name="Tiles15" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1168, 488)
+
+[node name="Tiles16" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1168, 656)
+
+[node name="Tiles17" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1464, 656)
+
+[node name="Tiles18" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1472, 272)
+
+[node name="Tiles19" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1472, 464)
+
+[node name="Tiles20" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1457, -272)
+
+[node name="Tiles21" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1744, -8)
+
+[node name="Tiles22" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1161, 8)
+
+[node name="Tiles23" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-400, 24)
+
+[node name="MoonBackground" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(144, 320)
+scale = Vector2(2.36979, 2.0625)
+texture = ExtResource("5_4ouur")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(3, 2)
+stream = ExtResource("6_b2ndw")
+autoplay = true
+
+[node name="Small_Platform" parent="." instance=ExtResource("7_ckrbt")]
+position = Vector2(232, 454)
+
+[node name="Small_Platform2" parent="." instance=ExtResource("7_ckrbt")]
+position = Vector2(728, 233)
+
+[node name="Tiles24" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1480, -8)
+
+[node name="Tiles25" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1744, -285)
+
+[node name="Tiles26" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1152, -272)
+
+[node name="Tiles27" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-720, 32)
+
+[node name="Tiles28" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-720, 320)
+
+[node name="Tiles29" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-712, 600)
+
+[node name="Tiles30" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(-712, 856)
+
+[node name="Tiles31" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1160, -528)
+
+[node name="Tiles32" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1464, -496)
+
+[node name="Tiles33" parent="." instance=ExtResource("1_tedvs")]
+position = Vector2(1752, -424)
+
+[node name="Small_Platform3" parent="." instance=ExtResource("7_ckrbt")]
+show_behind_parent = true
+position = Vector2(-304, -192)
+
+[node name="Small_Platform4" parent="." instance=ExtResource("7_ckrbt")]
+position = Vector2(-240, -192)
+
+[node name="Small_Platform5" parent="." instance=ExtResource("7_ckrbt")]
+position = Vector2(-184, -192)
+
+[node name="Small_Platform6" parent="." instance=ExtResource("7_ckrbt")]
+position = Vector2(-128, -192)
+
+[node name="Small_Platform7" parent="." instance=ExtResource("7_ckrbt")]
+position = Vector2(-72, -192)
+
+[node name="Small_Platform8" parent="." instance=ExtResource("7_ckrbt")]
+position = Vector2(-16, -192)
+
+[node name="Small_Platform9" parent="." instance=ExtResource("7_ckrbt")]
+position = Vector2(48, -192)
+
+[node name="Small_Platform10" parent="." instance=ExtResource("7_ckrbt")]
+position = Vector2(376, -88)
+
+[node name="Ammo" parent="." instance=ExtResource("4_ckrbt")]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 104.0
+offset_top = -376.0
+offset_right = 848.0
+offset_bottom = -128.0
+theme_override_fonts/normal_font = SubResource("FontFile_ckrbt")
+theme_override_font_sizes/bold_italics_font_size = 1311
+theme_override_font_sizes/normal_font_size = 36
+text = "WASD to move.
+Click to lauch yourself in the opposite direction.
+Hold Space to Glide.
+Press 'H' to restart."

@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://cvw34baox7v2a"]
+[gd_scene load_steps=11 format=3 uid="uid://cvw34baox7v2a"]
 
 [ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Platform & Tiles/Tiles.tscn" id="1_goiux"]
 [ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://Level/level_pass.tscn" id="2_cxlnm"]
+[ext_resource type="PackedScene" uid="uid://dntupwovotypx" path="res://Music/music.tscn" id="3_li645"]
+[ext_resource type="PackedScene" uid="uid://b7o7hxeo8yie4" path="res://Menu/Pause_menu.tscn" id="3_n5n4j"]
 [ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player/Player.tscn" id="3_o7uev"]
 [ext_resource type="Texture2D" uid="uid://0m66r2ouljv8" path="res://Background/Spaceship_Background.png" id="4_4pvmy"]
 [ext_resource type="PackedScene" uid="uid://bfewklmfo8bdb" path="res://Platform & Tiles/platform.tscn" id="5_nucui"]
@@ -20,6 +22,7 @@ position = Vector2(-832, 776)
 position = Vector2(-832, -88)
 
 [node name="Player" parent="." instance=ExtResource("3_o7uev")]
+top_level = true
 position = Vector2(-664, -96)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -29,12 +32,20 @@ limit_top = -536
 limit_right = 1112
 limit_bottom = 808
 
+[node name="AudioStreamPlayer2D" parent="Player/Camera2D" instance=ExtResource("3_li645")]
+
+[node name="Control" parent="Player" instance=ExtResource("3_n5n4j")]
+offset_left = 88.0
+offset_top = 24.0
+offset_right = 88.0
+offset_bottom = 29.0
+
 [node name="CharacterBody2D4" parent="." instance=ExtResource("1_goiux")]
 position = Vector2(1072, 736)
 
 [node name="SpaceshipBackground" type="Sprite2D" parent="."]
 show_behind_parent = true
-position = Vector2(72, 72)
+position = Vector2(8.00002, 112)
 scale = Vector2(1.92708, 1.64844)
 texture = ExtResource("4_4pvmy")
 

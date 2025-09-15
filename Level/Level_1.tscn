@@ -1,54 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://crtj7o7cmyjb"]
+[gd_scene load_steps=10 format=3 uid="uid://crtj7o7cmyjb"]
 
 [ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Platform & Tiles/Tiles.tscn" id="1_tedvs"]
 [ext_resource type="PackedScene" uid="uid://c3t0y4qvyre8x" path="res://Level/level_pass.tscn" id="2_gyeet"]
 [ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player/Player.tscn" id="3_2wi7h"]
 [ext_resource type="PackedScene" uid="uid://bebg0kwbh7b1q" path="res://Player/ammo.tscn" id="4_ckrbt"]
 [ext_resource type="Texture2D" uid="uid://c6r3hc0vogs4m" path="res://Background/Moon_Background.png" id="5_4ouur"]
-[ext_resource type="AudioStream" uid="uid://c15ohdfuiagcs" path="res://scripts/pixel-245147.mp3" id="6_b2ndw"]
+[ext_resource type="PackedScene" uid="uid://dntupwovotypx" path="res://Music/music.tscn" id="5_iyc1c"]
 [ext_resource type="PackedScene" uid="uid://dnkdwm0fsgamy" path="res://Platform & Tiles/small_platform.tscn" id="7_ckrbt"]
-
-[sub_resource type="FontFile" id="FontFile_ckrbt"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/70/0/ascent = 0.0
-cache/0/70/0/descent = 0.0
-cache/0/70/0/underline_position = 0.0
-cache/0/70/0/underline_thickness = 0.0
-cache/0/70/0/scale = 1.0
-cache/0/50/0/ascent = 0.0
-cache/0/50/0/descent = 0.0
-cache/0/50/0/underline_position = 0.0
-cache/0/50/0/underline_thickness = 0.0
-cache/0/50/0/scale = 1.0
-cache/0/40/0/ascent = 0.0
-cache/0/40/0/descent = 0.0
-cache/0/40/0/underline_position = 0.0
-cache/0/40/0/underline_thickness = 0.0
-cache/0/40/0/scale = 1.0
-cache/0/30/0/ascent = 0.0
-cache/0/30/0/descent = 0.0
-cache/0/30/0/underline_position = 0.0
-cache/0/30/0/underline_thickness = 0.0
-cache/0/30/0/scale = 1.0
-cache/0/35/0/ascent = 0.0
-cache/0/35/0/descent = 0.0
-cache/0/35/0/underline_position = 0.0
-cache/0/35/0/underline_thickness = 0.0
-cache/0/35/0/scale = 1.0
-cache/0/37/0/ascent = 0.0
-cache/0/37/0/descent = 0.0
-cache/0/37/0/underline_position = 0.0
-cache/0/37/0/underline_thickness = 0.0
-cache/0/37/0/scale = 1.0
-cache/0/36/0/ascent = 0.0
-cache/0/36/0/descent = 0.0
-cache/0/36/0/underline_position = 0.0
-cache/0/36/0/underline_thickness = 0.0
-cache/0/36/0/scale = 1.0
+[ext_resource type="FontFile" uid="uid://bvmb75d0vr7ft" path="res://grapesoda_2/GrapeSoda.ttf" id="8_iyc1c"]
+[ext_resource type="PackedScene" uid="uid://b7o7hxeo8yie4" path="res://Menu/Pause_menu.tscn" id="8_j7kct"]
 
 [node name="Level_1" type="Node2D"]
 metadata/_edit_vertical_guides_ = [1808.0]
@@ -75,6 +35,20 @@ offset = Vector2(-0.39, 0)
 zoom = Vector2(0.49, 0.49)
 limit_left = -670
 limit_right = 1808
+
+[node name="Control" parent="Camera2D" instance=ExtResource("8_j7kct")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -1172.0
+offset_top = -665.0
+offset_right = 1212.0
+offset_bottom = 655.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="AudioStreamPlayer2D" parent="Camera2D" instance=ExtResource("5_iyc1c")]
+attenuation = 1e-05
 
 [node name="Tiles" parent="." instance=ExtResource("1_tedvs")]
 position = Vector2(-400, 600)
@@ -151,11 +125,6 @@ position = Vector2(144, 320)
 scale = Vector2(2.36979, 2.0625)
 texture = ExtResource("5_4ouur")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(3, 2)
-stream = ExtResource("6_b2ndw")
-autoplay = true
-
 [node name="Small_Platform" parent="." instance=ExtResource("7_ckrbt")]
 position = Vector2(232, 454)
 
@@ -220,13 +189,13 @@ position = Vector2(376, -88)
 [node name="Ammo" parent="." instance=ExtResource("4_ckrbt")]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 104.0
+offset_left = 112.0
 offset_top = -376.0
-offset_right = 848.0
-offset_bottom = -128.0
-theme_override_fonts/normal_font = SubResource("FontFile_ckrbt")
+offset_right = 1016.0
+offset_bottom = -95.0
+theme_override_fonts/normal_font = ExtResource("8_iyc1c")
 theme_override_font_sizes/bold_italics_font_size = 1311
-theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/normal_font_size = 50
 text = "WASD to move.
 Click to lauch yourself in the opposite direction.
 Hold Space to Glide.

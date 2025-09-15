@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://cfvxwiwl2np0d"]
+[gd_scene load_steps=18 format=3 uid="uid://cfvxwiwl2np0d"]
 
+[ext_resource type="PackedScene" uid="uid://b7o7hxeo8yie4" path="res://Menu/Pause_menu.tscn" id="2_wvqr8"]
 [ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Platform & Tiles/Tiles.tscn" id="3_bkaik"]
 [ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player/Player.tscn" id="4_qj7nf"]
 [ext_resource type="PackedScene" uid="uid://dnkdwm0fsgamy" path="res://Platform & Tiles/small_platform.tscn" id="4_uhnmm"]
@@ -13,19 +14,12 @@
 [ext_resource type="Texture2D" uid="uid://c6r3hc0vogs4m" path="res://Background/Moon_Background.png" id="11_kgp7g"]
 [ext_resource type="PackedScene" uid="uid://bepg3b4gbwv3l" path="res://Platform & Tiles/Long_Tile.tscn" id="12_r0yry"]
 [ext_resource type="PackedScene" uid="uid://bebg0kwbh7b1q" path="res://Player/ammo.tscn" id="13_s4bsi"]
+[ext_resource type="PackedScene" uid="uid://4p0pxyaly33t" path="res://Enemy/falling_spikes.tscn" id="14_gq326"]
+[ext_resource type="PackedScene" uid="uid://uw45gdeouyh4" path="res://Enemy/spike_piece.tscn" id="15_p65gi"]
+[ext_resource type="PackedScene" uid="uid://dntupwovotypx" path="res://Music/music.tscn" id="17_gbhyl"]
 
 [node name="Level_3" type="Node2D"]
 z_as_relative = false
-
-[node name="Player" parent="." instance=ExtResource("4_qj7nf")]
-position = Vector2(-584, -472)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(0.445, 0.445)
-limit_left = -1047
-limit_top = -922
-limit_right = 1688
-limit_bottom = 1076
 
 [node name="Area2D" parent="." instance=ExtResource("7_1mclj")]
 position = Vector2(888, 792)
@@ -164,8 +158,7 @@ position = Vector2(-768, -808)
 position = Vector2(-8, -832)
 
 [node name="FallingRock3" parent="." instance=ExtResource("8_q1vk6")]
-position = Vector2(-552, -1328)
-fall_speed = 500.0
+position = Vector2(-560, -1336)
 
 [node name="Node2D" parent="." instance=ExtResource("9_o5v8y")]
 position = Vector2(-312, -378)
@@ -333,7 +326,7 @@ scale = Vector2(2.325, 2.015)
 
 [node name="MoonBackground" type="Sprite2D" parent="."]
 show_behind_parent = true
-position = Vector2(96, 256)
+position = Vector2(290, 112)
 scale = Vector2(2.57292, 2.39844)
 texture = ExtResource("11_kgp7g")
 
@@ -395,3 +388,56 @@ position = Vector2(864, -856)
 position = Vector2(952, -856)
 
 [node name="Ammo" parent="." instance=ExtResource("13_s4bsi")]
+
+[node name="FallingSpikes" parent="." instance=ExtResource("14_gq326")]
+position = Vector2(-176, 536)
+scale = Vector2(1.5, 2.235)
+destroy_y = 800.0
+
+[node name="FallingSpikes2" parent="." instance=ExtResource("14_gq326")]
+position = Vector2(-32, 536)
+scale = Vector2(1.5, 2.235)
+destroy_y = 800.0
+
+[node name="SpikePieces2" parent="." instance=ExtResource("15_p65gi")]
+position = Vector2(-274, 816)
+scale = Vector2(1.975, 1.975)
+
+[node name="SpikePieces3" parent="." instance=ExtResource("15_p65gi")]
+position = Vector2(-240, 816)
+scale = Vector2(1.975, 1.975)
+
+[node name="SpikePieces4" parent="." instance=ExtResource("15_p65gi")]
+position = Vector2(-216, 816)
+scale = Vector2(1.975, 1.975)
+
+[node name="SpikePieces5" parent="." instance=ExtResource("15_p65gi")]
+position = Vector2(-116, 816)
+scale = Vector2(1.975, 1.975)
+
+[node name="SpikePieces6" parent="." instance=ExtResource("15_p65gi")]
+position = Vector2(-88, 816)
+scale = Vector2(1.975, 1.975)
+
+[node name="SpikePieces7" parent="." instance=ExtResource("15_p65gi")]
+position = Vector2(-56, 816)
+scale = Vector2(1.975, 1.975)
+
+[node name="Player" parent="." instance=ExtResource("4_qj7nf")]
+position = Vector2(-592, -528)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(0.535, 0.535)
+limit_left = -1047
+limit_top = -922
+limit_right = 1688
+limit_bottom = 1079
+
+[node name="Control" parent="Player/Camera2D" instance=ExtResource("2_wvqr8")]
+offset_left = -992.0
+offset_top = -584.0
+offset_right = 1160.0
+offset_bottom = 623.0
+
+[node name="AudioStreamPlayer2D" parent="Player/Camera2D" instance=ExtResource("17_gbhyl")]
+attenuation = 8.63167e-05

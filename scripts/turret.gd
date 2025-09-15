@@ -6,6 +6,7 @@ extends Node2D
 @onready var gunSprite = $GunSprite
 @onready var rayCast = $RayCast2D
 @onready var reloadTimer = $RayCast2D/ReloadTimer
+@onready var turret_sound: AudioStreamPlayer2D = $TurretSound
 
 func _ready():
 	reloadTimer.wait_time = 0.1 / FIRE_RATE
@@ -35,6 +36,11 @@ func shoot():
 		get_tree().current_scene.add_child(bullet)
 		bullet.global_position = global_position
 		bullet.global_rotation = rayCast.global_rotation
+
+	# 🔊 play sound when shooting
+	if turret_sound:
+		turret_sound.play()
+
 	reloadTimer.start()
 
 func get_nearest_player() -> Node2D:

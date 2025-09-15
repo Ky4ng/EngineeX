@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://bu2y5cpj8bk34"]
+
+[ext_resource type="Texture2D" uid="uid://dsfs8f2l8y6g5" path="res://sprites/Jetpack/player_jetpack_animated.png" id="1_8aj6d"]
+[ext_resource type="Script" uid="uid://ewgqcteiltgk" path="res://scripts/jetpack.gd" id="1_ol6xp"]
+[ext_resource type="Texture2D" uid="uid://cig6ex0dc1o7y" path="res://sprites/Jetpack/player_jetpack.png" id="3_5t0jo"]
+[ext_resource type="AudioStream" uid="uid://bitj2ykpt04x5" path="res://Sound/JetPack_Sound.wav" id="4_x00wo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ol6xp"]
+atlas = ExtResource("1_8aj6d")
+region = Rect2(1, 0, 32, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5t0jo"]
+atlas = ExtResource("1_8aj6d")
+region = Rect2(33, 0, 32, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p6glh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ol6xp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5t0jo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5t0jo")
+}],
+"loop": true,
+"name": &"glide",
+"speed": 100.0
+}]
+
+[node name="Jetpack" type="Node2D"]
+script = ExtResource("1_ol6xp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_p6glh")
+animation = &"glide"
+frame_progress = 0.6429
+
+[node name="JetPackSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_x00wo")

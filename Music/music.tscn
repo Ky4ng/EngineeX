@@ -1,0 +1,19 @@
+[gd_scene load_steps=7 format=3 uid="uid://dntupwovotypx"]
+
+[ext_resource type="Script" uid="uid://d4hgq3fnn8dxi" path="res://scripts/music.gd" id="1_qc0l7"]
+[ext_resource type="AudioStream" uid="uid://c15ohdfuiagcs" path="res://Music/menu_music.mp3" id="2_8w7rj"]
+[ext_resource type="AudioStream" uid="uid://dvtwdtjl2nqjt" path="res://Music/moon_music.mp3" id="3_74vr2"]
+[ext_resource type="AudioStream" uid="uid://euvroo0aiox0" path="res://Music/cave_music.mp3" id="4_x5nyw"]
+[ext_resource type="AudioStream" uid="uid://r2axp0c7288l" path="res://Music/spaceship_music.mp3" id="5_0svpk"]
+[ext_resource type="AudioStream" uid="uid://mmjdd6na2nek" path="res://Music/win-and-win-368106.mp3" id="6_v2jok"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+volume_db = -10.857
+max_distance = 1e+10
+attenuation = 1.28311e-05
+script = ExtResource("1_qc0l7")
+menu_music = ExtResource("2_8w7rj")
+moon_music = ExtResource("3_74vr2")
+cave_music = ExtResource("4_x5nyw")
+spaceship_music = ExtResource("5_0svpk")
+vitory_music = ExtResource("6_v2jok")
