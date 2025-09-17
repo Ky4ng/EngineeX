@@ -48,7 +48,6 @@ grow_horizontal = 1
 grow_vertical = 1
 
 [node name="AudioStreamPlayer2D" parent="Camera2D" instance=ExtResource("5_iyc1c")]
-attenuation = 1e-05
 
 [node name="Tiles" parent="." instance=ExtResource("1_tedvs")]
 position = Vector2(-400, 600)
