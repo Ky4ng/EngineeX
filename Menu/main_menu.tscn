@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://cod7aenvp0sn6"]
+[gd_scene load_steps=20 format=3 uid="uid://cod7aenvp0sn6"]
 
 [ext_resource type="Script" uid="uid://b8kcju1vio3eq" path="res://scripts/main__menu.gd" id="1_60bfp"]
 [ext_resource type="Texture2D" uid="uid://tpwxa2iuy4wx" path="res://Background/Background _image.jpeg" id="2_u5tcx"]
 [ext_resource type="FontFile" uid="uid://bvmb75d0vr7ft" path="res://grapesoda_2/GrapeSoda.ttf" id="3_bt0kn"]
 [ext_resource type="Script" uid="uid://cjkrm3evgtbfv" path="res://scripts/audio_control.gd" id="5_q0yis"]
+[ext_resource type="Script" uid="uid://cenmshq1ouqe1" path="res://scripts/sound_effect_control.gd" id="6_cn2sd"]
 [ext_resource type="Script" uid="uid://bul1a5yyaxkfp" path="res://scripts/full_screen_control.gd" id="6_nxkl3"]
 [ext_resource type="PackedScene" uid="uid://dntupwovotypx" path="res://Music/music.tscn" id="6_rw3mj"]
 
@@ -50,6 +51,18 @@ thickness = 7
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ly8rj"]
 color = Color(0.494636, 0.920278, 0.492604, 1)
+thickness = 7
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_vv7ca"]
+color = Color(1, 1, 1, 1)
+thickness = 7
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_218iu"]
+color = Color(0.494118, 0.921569, 0.494118, 1)
+thickness = 7
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ywk15"]
+color = Color(0.494118, 0.921569, 0.494118, 1)
 thickness = 7
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lddw0"]
@@ -224,6 +237,7 @@ layout_mode = 2
 theme_override_constants/separation = 20
 
 [node name="Label" type="Label" parent="Settings/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_bt0kn")
 text = "Music Volumn"
@@ -241,6 +255,28 @@ value = 1.0
 script = ExtResource("5_q0yis")
 audio_bus_name = "Music"
 
+[node name="HBoxContainer3" type="HBoxContainer" parent="Settings/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Settings/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_bt0kn")
+text = "Sound Effect"
+
+[node name="SoundEffectControl" type="HSlider" parent="Settings/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/slider = SubResource("StyleBoxLine_vv7ca")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_218iu")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_ywk15")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("6_cn2sd")
+
 [node name="HBoxContainer2" type="HBoxContainer" parent="Settings/VBoxContainer"]
 layout_mode = 2
 
@@ -257,10 +293,12 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_lddw0")
 script = ExtResource("6_nxkl3")
 
 [node name="AudioStreamPlayer2D2" parent="." instance=ExtResource("6_rw3mj")]
+bus = &"Music"
 
 [connection signal="pressed" from="MainButtons/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MainButtons/Button2" to="." method="_on_setting_pressed"]
 [connection signal="pressed" from="MainButtons/Button3" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Settings/Back" to="." method="_on_back_pressed"]
 [connection signal="value_changed" from="Settings/VBoxContainer/HBoxContainer/AudioControl" to="Settings/VBoxContainer/HBoxContainer/AudioControl" method="_on_value_changed"]
+[connection signal="value_changed" from="Settings/VBoxContainer/HBoxContainer3/SoundEffectControl" to="Settings/VBoxContainer/HBoxContainer3/SoundEffectControl" method="_on_value_changed"]
 [connection signal="toggled" from="Settings/VBoxContainer/HBoxContainer2/FullScreenControl" to="Settings/VBoxContainer/HBoxContainer2/FullScreenControl" method="_on_toggled"]

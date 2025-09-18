@@ -6,7 +6,7 @@ extends Control
 
 
 func _on_start_pressed():
-	get_tree().change_scene_to_file("res://Level/Level_1.tscn")
+	get_tree().change_scene_to_file("res://levelSelect/level_select.tscn")
 	print("Start pressed")
 
 func _on_exit_pressed():

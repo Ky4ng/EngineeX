@@ -57,8 +57,10 @@ animation = &"fire"
 stream = ExtResource("8_atqw6")
 volume_db = -9.323
 pitch_scale = 0.5
+bus = &"SoundEffect"
 
 [node name="ReloadSound" type="AudioStreamPlayer2D" parent="Gun"]
 stream = ExtResource("9_atqw6")
 volume_db = -9.323
 pitch_scale = 3.0
+bus = &"SoundEffect"
