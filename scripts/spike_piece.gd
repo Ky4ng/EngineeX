@@ -1,3 +1,6 @@
+#Name: Dilan Rhaj
+#StudentID: 2300088
+
 extends Area2D
 
 @export var lifetime: float = 3.0
