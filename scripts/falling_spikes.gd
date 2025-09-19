@@ -1,3 +1,5 @@
+# Name: Dilan Rhaj
+#StudentID: 2300088
 extends Node2D
 
 @export var fall_speed: float = 200.0
