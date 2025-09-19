@@ -1,6 +1,12 @@
 # scriptor : Liew Zhen Yang
 # studentID : 2302645
-# function : controls the audio settings
+# key that storing volume :  META_KEY
+#default volume is 100% = 1.0 
+#function : control the volumn , if had volumnn is session then used it else used default volumn
+#         : store slider value to meta data, just only store in memory, not the disk and print the value
+#         : set volumn, turn linear volumn (0.0 - 1.0) into db, and avoid v= 0 occur -inf
+
+
 extends HSlider
 
 @export var audio_bus_name: String = "Master"
