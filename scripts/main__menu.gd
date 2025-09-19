@@ -1,5 +1,6 @@
-#scriptor : Liew Zhen Yang 
-#function : control the start button at main menu
+# scriptor : Liew Zhen Yang
+# studentID : 2302645
+# function : control the start button at main menu
 #           control the exit button at main menu
 #           control the settings button at main menu
 

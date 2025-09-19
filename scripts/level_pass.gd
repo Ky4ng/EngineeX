@@ -1,3 +1,8 @@
+# scriptor : Chua Kek Yang
+# studentID: 2103936
+# function : controls the function of the level passing, 
+#			 allowing players to go to the next level after reaching
+#			 the end of the current level
 extends Area2D
 
 var max_level: int = 11

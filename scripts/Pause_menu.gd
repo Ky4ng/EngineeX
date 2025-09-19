@@ -1,3 +1,7 @@
+# scriptor : Liew Zhen Yang
+# studentID : 2302645
+# function : allows the player to pause in a level,
+#			 the player can resume, restart the level or exit to the main menu
 extends Control
 signal paused_changed(paused: bool)
 

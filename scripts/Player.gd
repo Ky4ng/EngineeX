@@ -1,3 +1,8 @@
+# scriptor : Chua Yun Sheng
+# studentID : 2202740
+# function : controls the functions of the player,
+#			 like movement speed, glide speed and gravity,
+#			 lauch deceleration and death effects
 extends CharacterBody2D
 
 @export var speed: float = 600

@@ -1,3 +1,8 @@
+# scriptor : Chua Yun Sheng
+# studentID: 2202740
+# function : controls the function of the gun.
+#			 allowing firing, which lauch the player 
+#			 and individual reloading, which refills the ammo one by one
 extends Node2D
 
 var player: CharacterBody2D

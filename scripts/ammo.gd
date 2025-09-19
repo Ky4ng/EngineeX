@@ -1,3 +1,6 @@
+# scriptor : Liew Zhen Yang
+# studentID : 2302645
+# function : shows the amount of ammo left before the player needs to reload
 extends CanvasLayer
 
 @export var max_ammo_value: int = 3

@@ -1,3 +1,8 @@
+# scriptor : Chua Yun Sheng
+# studentID: 2202740
+# function : controls the function of the danger floors
+#			 allowing it to kill players on contact
+#			 and change the sprite of the danger floor depending on the level
 extends Node2D
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D

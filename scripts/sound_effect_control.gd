@@ -1,3 +1,6 @@
+# scriptor : Liew Zhen Yang
+# studentID : 2302645
+# function : controls the volume of the sound effects
 extends HSlider
 
 @export var bus_name: String = "Master"   

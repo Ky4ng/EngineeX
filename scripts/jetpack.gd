@@ -1,3 +1,7 @@
+# scriptor : Chua Yun Sheng
+# studentID : 2202740
+# function : controls the function of the jetpack, 
+#			 allowing hold to slowly glide
 extends Node2D
 
 @onready var jetpack_sound: AudioStreamPlayer2D = $JetPackSound

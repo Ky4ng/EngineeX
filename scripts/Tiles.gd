@@ -1,3 +1,6 @@
+# scriptor : Chua Yun Sheng
+# studentID : 2202740
+# function : change the sprite of the tiles depending on the level
 extends CharacterBody2D
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 

@@ -1,3 +1,6 @@
+# scriptor : Liew Zhen Yang
+# studentID : 2302645
+# function : controls the audio settings
 extends HSlider
 
 @export var audio_bus_name: String = "Master"

@@ -1,3 +1,9 @@
+# scriptor : Chua Kek Yang
+# studentID: 2103936
+# function : controls the function of the music in the levels and menus, 
+#			 allowing the music to change depending on the levels and
+#			 and flow seamlessly between levels
+
 extends AudioStreamPlayer2D
 
 @export var menu_music: AudioStream

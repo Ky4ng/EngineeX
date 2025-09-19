@@ -1,3 +1,6 @@
+# scriptor : Liew Zhen Yang
+# studentID : 2302645
+# function : allows the player to click on the designated button to go to the level shown on the button
 extends Button
 
 

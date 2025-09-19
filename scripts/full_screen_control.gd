@@ -1,3 +1,6 @@
+# scriptor : Liew Zhen Yang
+# studentID : 2302645
+# function : enable the toggle for fullscreen
 extends CheckButton
 
 

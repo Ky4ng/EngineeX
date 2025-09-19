@@ -1,3 +1,7 @@
+# scriptor : Dilan Rhaj
+# studentID: 2300088
+# function : controls the characterics of the turret's bullet
+#			 its spped and visibility
 extends Area2D
 
 const RIGHT = Vector2.RIGHT
