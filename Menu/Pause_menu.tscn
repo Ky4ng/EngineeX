@@ -29,33 +29,32 @@ corner_radius_bottom_right = 17
 corner_radius_bottom_left = 17
 shadow_size = 3
 
-[node name="Control" type="Control"]
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Control" type="Control" parent="CenterContainer"]
 process_mode = 3
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -2.0
-offset_bottom = 5.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
 script = ExtResource("1_f1ww6")
 
-[node name="Panel2" type="Panel" parent="."]
+[node name="Panel2" type="Panel" parent="CenterContainer/Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -279.0
-offset_top = -182.5
-offset_right = 103.0
-offset_bottom = 122.5
+offset_left = 394.0
+offset_top = 171.0
+offset_right = 776.0
+offset_bottom = 476.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="Panel2"]
+[node name="Label" type="Label" parent="CenterContainer/Control/Panel2"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -66,7 +65,7 @@ theme_override_font_sizes/font_size = 32
 text = "Pause"
 horizontal_alignment = 1
 
-[node name="PauseMenu" type="VBoxContainer" parent="Panel2"]
+[node name="PauseMenu" type="VBoxContainer" parent="CenterContainer/Control/Panel2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -81,7 +80,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
 
-[node name="Resume" type="Button" parent="Panel2/PauseMenu"]
+[node name="Resume" type="Button" parent="CenterContainer/Control/Panel2/PauseMenu"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -96,7 +95,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gmbna")
 theme_override_styles/normal = SubResource("StyleBoxFlat_a8aid")
 text = "Resume"
 
-[node name="Restart" type="Button" parent="Panel2/PauseMenu"]
+[node name="Restart" type="Button" parent="CenterContainer/Control/Panel2/PauseMenu"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -111,7 +110,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gmbna")
 theme_override_styles/normal = SubResource("StyleBoxFlat_a8aid")
 text = "Restart"
 
-[node name="BackToMenu" type="Button" parent="Panel2/PauseMenu"]
+[node name="BackToMenu" type="Button" parent="CenterContainer/Control/Panel2/PauseMenu"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -126,6 +125,6 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gmbna")
 theme_override_styles/normal = SubResource("StyleBoxFlat_a8aid")
 text = "Back To Menu"
 
-[connection signal="pressed" from="Panel2/PauseMenu/Resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="Panel2/PauseMenu/Restart" to="." method="_on_restart_pressed"]
-[connection signal="pressed" from="Panel2/PauseMenu/BackToMenu" to="." method="_on_back_to_menu_pressed"]
+[connection signal="pressed" from="CenterContainer/Control/Panel2/PauseMenu/Resume" to="CenterContainer/Control" method="_on_resume_pressed"]
+[connection signal="pressed" from="CenterContainer/Control/Panel2/PauseMenu/Restart" to="CenterContainer/Control" method="_on_restart_pressed"]
+[connection signal="pressed" from="CenterContainer/Control/Panel2/PauseMenu/BackToMenu" to="CenterContainer/Control" method="_on_back_to_menu_pressed"]

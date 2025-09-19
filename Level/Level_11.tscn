@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://mmjdd6na2nek" path="res://Music/win-and-win-368106.mp3" id="4_k0oya"]
 [ext_resource type="FontFile" uid="uid://bvmb75d0vr7ft" path="res://grapesoda_2/GrapeSoda.ttf" id="5_80x03"]
 [ext_resource type="Texture2D" uid="uid://cig6ex0dc1o7y" path="res://sprites/Jetpack/player_jetpack.png" id="6_k0oya"]
-[ext_resource type="Texture2D" uid="uid://h7ute0reqj8x" path="res://sprites/Gun/gun.png" id="7_80x03"]
+[ext_resource type="Texture2D" uid="uid://h7ute0reqj8x" path="res://sprites/Gun/gun_idle.png" id="7_80x03"]
 [ext_resource type="Texture2D" uid="uid://crrfak2dvbmvr" path="res://sprites/Player/idle_1.png" id="8_6p2lj"]
 [ext_resource type="Texture2D" uid="uid://tpwxa2iuy4wx" path="res://Background/Background _image.jpeg" id="9_80x03"]
 [ext_resource type="Texture2D" uid="uid://cn8y1v78vr14s" path="res://sprites/spike/meteor_spike.png" id="10_rkgq5"]

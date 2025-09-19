@@ -52,7 +52,7 @@ func update_music_for_level():
 
 	var new_stream: AudioStream = null
 
-	if scene_name.contains("main_menu") or scene_name.contains("levelselect"):
+	if scene_name.contains("main_menu") or scene_name.contains("level_select"):
 		print("🎵 Picking menu music")
 		new_stream = menu_music
 	else:

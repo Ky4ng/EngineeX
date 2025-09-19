@@ -1,12 +1,12 @@
 [gd_scene load_steps=11 format=3 uid="uid://b41c5onxn7aji"]
 
 [ext_resource type="Script" uid="uid://dm8cy4wvrgas5" path="res://scripts/Gun.gd" id="1_tjdg3"]
-[ext_resource type="Texture2D" uid="uid://h7ute0reqj8x" path="res://sprites/Gun/gun.png" id="3_1psom"]
-[ext_resource type="Texture2D" uid="uid://vdifdom4m8by" path="res://sprites/Gun/gun_9.png" id="3_gnneg"]
-[ext_resource type="Texture2D" uid="uid://dyh2uqlxo1njs" path="res://sprites/Gun/gun_11.png" id="4_de1q4"]
-[ext_resource type="Texture2D" uid="uid://b8ds4a4r7ffic" path="res://sprites/Gun/gun_10.png" id="4_mm6li"]
-[ext_resource type="Texture2D" uid="uid://bg05kkgymedhr" path="res://sprites/Gun/gun_12.png" id="6_atqw6"]
-[ext_resource type="Texture2D" uid="uid://cvgguhhjwda0w" path="res://sprites/Gun/gun_13.png" id="7_ikldf"]
+[ext_resource type="Texture2D" uid="uid://h7ute0reqj8x" path="res://sprites/Gun/gun_idle.png" id="3_1psom"]
+[ext_resource type="Texture2D" uid="uid://vdifdom4m8by" path="res://sprites/Gun/gun_fire1.png" id="3_gnneg"]
+[ext_resource type="Texture2D" uid="uid://dyh2uqlxo1njs" path="res://sprites/Gun/gun_fire3.png" id="4_de1q4"]
+[ext_resource type="Texture2D" uid="uid://b8ds4a4r7ffic" path="res://sprites/Gun/gun_fire2.png" id="4_mm6li"]
+[ext_resource type="Texture2D" uid="uid://bg05kkgymedhr" path="res://sprites/Gun/gun_fire4.png" id="6_atqw6"]
+[ext_resource type="Texture2D" uid="uid://cvgguhhjwda0w" path="res://sprites/Gun/gun_fire5.png" id="7_ikldf"]
 [ext_resource type="AudioStream" uid="uid://ds1fv5y6gifu2" path="res://Sound/Gun_Sound.mp3" id="8_atqw6"]
 [ext_resource type="AudioStream" uid="uid://d1l0qfjw3ehl" path="res://Sound/Gun_Reload.mp3" id="9_atqw6"]
 
