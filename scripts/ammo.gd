@@ -1,6 +1,14 @@
 # scriptor : Liew Zhen Yang
 # studentID : 2302645
-# function : shows the amount of ammo left before the player needs to reload
+#function : set the max ammo to 3, and update the number of ammo
+#         : when shoot, number of ammo -1, when ammo=0 will show 'Need Reloaded" in blink
+#         : click R will relaoding the ammo, and hide the "Need Reloading" and update the ammo number until the number is 3
+#         : when click paused "Need Reloading" will hide until resume game will continue blink
+#         : when paused, blink animation will stop, text transparency is 100 %
+#         : control the blink animaton, set it as loop and set it become transparency in 0.5 s (1.0 to 0.0)
+
+
+
 extends CanvasLayer
 
 @export var max_ammo_value: int = 3
