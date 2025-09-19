@@ -1,6 +1,6 @@
 extends HSlider
 
-@export var audio_bus_name: String
+@export var audio_bus_name: String = "Master"
 var audio_bus_id: int
 
 # Key for storing volume during the current session

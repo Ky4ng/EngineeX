@@ -1,6 +1,6 @@
 extends HSlider
 
-@export var bus_name: String = "SoundEffect"   
+@export var bus_name: String = "Master"   
 @export var session_key: String = "session_sfx" # Keep value for this session only (not saved to disk)
 # Default volume (100% = 1.0)
 @export var default_vol: float = 1.0            

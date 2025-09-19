@@ -253,7 +253,6 @@ max_value = 1.0
 step = 0.05
 value = 1.0
 script = ExtResource("5_q0yis")
-audio_bus_name = "Music"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="Settings/VBoxContainer"]
 layout_mode = 2
