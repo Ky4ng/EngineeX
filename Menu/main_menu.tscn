@@ -292,7 +292,6 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_lddw0")
 script = ExtResource("6_nxkl3")
 
 [node name="AudioStreamPlayer2D2" parent="." instance=ExtResource("6_rw3mj")]
-bus = &"Music"
 
 [connection signal="pressed" from="MainButtons/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MainButtons/Button2" to="." method="_on_setting_pressed"]

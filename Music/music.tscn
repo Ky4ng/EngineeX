@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://dvtwdtjl2nqjt" path="res://Music/moon_music.mp3" id="3_74vr2"]
 [ext_resource type="AudioStream" uid="uid://euvroo0aiox0" path="res://Music/cave_music.mp3" id="4_x5nyw"]
 [ext_resource type="AudioStream" uid="uid://r2axp0c7288l" path="res://Music/spaceship_music.mp3" id="5_0svpk"]
-[ext_resource type="AudioStream" uid="uid://mmjdd6na2nek" path="res://Music/win-and-win-368106.mp3" id="6_v2jok"]
+[ext_resource type="AudioStream" uid="uid://mmjdd6na2nek" path="res://Music/credit_music.mp3" id="6_v2jok"]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
 volume_db = -10.857

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://856q800rhoxh"]
+[gd_scene load_steps=13 format=3 uid="uid://856q800rhoxh"]
 
 [ext_resource type="PackedScene" uid="uid://n1stiniw3sjg" path="res://Platform & Tiles/Tiles.tscn" id="1_jyudl"]
 [ext_resource type="PackedScene" uid="uid://d2olvppacbh56" path="res://Player/Player.tscn" id="2_3djxs"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://h5vyw1skbksk" path="res://Enemy/air_spike.tscn" id="7_m870p"]
 [ext_resource type="Texture2D" uid="uid://c6r3hc0vogs4m" path="res://Background/Moon_Background.png" id="8_catqn"]
 [ext_resource type="PackedScene" uid="uid://bebg0kwbh7b1q" path="res://Player/ammo.tscn" id="9_rb7sf"]
+[ext_resource type="FontFile" uid="uid://bvmb75d0vr7ft" path="res://grapesoda_2/GrapeSoda.ttf" id="12_71nfi"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -41,10 +42,6 @@ drag_horizontal_offset = -1.0
 drag_vertical_offset = -1.0
 
 [node name="Control" parent="Player/Camera2D" instance=ExtResource("4_y1m86")]
-offset_left = -975.0
-offset_top = -568.0
-offset_right = 1137.0
-offset_bottom = 608.0
 
 [node name="AudioStreamPlayer2D" parent="Player" instance=ExtResource("5_yba5r")]
 
@@ -181,3 +178,14 @@ texture = ExtResource("8_catqn")
 position = Vector2(1424, -352)
 
 [node name="Ammo" parent="." instance=ExtResource("9_rb7sf")]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -532.0
+offset_top = -647.0
+offset_right = 372.0
+offset_bottom = -536.0
+theme_override_fonts/normal_font = ExtResource("12_71nfi")
+theme_override_font_sizes/bold_italics_font_size = 1311
+theme_override_font_sizes/normal_font_size = 50
+text = "You start sliding after lauching,
+Resume normal walking by stop fully."
