@@ -1,5 +1,8 @@
 #Name: Dilan Rhaj
 #StudentID: 2300088
+#function: controls a turret that rotates toward the nearest player, 
+#          detects line of sight, shoots bullets with sound, and 
+#          reloads between shots.
 
 extends Node2D
 
