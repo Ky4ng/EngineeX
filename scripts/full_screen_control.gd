@@ -1,6 +1,7 @@
 # scriptor : Liew Zhen Yang
 # studentID : 2302645
-# function : enable the toggle for fullscreen
+#function : control the size of the window, if on will turn to windowed, then off turn to full screen
+
 extends CheckButton
 
 
