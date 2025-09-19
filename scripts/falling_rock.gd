@@ -1,5 +1,8 @@
 #Name: Dilan Rhaj
 #StudentID: 2300088
+#function: makes a rock fall when the player enters a trigger 
+#          area, plays different sprites based on level, and 
+#          destroys itself after a timer or kills the player on contact
 
 extends Node2D
 
