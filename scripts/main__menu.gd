@@ -1,3 +1,8 @@
+#scriptor : Liew Zhen Yang 
+#function : control the start button at main menu
+#           control the exit button at main menu
+#           control the settings button at main menu
+
 extends Control
 
 @onready var main_buttons: VBoxContainer = $MainButtons
