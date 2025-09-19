@@ -1,6 +1,8 @@
 # scriptor : Liew Zhen Yang
 # studentID : 2302645
-# function : allows the player to click on the designated button to go to the level shown on the button
+#function : set up back to menu button, when user click will direct back to menu
+#         : set all button direct go to the specific scene when user click, such as click 1 will direct go to level 1 . Then print Level 1 pressed
+
 extends Button
 
 
