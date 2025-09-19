@@ -1,3 +1,6 @@
+#Name: Dilan Rhaj
+#StudentID: 2300088
+
 extends Node2D
 
 @export var BULLET: PackedScene
