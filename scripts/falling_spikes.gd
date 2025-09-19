@@ -1,3 +1,8 @@
+#Name: Dilan Rhaj
+#StudentID: 2300088
+#function: controls a falling spike trap that detects the player, falls, 
+#          breaks on the ground, activates nearby spike pieces, and removes itself.
+
 extends Node2D
 
 @export var fall_speed: float = 200.0

@@ -1,3 +1,9 @@
+#Name: Dilan Rhaj
+#StudentID: 2300088
+#function: controls spike pieces that activate after being triggered, 
+#          become visible and dangerous, damage the player on contact, 
+#          and disappear after a set lifetime.
+
 extends Area2D
 
 @export var lifetime: float = 3.0

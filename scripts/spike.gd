@@ -1,3 +1,7 @@
+#Name: Dilan Rhaj
+#StudentID: 2300088
+#funciton: makes a hazard that kills the player on contact and changes its sprite based on the current level.
+
 extends Area2D
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
