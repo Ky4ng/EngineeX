@@ -1,7 +1,14 @@
 # scriptor : Liew Zhen Yang
 # studentID : 2302645
-# function : allows the player to pause in a level,
-#			 the player can resume, restart the level or exit to the main menu
+#function : first do the initialization. when enter the game, pause menu will hide 
+#         : finding the reload label. 
+#         : Had three ways to finding the reload label, first is use the Inspector-assigned NodePath; second is search the scene tree by node name "ReloadLabel"; third is search by group "ReloadUI"
+#         : listen for the pause key (esc,p), when click esc or p pause menu will open 
+#         : change the pause state, open or closed the pause menu
+#         : when paused, the pause menu will show.Then, hides and disables the reload label while paused.
+#         : when resume game, pause menu will hide and restore the reload label’s visibility and processing mode.
+#         : pause menu had three button, resume button means closes the pause menu; restart button means reloads the current scene; back to menu button means loads the main menu scene.
+
 extends Control
 signal paused_changed(paused: bool)
 
