@@ -1,6 +1,9 @@
 # scriptor : Liew Zhen Yang
 # studentID : 2302645
-# function : controls the volume of the sound effects
+#function : First do the initialization, loads the volumn value, if it exists in session storage then use it, otherwise use the default and sva it to session
+#         : when slider value change, updates session value and applies the new volumn.
+#         : clamps the value so it never goes to 0.0, then convert the linear value (0–1) into dB
+
 extends HSlider
 
 @export var bus_name: String = "Master"   
